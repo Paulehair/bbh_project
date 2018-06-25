@@ -4,7 +4,9 @@ namespace App\Form;
 
 use App\Entity\Booking;
 use App\Entity\Cabin;
+use Doctrine\DBAL\Types\TextType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -13,10 +15,11 @@ class BookingType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('guest_quantity')
-            ->add('cabin')
+            ->add('cabin', null, [
+            	'expanded' => true,
+            ])
             ->add('month')
-            ->add('reference')
+            ->add('reference', HiddenType::class)
 	        ->getForm();
         ;
     }

@@ -18,14 +18,14 @@ class Booking
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Cabin", inversedBy="cabin")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Cabin", inversedBy="booking")
      * @ORM\JoinColumn(nullable=false)
      * @Assert\NotBlank()
      */
     private $cabin;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Month", inversedBy="departure")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Month", inversedBy="Booking")
      * @ORM\JoinColumn(nullable=false)
      * @Assert\NotBlank()
      */

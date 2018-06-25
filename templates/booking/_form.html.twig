@@ -1,5 +1,11 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-
-    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ dump(cabin) }}
+<div>
+    {{ form_label(form.cabin) }}
+    {{ form_widget(form.cabin, {'attr': {'class': 'foo'}}) }}
+    {{ form_errors(form.cabin) }}
+</div>
+    {{ form_row(form.month) }}
+    {{ form_rest(form) }}
+<button class="btn">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
