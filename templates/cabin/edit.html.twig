@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Cabin{% endblock %}
+
+{% block body %}
+    <h1>Edit Cabin</h1>
+
+    {{ include('cabin/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('cabin_index') }}">back to list</a>
+
+    {{ include('cabin/_delete_form.html.twig') }}
+{% endblock %}
