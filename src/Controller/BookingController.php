@@ -59,6 +59,7 @@ class BookingController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+        	$booking->setReference(uniqid());
             $em = $this->getDoctrine()->getManager();
             $em->persist($booking);
             $em->flush();

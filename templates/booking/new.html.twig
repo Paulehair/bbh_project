@@ -11,11 +11,25 @@
 {% endblock %}
 {% block javascripts %}
     <script type="text/javascript">
+        /**
         var test = document.querySelectorAll('.test');
         for(var i = 0; i < test.length; i++) {
             test[i].addEventListener('click', function() {
                 console.log('OK');
             });
         };
+        var next = document.querySelector('.next');
+        var cabinItem = document.querySelectorAll('.cabinType');
+        for (var i = 0; i < cabinItem.length; i++) {
+            cabinItem[i].style.display = 'none';
+        }
+        next.addEventListener('click', function (event) {
+            event.preventDefault();
+            console.log('OK');
+            for (var i = 0; i < cabinItem.length; i++) {
+                cabinItem[i].style.display = 'block';
+            }
+        })
+        **/
     </script>
 {% endblock %}
