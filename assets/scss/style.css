@@ -88,7 +88,8 @@ video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /* HTML5 display-role reset for older browsers */
 article,
@@ -102,119 +103,255 @@ hgroup,
 menu,
 nav,
 section {
-  display: block; }
+  display: block;
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
 ol,
 ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote,
 q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:after, blockquote:before {
   content: '';
-  content: none; }
+  content: none;
+}
 
 q:after, q:before {
   content: '';
-  content: none; }
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
+
+.Header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 80%;
+  height: 10%;
+  margin: 1.5% auto;
+}
+
+.Header_logo {
+  margin: 1.4% 0 0 0;
+}
+
+.Header_burger {
+  width: 2em;
+  height: 2em;
+  margin-left: 60%;
+}
+
+@media (min-width: 768px) {
+  .Header_burger {
+    display: none;
+  }
+}
+
+.Header_nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .Header_nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.Header_nav_box {
+  font-family: "rajdhanisemibold";
+  font-size: 1.5em;
+  height: 150%;
+}
+
+.Header_nav_box:first-child:hover .Header_nav_box_menu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.Header_nav_box_menu {
+  margin: 1.5em 0 0 0;
+  border: 1px solid #a39b94;
+  border-top: none;
+  color: #a39b94;
+  background: #f0ece1;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.Header_nav_box_menu:hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+.Header_nav_box_menu_item {
+  padding: 0.2em;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.Header_nav_box_menu_item:hover {
+  color: #383d3b;
+}
+
+.Header_nav_box_nbr {
+  color: #a39b94;
+  margin-bottom: 1em;
+}
+
+.Header_nav_box_item {
+  color: #383d3b;
+  cursor: pointer;
+}
+
+.Header_nav_box_square {
+  margin-bottom: 1em;
+  width: 1em;
+  height: 1em;
+  background: #f52f57;
+}
 
 .Map {
   position: relative;
   width: 100%;
-  height: 50%; }
-  .Map_planet_0 {
-    position: absolute;
-    top: 30%;
-    left: 10%;
-    background: #353a38;
-    border-radius: 100px;
-    width: 3em;
-    height: 3em; }
-  .Map_planet_1 {
-    position: absolute;
-    top: 80%;
-    left: 40%;
-    background: #353a38;
-    border-radius: 100px;
-    width: 3em;
-    height: 3em; }
-  .Map_planet_2 {
-    position: absolute;
-    top: 50%;
-    left: 80%;
-    background: #353a38;
-    border-radius: 100px;
-    width: 3em;
-    height: 3em; }
+  height: 50%;
+}
+
+.Map_planet_0 {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  background: #353a38;
+  border-radius: 100px;
+  width: 3em;
+  height: 3em;
+}
+
+.Map_planet_1 {
+  position: absolute;
+  top: 80%;
+  left: 40%;
+  background: #353a38;
+  border-radius: 100px;
+  width: 3em;
+  height: 3em;
+}
+
+.Map_planet_2 {
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  background: #353a38;
+  border-radius: 100px;
+  width: 3em;
+  height: 3em;
+}
 
 .Card {
-  width: 220%;
+  width: 100%;
   height: 100%;
   margin: 10% auto;
+  overflow-x: scroll;
+}
+
+.Card_slider {
+  width: 110%;
   display: flex;
-  overflow-x: scroll; }
-  .Card_ctnr {
-    border-top: 1px solid #353a38;
-    border-left: 1px solid #353a38;
-    height: 42%;
-    margin: 0 0 0 4%; }
-    .Card_ctnr_title {
-      padding: 1em;
-      font-family: "rajdhanisemibold";
-      font-size: 30px; }
-      .Card_ctnr_title:after {
-        content: "";
-        background: url("../img/traits.png") no-repeat;
-        background-size: cover;
-        position: absolute;
-        top: 62%;
-        left: 22%;
-        width: 28%;
-        height: 2%;
-        z-index: -1; }
-    .Card_ctnr_txt {
-      padding: 1em;
-      font-size: 16px;
-      font-family: "kraft_monoregular"; }
-    .Card_ctnr_btn {
-      width: 60%;
-      height: 6%;
-      margin: 15% auto 0;
-      padding: 1em 2em;
-      background: linear-gradient(-145deg, rgba(153, 70, 200, 0.8), rgba(244, 43, 87, 0.8));
-      font-size: 14px;
-      color: #f0ede2;
-      text-align: center;
-      cursor: pointer; }
+}
+
+.Card_slider_ctnr {
+  border-top: 1px solid #353a38;
+  border-left: 1px solid #353a38;
+  height: 42%;
+  margin: 0 0 0 4%;
+}
+
+.Card_slider_ctnr_title {
+  padding: 1em;
+  font-family: "rajdhanisemibold";
+  font-size: 30px;
+}
+
+.Card_slider_ctnr_title:after {
+  content: "";
+  background: url("../img/traits.png") no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 70.4%;
+  left: 22%;
+  width: 28%;
+  height: 2%;
+  z-index: -1;
+}
+
+.Card_slider_ctnr_txt {
+  padding: 1em;
+  font-size: 16px;
+  font-family: "kraft_monoregular";
+}
+
+.Card_slider_ctnr_btn {
+  width: 60%;
+  height: 6%;
+  margin: 15% auto 0;
+  padding: 1em 2em;
+  background: linear-gradient(-145deg, rgba(153, 70, 200, 0.8), rgba(244, 43, 87, 0.8));
+  font-size: 14px;
+  color: #f0ede2;
+  text-align: center;
+  cursor: pointer;
+}
 
 /* FONTS */
 @font-face {
   font-family: 'kraft_monoregular';
-  src: url("../font/kraftmono-webfont.woff2") format("woff2"), url("../font/kraftmono-webfont.woff") format("woff"); }
+  src: url("../font/kraftmono-webfont.woff2") format("woff2"), url("../font/kraftmono-webfont.woff") format("woff");
+}
+
 @font-face {
   font-family: 'kraft_monoitalic';
-  src: url("../font/kraftmono-italic-webfont.woff2") format("woff2"), url("../font/kraftmono-italic-webfont.woff") format("woff"); }
+  src: url("../font/kraftmono-italic-webfont.woff2") format("woff2"), url("../font/kraftmono-italic-webfont.woff") format("woff");
+}
+
 @font-face {
   font-family: 'rajdhanisemibold';
-  src: url("../font/rajdhani-semibold-webfont.woff2") format("woff2"), url("../font/rajdhani-semibold-webfont.woff") format("woff"); }
+  src: url("../font/rajdhani-semibold-webfont.woff2") format("woff2"), url("../font/rajdhani-semibold-webfont.woff") format("woff");
+}
+
 body {
+  width: 100%;
   height: 100vh;
-  background: #f0ede2; }
+  background: #f0ede2;
+}
 
 .container {
   overflow: hidden;
-  height: 100%; }
+  width: 80%;
+  height: 100%;
+  border: 1px solid #383d3b;
+  margin: 0 auto;
+}
 
 .boxShad {
-  box-shadow: 0 0 80px #381e55; }
+  box-shadow: 0 0 80px #381e55;
+}
 
+.--bigger {
+  height: auto;
+}
 /*# sourceMappingURL=style.css.map */

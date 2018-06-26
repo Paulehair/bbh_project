@@ -10,6 +10,38 @@
 </head>
 
 <body>
+  <header class="Header">
+    <p class="Header_logo">DIONYSOS</p>
+
+    <img class="Header_burger" src="assets/img/burger.svg" alt="burger menu" title="burger menu">
+
+    <nav class="Header_nav">
+      <div id="roll" class="Header_nav_box">
+        <p class="Header_nav_box_nbr">01</p>
+        <p class="Header_nav_box_item">L'EXPERIENCE</p>
+
+        <div class="Header_nav_box_menu">
+          <p class="Header_nav_box_menu_item">Carte</p>
+          <p class="Header_nav_box_menu_item">Vaisseau</p>
+          <p class="Header_nav_box_menu_item">Cabines</p>
+          <p class="Header_nav_box_menu_item">Activités</p>
+        </div>
+      </div>
+      <div class="Header_nav_box">
+        <p class="Header_nav_box_nbr">02</p>
+        <p class="Header_nav_box_item">RESERVER</p>
+      </div>
+      <div class="Header_nav_box">
+        <p class="Header_nav_box_nbr">03</p>
+        <p class="Header_nav_box_item">CONTACT</p>
+      </div>
+      <div class="Header_nav_box">
+        <div class="Header_nav_box_square"></div>
+        <p class="Header_nav_box_item">SE CONNECTER</p>
+      </div>
+    </nav>
+  </header>
+
   <section class="container">
     <section class="Map">
       <div data-planet="venus" class="Map_planet_0 t"></div>
@@ -18,22 +50,24 @@
     </section>
 
     <section class="Card">
-      <div data-planet="venus" class="Card_ctnr">
-        <h2 class="Card_ctnr_title">Vénus</h2>
-        <p class="Card_ctnr_txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-        <p class="Card_ctnr_btn">See more</p>
-      </div>
+      <div class="Card_slider">
+        <div data-planet="venus" class="Card_slider_ctnr">
+          <h2 class="Card_slider_ctnr_title">Vénus</h2>
+          <p class="Card_slider_ctnr_txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <p class="Card_slider_ctnr_btn">See more</p>
+        </div>
 
-      <div data-planet="mars" class="Card_ctnr">
-        <h2 class="Card_ctnr_title">Mars</h2>
-        <p class="Card_ctnr_txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-        <p class="Card_ctnr_btn">See more</p>
-      </div>
+        <div data-planet="mars" class="Card_slider_ctnr">
+          <h2 class="Card_slider_ctnr_title">Mars</h2>
+          <p class="Card_slider_ctnr_txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <p class="Card_slider_ctnr_btn">See more</p>
+        </div>
 
-      <div data-planet="jupiter" class="Card_ctnr">
-        <h2 class="Card_ctnr_title">Jupiter</h2>
-        <p class="Card_ctnr_txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-        <p class="Card_ctnr_btn">See more</p>
+        <div data-planet="jupiter" class="Card_slider_ctnr">
+          <h2 class="Card_slider_ctnr_title">Jupiter</h2>
+          <p class="Card_slider_ctnr_txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <p class="Card_slider_ctnr_btn">See more</p>
+        </div>
       </div>
     </section>
   </section>

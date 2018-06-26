@@ -1,0 +1,87 @@
+.Header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 80%;
+  height: 10%;
+  margin: 1.5% auto;
+
+  &_logo {
+    margin: 1.4% 0 0 0;
+  }
+
+  &_burger {
+    width: 2em;
+    height: 2em;
+    margin-left: 60%;
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
+
+  &_nav {
+    display: none;
+    
+    @include breakpoint(tablet) {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    &_box {
+      font-family: $radjhani;
+      font-size: 1.5em;
+      height: 150%;
+
+      &:first-child:hover .Header_nav_box_menu {
+        visibility: visible;
+        opacity: 1;
+      }
+      
+      &_menu {
+        margin: 1.5em 0 0 0;
+        border: 1px solid $grey;
+        border-top: none;
+        color: $grey;
+        background: $white;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+
+        &:hover {
+          visibility: visible;
+          opacity: 1;
+        }
+
+        &_item {
+          padding: 0.2em;
+          cursor: pointer;
+        transition: all 0.5s ease;
+
+          &:hover {
+            color: $darkgrey;
+          }
+        }
+      }
+
+      &_nbr {
+        color: $grey;
+        margin-bottom: 1em;
+      }
+
+      &_item {
+        color: $darkgrey;
+        cursor: pointer;
+      }
+
+      &_square {
+        margin-bottom: 1em;
+        width: 1em;
+        height: 1em;
+        background: $red;
+      }
+    }
+
+  }
+}

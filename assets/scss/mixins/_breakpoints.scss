@@ -15,7 +15,7 @@
     }
   } @else
   if $point==mobileL {
-    @media (min-width: 425px) {
+    @media (min-width: 415px) {
       @content;
     }
   } @else
