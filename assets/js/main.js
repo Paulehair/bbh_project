@@ -1,9 +1,7 @@
 const ui = {
-  planets: document.querySelectorAll('.t'),
   cards: document.querySelectorAll('.Card_slider_ctnr'),
-  card: document.querySelectorAll('.Card'),
-  expNav: document.querySelector('#roll'),
-  menu: document.querySelector('.Header_nav_box_menu')
+  menu: document.querySelector('.Header_nav_box_menu'),
+  img: document.querySelector('.Map_img')
 }
 
 const style = {
@@ -11,8 +9,8 @@ const style = {
 }
 
 // FLOAT ANIM
-TweenMax.to(ui.planets, 4, {
-  y: 20,
+TweenMax.to(ui.img, 4, {
+  y: 30,
   yoyo: true,
   repeat: -1
 });
@@ -20,20 +18,6 @@ TweenMax.to(ui.planets, 4, {
 // MAP
 for (let i = 0; i < ui.cards.length; i++) {
   ui.cards[i].addEventListener('click', () => {
-    for (let a = 0; a < ui.planets.length; a++) {
-      if (ui.cards[i].dataset.planet ===  ui.planets[a].dataset.planet) {
-
-        ui.planets[a].style.boxShadow = style.boxShad;
-        ui.planets[a].style.width = "4em";
-        ui.planets[a].style.height = "4em";
-
-      } else if (ui.planets[a].style.boxShadow = style.boxShad) {
-
-        ui.planets[a].style.boxShadow = "";
-        ui.planets[a].style.width = "3em";
-        ui.planets[a].style.height = "3em";
-
-      }
-    }
+    ui.img.setAttribute("src", "assets/img/p" + i + ".png");
   });
 }

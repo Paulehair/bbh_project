@@ -232,34 +232,39 @@ table {
   height: 50%;
 }
 
-.Map_planet_0 {
-  position: absolute;
-  top: 30%;
-  left: 10%;
-  background: #353a38;
-  border-radius: 100px;
-  width: 3em;
-  height: 3em;
+.Map_title {
+  color: #383d3b;
+  font-family: "rajdhanisemibold";
+  font-size: 1.8em;
+  width: 40%;
+  padding: 1em;
 }
 
-.Map_planet_1 {
-  position: absolute;
-  top: 80%;
-  left: 40%;
-  background: #353a38;
-  border-radius: 100px;
-  width: 3em;
-  height: 3em;
+.Map_img {
+  object-fit: contain;
+  width: 31em;
+  margin: 0 0 0 -5em;
 }
 
-.Map_planet_2 {
-  position: absolute;
-  top: 50%;
-  left: 80%;
-  background: #353a38;
-  border-radius: 100px;
-  width: 3em;
-  height: 3em;
+@media (min-width: 768px) {
+  .Map_img {
+    margin: 0 0 0 -1em;
+    width: 40em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Map_img {
+    margin: 0 0 0 2em;
+    width: 50em;
+  }
+}
+
+@media (min-width: 1440px) {
+  .Map_img {
+    margin: 0 0 0 8em;
+    width: 60em;
+  }
 }
 
 .Card {
@@ -270,7 +275,8 @@ table {
 }
 
 .Card_slider {
-  width: 110%;
+  width: 235%;
+  height: 95%;
   display: flex;
 }
 
@@ -282,6 +288,7 @@ table {
 }
 
 .Card_slider_ctnr_title {
+  position: relative;
   padding: 1em;
   font-family: "rajdhanisemibold";
   font-size: 30px;
@@ -289,13 +296,13 @@ table {
 
 .Card_slider_ctnr_title:after {
   content: "";
-  background: url("../img/traits.png") no-repeat;
+  background: url(../img/traits.png) no-repeat;
   background-size: cover;
   position: absolute;
-  top: 70.4%;
+  top: 47.4%;
   left: 22%;
-  width: 28%;
-  height: 2%;
+  width: 65%;
+  height: 20%;
   z-index: -1;
 }
 
@@ -349,9 +356,5 @@ body {
 
 .boxShad {
   box-shadow: 0 0 80px #381e55;
-}
-
-.--bigger {
-  height: auto;
 }
 /*# sourceMappingURL=style.css.map */

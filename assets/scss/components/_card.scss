@@ -5,7 +5,8 @@
   overflow-x: scroll;
 
   &_slider {
-    width: 110%;
+    width: 235%;
+    height: 95%;
     display: flex;
 
     &_ctnr {
@@ -15,19 +16,20 @@
       margin: 0 0 0 4%;
 
       &_title {
+        position: relative;
         padding: 1em;
         font-family: $radjhani;
         font-size: 30px;
-
+        
         &:after {
           content: "";
-          background: url("../img/traits.png") no-repeat;
+          background: url(../img/traits.png) no-repeat;
           background-size: cover;
           position: absolute;
-          top: 70.4%;
+          top: 47.4%;
           left: 22%;
-          width: 28%;
-          height: 2%;
+          width: 65%;
+          height: 20%;
           z-index: -1;
         }
       }
@@ -37,7 +39,7 @@
         font-size: $fontP;
         font-family: $kraftMono;
       }
-
+      
       &_btn {
         width: 60%;
         height: 6%;
