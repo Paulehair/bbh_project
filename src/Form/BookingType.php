@@ -16,10 +16,13 @@ class BookingType extends AbstractType
     {
         $builder
             ->add('cabin', null, [
-            	'expanded' => true,
+	            'class'         => 'App\Entity\Cabin',
+	            'label'         => 'Cabin',
+	            'expanded'      => true,
+	            'multiple'      => true
             ])
             ->add('month')
-            ->add('reference', HiddenType::class)
+            ->add('reference')
 	        ->getForm();
         ;
     }

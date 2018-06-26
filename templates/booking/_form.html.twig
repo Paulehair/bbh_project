@@ -1,11 +1,16 @@
 {{ form_start(form) }}
-{{ dump(cabin) }}
-<div>
-    {{ form_label(form.cabin) }}
-    {{ form_widget(form.cabin, {'attr': {'class': 'foo'}}) }}
-    {{ form_errors(form.cabin) }}
-</div>
-    {{ form_row(form.month) }}
+<table>
+    {% for cabin in form.cabin %}
+        {% set index = cabin.vars.value %}{# get array index #}
+        {% set entity = form.cabin.vars.choices[index].data %}{# get entity object #}
+            <div>
+               {# render checkbox #}
+                <p class="test">{{ entity.name }}</p>
+                <p>{{ entity.price }} €</p>
+                <a href="#">{{ form_widget(cabin) }} Choisir </a>
+            </div>
+    {% endfor %}
+</table>
     {{ form_rest(form) }}
 <button class="btn">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
