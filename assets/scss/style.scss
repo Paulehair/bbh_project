@@ -8,6 +8,7 @@
 @import "./components/header";
 @import "./components/map";
 @import "./components/card";
+@import "./components/planetdesc";
 
 /* FONTS */
 @font-face {
@@ -34,7 +35,6 @@ body {
 .container {
   overflow: hidden;
   width: 80%;
-  height: 100%;
   border: 1px solid $darkgrey;
   margin: 0 auto;
 }
