@@ -38,6 +38,7 @@ class Booking
 
     /**
      * @ORM\Column(type="string", length=20)
+     * 
      */
     private $reference;
 
@@ -90,12 +91,10 @@ class Booking
     public function setReference(string $reference): self
     {
         $this->reference = $reference;
-
         return $this;
     }
 
     public function __toString() {
 	   return $this->getReference();
     }
-
 }

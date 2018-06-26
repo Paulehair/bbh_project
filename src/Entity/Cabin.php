@@ -98,6 +98,6 @@ class Cabin
     }
 
     public function __toString() {
-	    return $this->getName() . $this->getPrice();
+	    return $this->getName();
     }
 }
