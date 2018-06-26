@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\Booking;
 use App\Entity\Cabin;
 use Doctrine\DBAL\Types\TextType;
+use function PHPSTORM_META\type;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -16,14 +17,13 @@ class BookingType extends AbstractType
     {
         $builder
             ->add('cabin', null, [
-	            'class'         => 'App\Entity\Cabin',
+	           // 'class'         => 'App\Entity\Cabin',
 	            'label'         => 'Cabin',
 	            'expanded'      => true,
 	            'multiple'      => false
             ])
             ->add('month')
-            ->add('reference')
-            ->add('guestQuantity')
+	        ->add('guestQuantity')
 	        ->getForm();
         ;
     }
