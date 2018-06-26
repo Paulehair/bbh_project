@@ -98,4 +98,8 @@ class Booking
 	   return $this->getReference();
     }
 
+    public function uniqid()
+    {
+        $reference = printf("uniqid('', true): %s\r\n", uniqid('', true));
+    }
 }

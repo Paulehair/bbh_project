@@ -19,10 +19,11 @@ class BookingType extends AbstractType
 	            'class'         => 'App\Entity\Cabin',
 	            'label'         => 'Cabin',
 	            'expanded'      => true,
-	            'multiple'      => true
+	            'multiple'      => false
             ])
             ->add('month')
             ->add('reference')
+            ->add('guestQuantity')
 	        ->getForm();
         ;
     }
