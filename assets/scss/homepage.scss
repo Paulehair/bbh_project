@@ -1,0 +1,34 @@
+// RESET SCSS
+@import "./global/reset";
+// MIXINS
+@import "./mixins/breakpoints";
+// VARIABLES
+@import "./global/variables";
+// COMPONENTS
+@import "./components/homepage";
+// @import "./components/screen";
+
+/* FONTS */
+@font-face {
+  font-family: 'kraft_monoregular';
+  src: url('../font/kraftmono-webfont.woff2') format('woff2'), url('../font/kraftmono-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'kraft_monoitalic';
+  src: url('../font/kraftmono-italic-webfont.woff2') format('woff2'), url('../font/kraftmono-italic-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'rajdhanisemibold';
+  src: url('../font/rajdhani-semibold-webfont.woff2') format('woff2'), url('../font/rajdhani-semibold-webfont.woff') format('woff');
+}
+
+html {
+  font-size: 62.5%;
+  width: 100%;
+}
+
+body {
+  background: $mainBkgd;
+}
