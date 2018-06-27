@@ -41,7 +41,42 @@
 
     {% block body %}
     {% endblock %}
-        {% block javascripts %}{% endblock %}
+    <footer class="Footer">
+    <div class="Footer_container">
+        <nav class="Footer_nav">
+          
+            <ul class="Nav">
+              <span class="Nav_title">Dionysos</span>
+
+              <div class="Nav_container">
+                  <li class="Nav_item"><a class="Nav_link" href="">Nous contacter</a></li>
+                  <li class="Nav_item"><a class="Nav_link" href="">carrière</a></li>
+                  <li class="Nav_item"><a class="Nav_link" href="">Presse</a></li>
+                  <li class="Nav_item"><a class="Nav_link" href="">Règles</a></li>
+                  <li class="Nav_item"><a class="Nav_link" href="">Aides</a></li>
+              </div>
+
+            </ul>
+
+          </nav>
+
+          <nav class="Footer_nav">
+              <ul class="Nav">
+                <span class="Nav_title">Découvrir</span>
+                <div class="Nav_container">
+                    <li class="Nav_item"><a class="Nav_link" href="">L'experience</a></li>
+                    <li class="Nav_item"><a class="Nav_link" href="">Sécurité</a></li>
+                    <li class="Nav_item"><a class="Nav_link" href="">Prérequis</a></li>
+                    <li class="Nav_item"><a class="Nav_link" href="">Vie à bord</a></li>
+                </div>
+              </ul>
+            </nav>
+    </div>
+    </footer>
+    {% block javascripts %}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+      <script src="/assets/js/main.js" type="text/javascript">
+    {% endblock %}
     </body>
 </html>
 
