@@ -11,7 +11,6 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  * @ORM\Table(name="app_users")
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  * @UniqueEntity(fields="email", message="Email already taken")
- * @UniqueEntity(fields="username", message="Username already taken")
  */
 class User implements UserInterface, \Serializable
 {
@@ -57,10 +56,17 @@ class User implements UserInterface, \Serializable
 	 */
 	private $isActive;
 
+	/**
+	 * @ORM\Column(name="roles", type="string", length=100, options={"default" : "ROLE_USER"})
+	 */
+	private $roles;
+
 	public function __construct()
 	{
 		$this->isActive = true;
-		$this->roles = array('ROLE_USER');
+		if (is_null($this->roles)) {
+			$this->roles = array('ROLE_USER');
+		}
 	}
 
 	public function getId()
@@ -144,9 +150,22 @@ class User implements UserInterface, \Serializable
 		return null;
 	}
 
-	public function getRoles()
-	{
-		return array('ROLE_USER');
+	/**
+	 * @return mixed
+	 */
+	public function getRoles() {
+		return $this->roles;
+	}
+
+	/**
+	 * @param mixed $roles
+	 *
+	 * @return User
+	 */
+	public function setRoles( $roles ) {
+		$this->roles = $roles;
+
+		return $this;
 	}
 
 	public function eraseCredentials()
@@ -168,7 +187,6 @@ class User implements UserInterface, \Serializable
 	{
 		list (
 			$this->id,
-			$this->username,
 			$this->password,
 			) = unserialize($serialized, ['allowed_classes' => false]);
 	}

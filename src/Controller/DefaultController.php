@@ -12,6 +12,7 @@ class DefaultController extends Controller
 	{
 		return new Response("Hello");
 	}
+
 	/**
 	 * @Route("/admin")
 	 */
