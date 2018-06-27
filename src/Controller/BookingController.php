@@ -17,7 +17,7 @@ use Symfony\Component\Validator\Validator\ValidatorInterface;
  */
 class BookingController extends Controller
 {
-    /**
+    /** @
      * @Route("/", name="booking_index", methods="GET")
      */
     public function index(BookingRepository $bookingRepository): Response
@@ -41,7 +41,7 @@ class BookingController extends Controller
             $em->persist($booking);
             //$em->flush();
 
-            return $this->redirectToRoute('user_registration');
+            return $this->redirectToRoute('cabin_show');
         }
 
         return $this->render('booking/new.html.twig', [
@@ -93,3 +93,4 @@ class BookingController extends Controller
         return $this->redirectToRoute('booking_index');
     }
 }
+
