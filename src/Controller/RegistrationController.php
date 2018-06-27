@@ -19,7 +19,7 @@ class RegistrationController extends Controller
 		// 1) build the form
 		$user = new User();
 		$form = $this->createForm(UserType::class, $user);
-
+		$user->setRoles('ROLE_USER');
 		// 2) handle the submit (will only happen on POST)
 		$form->handleRequest($request);
 		if ($form->isSubmitted() && $form->isValid()) {
@@ -36,7 +36,7 @@ class RegistrationController extends Controller
 			// ... do any other work - like sending them an email, etc
 			// maybe set a "flash" success message for the user
 
-			return $this->redirectToRoute('booking_show');
+			return $this->redirectToRoute('login');
 		}
 
 		return $this->render(

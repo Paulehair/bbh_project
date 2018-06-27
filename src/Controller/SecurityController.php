@@ -31,11 +31,10 @@ class SecurityController extends Controller
 
 		// last username entered by the user
 		$lastUsername = $authenticationUtils->getLastUsername();
-
 		return $this->render('security/login.html.twig', array(
 			'last_username' => $lastUsername,
 			'error'         => $error,
-			'sessid'        => $request->getSession()->getId(),
+			'sessid'        => $request->getSession()->get('current'),
 		));
 	}
 
@@ -44,11 +43,6 @@ class SecurityController extends Controller
 	 */
 	public function loginCheckAction(Request $request, Booking $booking, User $user)
 	{
-		/**
-		$sessid = $booking->getSessid();
-		if($sessid == $request->getSession()->getId()) {
-			$booking->setUser($user);
-		}**/
 		// this controller will not be executed,
 		// as the route is handled by the Security system
 	}

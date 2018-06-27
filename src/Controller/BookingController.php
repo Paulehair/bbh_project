@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use Symfony\Component\HttpFoundation\Session\SessionBagInterface;
 use App\Entity\Booking;
 use App\Form\BookingType;
 use App\Repository\BookingRepository;
@@ -29,7 +28,7 @@ class BookingController extends Controller
     /**
      * @Route("/new", name="booking_new", methods="GET|POST")
      */
-    public function new(Request $request, ValidatorInterface $validator, CabinRepository $cabinRepository, SessionBagInterface $bag): Response
+    public function new(Request $request, ValidatorInterface $validator, CabinRepository $cabinRepository): Response
     {
         $booking = new Booking();
         $form = $this->createForm(BookingType::class, $booking);
@@ -41,8 +40,8 @@ class BookingController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($booking);
             $em->flush();
-            $bag = $this->$form;
-	        $request->getSession()->registerBag($bag);
+	        $newId = $booking->getId();
+	        $request->getSession()->set('current', $newId);
             return $this->redirectToRoute('login');
         }
 
@@ -94,5 +93,25 @@ class BookingController extends Controller
 
         return $this->redirectToRoute('booking_index');
     }
+
+	/**
+	 * @Route("/{id}/edit", name="booking_edit", methods="GET|POST")
+	 */
+	public function addUser(Request $request, Booking $booking): Response
+	{
+		$form = $this->createForm(BookingType::class, $booking);
+		$form->handleRequest($request);
+
+		if ($form->isSubmitted() && $form->isValid()) {
+			$this->getDoctrine()->getManager()->flush();
+
+			return $this->redirectToRoute('booking_edit', ['id' => $booking->getId()]);
+		}
+
+		return $this->render('booking/edit.html.twig', [
+			'booking' => $booking,
+			'form' => $form->createView(),
+		]);
+	}
 }
 
