@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
@@ -41,6 +42,25 @@ class Booking
      * 
      */
     private $reference;
+
+	/**
+	 * @ORM\Column(type="string", length=120)
+	 *
+	 */
+	private $sessid;
+
+	public function setSessId(string $sessid)
+	{
+		$this->sessid = $sessid;
+		return $this;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getSessid() {
+		return $this->sessid;
+	}
 
     public function getId()
     {
