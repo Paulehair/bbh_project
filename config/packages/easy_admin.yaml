@@ -4,3 +4,4 @@ easy_admin:
         - App\Entity\Booking
         - App\Entity\Cabin
         - App\Entity\Month
+        - App\Entity\Planet
