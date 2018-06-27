@@ -7,13 +7,9 @@ use App\Form\BookingType;
 use App\Repository\BookingRepository;
 use App\Repository\CabinRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Serializer\Encoder\JsonEncoder;
-use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
-use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 /**
@@ -27,19 +23,6 @@ class BookingController extends Controller
     public function index(BookingRepository $bookingRepository): Response
     {
         return $this->render('booking/index.html.twig', ['bookings' => $bookingRepository->findAll()]);
-/**
-        $myBookings = $bookingRepository->findAll();
-
-	    $encoders = [new JsonEncoder()];
-	    $normalizer = new ObjectNormalizer();
-	    $normalizer->setCircularReferenceLimit(2);
-	    $normalizer->setCircularReferenceHandler(function ($object) {
-		    return $object->getId();
-	    });
-
-	    $serializer = new Serializer([$normalizer], $encoders);
-	    header("Access-Control-Allow-Origin: *");
-        return new JsonResponse($serializer->serialize($myBookings, 'json'), 200, [], true);**/
     }
 
     /**
@@ -47,16 +30,10 @@ class BookingController extends Controller
      */
     public function new(Request $request, ValidatorInterface $validator, CabinRepository $cabinRepository): Response
     {
-    	/**
-    	$book = $request->getContent();
-    	$bookObject = $serialize->deserialize($book, Booking::class);
-    	$errors = $validator->validate($bookObject);
-**/
-
-
         $booking = new Booking();
         $form = $this->createForm(BookingType::class, $booking);
         $form->handleRequest($request);
+        dump($this->getUser());
 
         if ($form->isSubmitted() && $form->isValid()) {
         	$booking->setReference(uniqid());
