@@ -70,10 +70,7 @@ class User implements UserInterface, \Serializable
 	public function __construct()
 	{
 		$this->isActive = true;
-		if (is_null($this->roles)) {
-			$this->roles = array('ROLE_USER');
-		}
-  $this->bookings = new ArrayCollection();
+        $this->bookings = new ArrayCollection();
 	}
 
 	public function getId()
@@ -161,7 +158,7 @@ class User implements UserInterface, \Serializable
 	 * @return mixed
 	 */
 	public function getRoles() {
-		return $this->roles;
+		return $this->roles = array('ROLE_USER');
 	}
 
 	/**
@@ -185,7 +182,10 @@ class User implements UserInterface, \Serializable
 		return serialize(array(
 			$this->id,
 			$this->password,
-
+			$this->firstName,
+			$this->lastName,
+			$this->email,
+			$this->isActive,
 		));
 	}
 
@@ -195,6 +195,10 @@ class User implements UserInterface, \Serializable
 		list (
 			$this->id,
 			$this->password,
+			$this->firstName,
+			$this->lastName,
+			$this->email,
+			$this->isActive,
 			) = unserialize($serialized, ['allowed_classes' => false]);
 	}
 
@@ -225,5 +229,9 @@ class User implements UserInterface, \Serializable
 	        }
 	    }
 	    return $this;
+	}
+
+	public function __toString() {
+		return $this->getEmail();
 	}
 }

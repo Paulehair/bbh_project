@@ -15,7 +15,7 @@ class DefaultController extends Controller
 	}
 
 	/**
-	 * @Route("/admin")
+	 * @Route("/administration")
 	 */
 	public function admin()
 	{

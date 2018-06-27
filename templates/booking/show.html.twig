@@ -8,12 +8,23 @@
         <tbody>
             <tr>
                 <th>Id</th>
-                <th>Name</th>
-
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Réservation N°</th>
+                <th>Cabine</th>
+                <th>Nombre de passagers</th>
+                <th>Mois</th>
+                <th>Prix</th>
             </tr>
             <tr>
                 <td>{{ booking.id }}</td>
-                <td>{{ booking.cabin }}</td>
+                <td>{{ booking.user.firstName }}</td>
+                <td>{{ booking.user.lastName }}</td>
+                <td>{{ booking.reference }}</td>
+                <td>{{ booking.cabin.name }}</td>
+                <td>{{ booking.guestQuantity }}</td>
+                <td>{{ booking.month }}</td>
+                <td>{{ booking.cabin.price }} €</td>
             </tr>
         </tbody>
     </table>
