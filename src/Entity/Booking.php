@@ -49,10 +49,10 @@ class Booking
 	 */
 	private $sessid;
 
- /**
-  * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="bookings")
-  */
- private $user;
+	/**
+	 * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="bookings")
+	 */
+	private $user;
 
 	public function setSessId(string $sessid)
 	{

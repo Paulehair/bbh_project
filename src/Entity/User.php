@@ -197,30 +197,33 @@ class User implements UserInterface, \Serializable
 			$this->password,
 			) = unserialize($serialized, ['allowed_classes' => false]);
 	}
- /**
-  * @return Collection|Booking[]
-  */
- public function getBookings(): Collection
- {
-     return $this->bookings;
- }
- public function addBooking(Booking $booking): self
- {
-     if (!$this->bookings->contains($booking)) {
-         $this->bookings[] = $booking;
-         $booking->setUser($this);
-     }
-     return $this;
- }
- public function removeBooking(Booking $booking): self
- {
-     if ($this->bookings->contains($booking)) {
-         $this->bookings->removeElement($booking);
-         // set the owning side to null (unless already changed)
-         if ($booking->getUser() === $this) {
-             $booking->setUser(null);
-         }
-     }
-     return $this;
- }
+
+	/**
+	 * @return Collection|Booking[]
+	 */
+	public function getBookings(): Collection
+	{
+	    return $this->bookings;
+	}
+
+	public function addBooking(Booking $booking): self
+	{
+	    if (!$this->bookings->contains($booking)) {
+	        $this->bookings[] = $booking;
+	        $booking->setUser($this);
+	    }
+	    return $this;
+	}
+
+	public function removeBooking(Booking $booking): self
+	{
+	    if ($this->bookings->contains($booking)) {
+	        $this->bookings->removeElement($booking);
+	        // set the owning side to null (unless already changed)
+	        if ($booking->getUser() === $this) {
+	            $booking->setUser(null);
+	        }
+	    }
+	    return $this;
+	}
 }
