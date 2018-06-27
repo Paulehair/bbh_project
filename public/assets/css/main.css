@@ -556,48 +556,48 @@
         height: auto; }
 
 .experience {
-  margin-top: 2rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  border-top: 1px solid black;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  background-image: url(../img/moon.png);
+  width: 90%;
+  margin: 0 auto;
+  border-top: 1px solid #A39B94;
+  border-left: 1px solid #A39B94;
+  border-right: 1px solid #A39B94;
+  background-image: url("../img/moon.png");
   background-repeat: no-repeat;
-  background-size: contain;
   height: 70rem; }
-  @media (min-width: 768px) {
-    .experience {
-      background-position: right; } }
   .experience-container {
-    background-image: url(../img/spaceship.png);
+    background-image: url("../img/spaceship.png");
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center;
-    margin-left: 4.5rem;
-    padding-top: 40rem; }
+    width: 85%;
+    margin: 0 auto;
+    background-size: 100%;
+    background-position: 20% 20%;
+    padding-top: 250px; }
     @media (min-width: 768px) {
       .experience-container {
-        background-image: url();
-        margin-left: 15rem; } }
+        padding-top: 200px;
+        background-image: url(""); } }
   .experience-title {
-    font-size: 4rem;
+    font-size: 40px;
     font-family: "rajdhanisemibold";
     margin-bottom: 3.2rem; }
   .experience-paragraph {
-    font-size: 1.6rem;
+    font-size: 14px;
+    width: 80%;
     margin-bottom: 4.2rem;
     font-family: "kraft_monoregular";
     color: #a39b94; }
     @media (min-width: 768px) {
       .experience-paragraph {
-        background-image: url();
-        margin-left: 5.5rem; } }
+        background-image: url("");
+        margin-left: 5.5rem;
+        letter-spacing: 1px;
+        width: 60%; } }
   .experience-btn {
     width: 60%;
     height: 6%;
     margin: 15% auto 0;
-    padding: 1em 2em;
+    padding: 15px 35px;
     background: linear-gradient(-145deg, rgba(153, 70, 200, 0.8), rgba(244, 43, 87, 0.8));
     font-size: 1.4rem;
     font-family: "kraft_monoregular";
@@ -607,17 +607,14 @@
     text-decoration: none; }
 
 .spaceship {
-  margin-left: 2rem;
-  margin-right: 2rem;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  width: 90%;
+  margin: 0 auto;
+  border-left: 1px solid #A39B94;
+  border-right: 1px solid #A39B94;
   height: 70rem; }
   .spaceship-container {
-    margin-left: 4.5rem;
-    padding-top: 8rem; }
-    @media (min-width: 768px) {
-      .spaceship-container {
-        margin-left: 15rem; } }
+    width: 85%;
+    margin: 0 auto; }
   .spaceship-title {
     font-size: 4.5rem;
     font-family: "rajdhanisemibold"; }
@@ -626,10 +623,11 @@
     margin-left: 4rem;
     margin-bottom: 8rem;
     font-family: "kraft_monoregular";
-    font-size: 1.6rem;
+    line-height: 120%;
+    font-size: 14px;
     color: #a39b94; }
   .spaceship-carac {
-    background-image: url(../img/traits.png);
+    background-image: url("../img/traits.png");
     background-repeat: no-repeat;
     background-size: contain;
     margin-top: 10rem;
@@ -654,14 +652,15 @@
     padding-top: 2rem;
     margin-left: 4.5rem;
     margin-bottom: 3rem;
-    font-size: 1.8rem;
+    font-size: 24px;
     font-family: "rajdhanisemibold";
     color: #f0ece1; }
   .activity-container-paragraph {
     margin-top: 4rem;
     margin-left: 4.5rem;
     margin-bottom: 4rem;
-    font-size: 1.6rem;
+    font-size: 14px;
+    line-height: 120%;
     font-family: "kraft_monoregular";
     color: #f0ece1; }
   .activity-wrapper-second {
@@ -710,6 +709,131 @@
     text-align: center;
     cursor: pointer;
     text-decoration: none; }
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:after, blockquote:before {
+  content: '';
+  content: none; }
+
+q:after, q:before {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
 
 .detailsactivity-container {
   background-image: url(../img/allstars.jpg);
