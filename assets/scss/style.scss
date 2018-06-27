@@ -42,3 +42,17 @@ body {
 .boxShad {
   box-shadow: $boxShad;
 }
+
+.flex {
+  display: flex;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: $grey;
+}

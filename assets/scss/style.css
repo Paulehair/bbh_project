@@ -141,11 +141,20 @@ table {
   display: flex;
   width: 80%;
   height: 10%;
-  margin: 1.5% auto;
+  margin: 4% auto;
 }
 
 .Header_logo {
   margin: 1.4% 0 0 0;
+  font-family: "rajdhanisemibold";
+  font-size: 20px;
+}
+
+@media (min-width: 1024px) {
+  .Header_logo {
+    margin: 2.5% 0 0 3%;
+    height: fit-content;
+  }
 }
 
 .Header_burger {
@@ -156,26 +165,67 @@ table {
 
 @media (min-width: 768px) {
   .Header_burger {
+    margin-left: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Header_burger {
     display: none;
   }
 }
 
 .Header_nav {
   display: none;
+  flex-direction: column;
+  background: #f0ece1;
+  width: 100%;
+  height: 100vh;
+  padding-top: 5em;
+  position: absolute;
+  top: 3em;
+  left: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .Header_nav {
     width: 100%;
+    height: 106%;
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
+    padding: 0 2%;
+    position: unset;
+    top: unset;
+    left: unset;
+    margin: 0 0 0 2%;
   }
 }
 
 .Header_nav_box {
+  margin: 5% 0 0 5%;
   font-family: "rajdhanisemibold";
   font-size: 1.5em;
-  height: 150%;
+  width: 132.66px;
+}
+
+@media (min-width: 415px) {
+  .Header_nav_box {
+    margin: 3% 20%;
+  }
+}
+
+@media (min-width: 768px) {
+  .Header_nav_box {
+    margin: 3% auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Header_nav_box {
+    margin: 0 auto;
+    height: 150%;
+  }
 }
 
 .Header_nav_box:first-child:hover .Header_nav_box_menu {
@@ -184,14 +234,30 @@ table {
 }
 
 .Header_nav_box_menu {
+  display: none;
+  position: absolute;
+  top: 8%;
+  right: 7%;
   margin: 1.5em 0 0 0;
-  border: 1px solid #a39b94;
-  border-top: none;
   color: #a39b94;
-  background: #f0ece1;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.5s ease;
+}
+
+@media (min-width: 768px) {
+  .Header_nav_box_menu {
+    right: 17%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Header_nav_box_menu {
+    margin: 0 0;
+    position: unset;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: unset;
+    background: #f0ece1;
+  }
 }
 
 .Header_nav_box_menu:hover {
@@ -217,6 +283,7 @@ table {
 .Header_nav_box_item {
   color: #383d3b;
   cursor: pointer;
+  width: max-content;
 }
 
 .Header_nav_box_square {
@@ -335,7 +402,7 @@ table {
 }
 
 .Planet_content {
-  padding-top: 16em;
+  padding-top: 18%;
 }
 
 .Planet_content_title {
@@ -424,5 +491,19 @@ body {
 
 .boxShad {
   box-shadow: 0 0 80px #381e55;
+}
+
+.flex {
+  display: flex;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: #a39b94;
 }
 /*# sourceMappingURL=style.css.map */
