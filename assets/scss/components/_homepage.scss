@@ -1,0 +1,181 @@
+.experience{
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  background-image: url(../img/moon.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 70rem;
+  @include breakpoint(tablet) {
+  background-position: right;
+  }
+  &-container{
+    background-image: url(../img/spaceship.png);
+    background-repeat: no-repeat;
+    background-size :contain;
+    background-position: center;
+    margin-left: 4.5rem;
+    padding-top: 40rem;
+    @include breakpoint(tablet) {
+    background-image: url();
+    margin-left: 15rem;
+    }
+  }
+  &-title{
+    font-size: 4rem;
+    font-family: $radjhani;
+    margin-bottom: 3.2rem;
+  }
+  &-paragraph{
+    font-size: 1.6rem;
+    margin-bottom: 4.2rem;
+    font-family: $kraftMono;
+    color: $grey;
+    @include breakpoint(tablet) {
+    background-image: url();
+    margin-left: 5.5rem;
+    }
+  }
+  &-btn{
+    width: 60%;
+    height: 6%;
+    margin: 15% auto 0;
+    padding: 1em 2em;
+    background: linear-gradient(-145deg, rgba(153, 70, 200, 0.8), rgba(244, 43, 87, 0.8));
+    font-size: 1.4rem;
+    font-family: $kraftMono;
+    color: #f0ede2;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.spaceship{
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  height: 70rem;
+  &-container{
+    margin-left: 4.5rem;
+    padding-top: 8rem;
+    @include breakpoint(tablet) {
+    margin-left: 15rem;
+    }
+  }
+  &-title{
+    font-size: 4.5rem;
+    font-family: $radjhani;
+  }
+  &-paragraph{
+    margin-top: 8rem;
+    margin-left: 4rem;
+    margin-bottom: 8rem;
+    font-family: $kraftMono;
+    font-size: 1.6rem;
+    color: $grey;
+  }
+  &-carac{
+    background-image: url(../img/traits.png);
+    background-repeat: no-repeat;
+    background-size :contain;
+    margin-top: 10rem;
+    font-family: $kraftMono;
+    font-size: 1.6rem;
+  }
+  &-btn{
+    width: 60%;
+    height: 6%;
+    margin: 15% auto 0;
+    padding: 1em 2em;
+    background: linear-gradient(-145deg, rgba(153, 70, 200, 0.8), rgba(244, 43, 87, 0.8));
+    font-size: 1.4rem;
+    font-family: $kraftMono;
+    color: #f0ede2;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.activity{
+  background: $red;
+  &-container{
+    &-title{
+      padding-top: 2rem;
+      margin-left: 4.5rem;
+      margin-bottom: 3rem;
+      font-size: 1.8rem;
+      font-family: $radjhani;
+      color: $white;
+    }
+    &-paragraph{
+      margin-top: 4rem;
+      margin-left: 4.5rem;
+      margin-bottom: 4rem;
+      font-size: 1.6rem;
+      font-family: $kraftMono;
+      color: $white;
+    }
+  }
+
+  &-wrapper{
+    &-second{
+      margin-top: 7rem;
+      margin-bottom: 7rem;
+      margin-left: 4.5rem;
+      display: flex;
+      justify-content: space-around;
+      @include breakpoint(tablet) {
+        display: flex;
+        flex-direction: row;
+      }
+    &-img{
+      margin-right: 4rem;
+      height: 10rem;
+      width: 10rem;
+      @include breakpoint(tablet) {
+        height: 30rem;
+        width: 30rem;
+      }
+      @include breakpoint(laptop) {
+        height: 45rem;
+        width: 45rem;
+      }
+    }
+      &-content{
+        &-title{
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+          font-family: $radjhani;
+          font-size: 1.4rem;
+          color: $white;
+        }
+        &-paragraph{
+          font-family: $kraftMono;
+          font-size: 1.2rem;
+          color: $white;
+        }
+      }
+    }
+  }
+  &-btn{
+    display: flex;
+    justify-content: center;
+    width: 11rem;
+    height: 1rem;
+    margin: 15% auto 0;
+    padding: 1em 2em;
+    background-color: $white;
+    font-size: 1.4rem;
+    font-family: $kraftMono;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
