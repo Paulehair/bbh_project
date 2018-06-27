@@ -1,0 +1,38 @@
+// RESET SCSS
+// MIXINS
+@import "./global/breakpoints";
+@import "./global/variables";
+@import "./global/breakpoints";
+
+// COMPONENTS
+// @import "./components/map";
+// @import "./components/card";
+// @import "./components/experience";
+// @import "./components/fiche";
+@import "./components/final";
+
+/* FONTS */
+@font-face {
+  font-family: 'kraft_monoregular';
+  src: url('../font/kraftmono-webfont.woff2') format('woff2'), url('../font/kraftmono-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'kraft_monoitalic';
+  src: url('../font/kraftmono-italic-webfont.woff2') format('woff2'), url('../font/kraftmono-italic-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'rajdhanisemibold';
+  src: url('../font/rajdhani-semibold-webfont.woff2') format('woff2'), url('../font/rajdhani-semibold-webfont.woff') format('woff');
+}
+
+body {
+  height: 100vh;
+  background: $mainBkgd;
+}
+
+.container {
+  overflow: hidden;
+  height: 100%;
+}
