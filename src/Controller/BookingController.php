@@ -33,15 +33,15 @@ class BookingController extends Controller
         $booking = new Booking();
         $form = $this->createForm(BookingType::class, $booking);
         $form->handleRequest($request);
-        dump($this->getUser());
+        //dump($this->getUser());
 
         if ($form->isSubmitted() && $form->isValid()) {
         	$booking->setReference(uniqid());
             $em = $this->getDoctrine()->getManager();
             $em->persist($booking);
-            $em->flush();
+            //$em->flush();
 
-            return $this->redirectToRoute('booking_index');
+            return $this->redirectToRoute('user_registration');
         }
 
         return $this->render('booking/new.html.twig', [
