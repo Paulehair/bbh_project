@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Booking;
+use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -41,8 +42,13 @@ class SecurityController extends Controller
 	/**
 	 * @Route("/login_check", name="login_check")
 	 */
-	public function loginCheckAction()
+	public function loginCheckAction(Request $request, Booking $booking, User $user)
 	{
+		/**
+		$sessid = $booking->getSessid();
+		if($sessid == $request->getSession()->getId()) {
+			$booking->setUser($user);
+		}**/
 		// this controller will not be executed,
 		// as the route is handled by the Security system
 	}

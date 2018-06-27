@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use Symfony\Component\HttpFoundation\Session\SessionBagInterface;
 use App\Entity\Booking;
 use App\Form\BookingType;
 use App\Repository\BookingRepository;
@@ -28,7 +29,7 @@ class BookingController extends Controller
     /**
      * @Route("/new", name="booking_new", methods="GET|POST")
      */
-    public function new(Request $request, ValidatorInterface $validator, CabinRepository $cabinRepository): Response
+    public function new(Request $request, ValidatorInterface $validator, CabinRepository $cabinRepository, SessionBagInterface $bag): Response
     {
         $booking = new Booking();
         $form = $this->createForm(BookingType::class, $booking);
@@ -39,8 +40,9 @@ class BookingController extends Controller
         	$booking->setSessId($request->getSession()->getId());
             $em = $this->getDoctrine()->getManager();
             $em->persist($booking);
-           // $em->flush();
-
+            $em->flush();
+            $bag = $this->$form;
+	        $request->getSession()->registerBag($bag);
             return $this->redirectToRoute('login');
         }
 
@@ -54,7 +56,7 @@ class BookingController extends Controller
     /**
      * @Route("/{id}", name="booking_show", methods="GET")
      */
-    public function show(Booking $booking): Response
+    public function show(Request $request, Booking $booking): Response
     {
         return $this->render('booking/show.html.twig', ['booking' => $booking]);
     }
