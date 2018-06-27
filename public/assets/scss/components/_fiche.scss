@@ -1,0 +1,154 @@
+.Fiche {
+  width: 90%;
+  margin: 50px auto;
+  border: solid 1px #A39B94;
+
+  &_Card {
+    display: block;
+    width: 90%;
+    margin: 100px auto;
+    @include breakpoint(tablet) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &_Item {
+      display: flex;
+      height: 150px;
+      margin-top: 30px;
+      width: 100%;
+      background-color: #F9F5EA;
+      @include breakpoint(tablet) {
+        display: block;
+        width: 30%;
+        height: 300px;
+      }
+
+      & > p {
+        padding-top: 15px;
+        width: 50%;
+
+        &:nth-child(1) {
+          width: 40%;
+          font-family: $kraftMono;
+          text-align: center;
+          @include breakpoint(tablet) {
+            width: 100%;
+          }
+        }
+
+        &:nth-child(2) {
+          color: #A39B94;
+          width: 60%;
+          font-family: $kraftMono;
+          font-size: 13Px;
+          line-height: 120%;
+          padding-right: 20px;
+          @include breakpoint(tablet) {
+            width: 80%;
+            padding-top: 50px;
+            padding-left: 15%;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  &_Att {
+    display: block;
+    width: 90%;
+    margin: 100px auto;
+
+    &_Txt {
+      font-family: $kraftMono;
+      color: #A39B94;
+    }
+
+    &_Title {
+      font-family: $kraftMono;
+    }
+
+    &_Line {
+      display: flex;
+      align-items: flex-end;
+
+      & > div {
+        margin-top: 10px;
+        display: flex;
+        align-items: flex-end;
+        width: 80px;
+        background-color: #4A4D4C;
+        height: 2px;
+      }
+    }
+
+    &_Item {
+      justify-content: space-between;
+      display: flex;
+      width: 60%;
+      margin-bottom: 25px;
+      @include breakpoint(tablet) {
+        width: 30%;
+      }
+    }
+  }
+
+  &_Dec {
+    width: 90%;
+    margin: 0 auto;
+
+    & > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &_Title {
+    display: block;
+    width: 90%;
+    margin: 50px auto;
+    @include breakpoint(tablet) {
+      margin-top: 100Px;
+    }
+
+    &_Under {
+      width: 5px;
+      background-color: #D1CEC5;
+      height: 80px;
+    }
+
+    &_Line {
+      width: 100%;
+      height: 5px;
+      background-color: #D1CEC5;
+      @include breakpoint(tablet) {
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+    }
+
+    &_Content {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      align-items: center;
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+
+      & > svg {
+        width: 100px;
+      }
+
+      & > h6 {
+        font-size: 32Px;
+        width: 40%;
+        font-family: $radjhani;
+        @include breakpoint(tablet) {
+          font-size: 45px;
+          width: 30%;
+        }
+      }
+    }
+  }
+}

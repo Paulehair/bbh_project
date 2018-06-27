@@ -1,15 +1,23 @@
 // RESET SCSS
-// MIXINS
-@import "./global/breakpoints";
-@import "./global/variables";
-@import "./global/breakpoints";
 
+// MIXINS
+@import "./global/variables";
+@import "./mixins/breakpoints";
 // COMPONENTS
-// @import "./components/map";
-// @import "./components/card";
-// @import "./components/experience";
-// @import "./components/fiche";
+@import "./components/header";
+@import "./components/map";
+@import "./components/card";
+@import "./components/planetdesc";
+@import "./components/experience";
+@import "./components/fiche";
 @import "./components/final";
+@import "./components/homepage";
+@import "./components/activitydesc";
+@import "./components/cabindetails";
+@import "./components/cabinlist";
+@import "./components/loginregister";
+@import "./components/footer";
+
 
 /* FONTS */
 @font-face {
@@ -28,11 +36,33 @@
 }
 
 body {
+  width: 100%;
   height: 100vh;
   background: $mainBkgd;
 }
 
 .container {
   overflow: hidden;
-  height: 100%;
+  width: 80%;
+  border: 1px solid $darkgrey;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: $grey;
+}
+
+html {
+  font-size: 62.5%;
+  width: 100%;
 }

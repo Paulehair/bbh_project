@@ -1,0 +1,137 @@
+.CabinList{
+    width: 90%;
+    display: block;
+    margin: 20px auto;
+    border: solid 1px #A39B94;
+    padding: 20px;
+    box-sizing: border-box;
+    @include breakpoint(tablet){
+        padding: 80px;
+    }
+    &_main{
+        font-family: $radjhani;
+    }
+}
+.CabinForm{
+    margin-top: 50px;
+    @include breakpoint(tablet){
+        display: flex;
+        justify-content: space-between;
+    }
+    &_container{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        @include breakpoint(tablet){
+            width: 300px;
+        }
+    }
+    &_item{
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        @include breakpoint(tablet){
+            flex-direction: row;
+            width: 500px;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &_icon{
+        width: 17px;
+        height: 17px; 
+        position: absolute;
+        right: 20px;
+        fill: #383D3B;
+        top: 50%;
+    }
+    &_label{
+        font-family: $kraftMono;
+        font-size: 14px;
+        color: #383D3B;
+        @include breakpoint(tablet){
+            height: 18px;
+        }
+    }
+    &_select{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        height: 50px;
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid #383D3B;
+        background: none;
+        color: #95938C;
+        font-family: $kraftMono;
+        box-sizing: border-box;
+        padding: 0 20px;
+        width: 100%;
+      
+    }
+}
+.ResultsContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    @include breakpoint(laptop){
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.CabinCard{
+    border: 1px solid #979797;
+    margin-top: 43px;
+    @include breakpoint(laptop){
+        width: 350px;
+        margin-top: 0px;
+    }
+}
+.CardThumbnail{
+    position: relative;
+    &_img{
+        width: 100%;
+    }
+    &_price{
+        position: absolute;
+        color: #ffffff;
+        font-family: $kraftMono;
+        bottom: 20px;
+        left: 20px;
+    }
+}
+.CabinInfo{
+    box-sizing: border-box;
+    padding: 20px;
+    &_upper{
+        display: flex;
+        justify-content: space-between;
+        font-family: $kraftMono;
+        font-size: 14px;
+    }
+    &_icon{
+       width: 12px;
+       height: 12px;
+       fill: #95938C; 
+       margin-right: 15px; 
+    }
+    &_text{
+        font-family: $kraftMono;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #a39b94;
+        margin-top: 40px;
+    }
+   
+    &_name{
+        font-family: $radjhani;
+        font-size: 16px; 
+    }
+    &_btnContainer{
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+}
