@@ -3,68 +3,56 @@
 {% block title %}Planet index{% endblock %}
 
 {% block body %}
+
     <section class="container">
         <section class="Map">
-            <div data-planet="venus" class="Map_planet_0 t"></div>
-            <div data-planet="mars" class="Map_planet_1 t"></div>
-            <div data-planet="jupiter" class="Map_planet_2 t"></div>
+            <h2 class="Map_title">Explorer le secteur</h2>
+            <img src="/assets/img/p0.png" alt="planets" class="Map_img" title="planets">
         </section>
 
         <section class="Card">
+            <div class="Card_slider">
         {% for planet in planets %}
-            <div data-planet="{{ planet.name }}" class="Card_ctnr">
-                <h2 class="Card_ctnr_title">{{ planet.name }}</h2>
-                <p class="Card_ctnr_txt">{{ planet.description }}</p>
-                <p class="Card_ctnr_btn"><a href="{{ path('planet_show', {'id': planet.id}) }}">Voir plus</a></p>
+            <div data-planet="{{ planet.name }}" class="Card_slider_ctnr">
+                <h2 class="Card_slider_ctnr_title">{{ planet.name }}</h2>
+                <p class="Card_slider_ctnr_txt">{{ planet.description }}</p>
+                <p class="Card_slider_ctnr_btn"><a href="{{ path('planet_show', {'id': planet.id}) }}">Voir plus</a></p>
             </div>
         {% else %}
             <tr>
                 <td colspan="7">no records found</td>
             </tr>
         {% endfor %}
+             </div>
         </section>
-        </tbody>
     </section>
 {% endblock %}
+
 {% block javascripts %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
     <script type="text/javascript">
         const ui = {
-            planets: document.querySelectorAll('.t'),
-            cards: document.querySelectorAll('.Card_ctnr'),
-            card: document.querySelectorAll('.Card')
-        }
+            cards: document.querySelectorAll('.Card_slider_ctnr'),
+            menu: document.querySelector('.Header_nav_box_menu'),
+            img: document.querySelector('.Map_img')
+        };
 
         const style = {
             boxShad: "0 0 80px rgba(56, 30, 85, 1)"
-        }
+        };
 
-        TweenMax.to(ui.planets, 4, {
-            y: 20,
+        // FLOAT ANIM
+        TweenMax.to(ui.img, 4, {
+            y: 30,
             yoyo: true,
             repeat: -1
         });
 
-        // Map
+        // MAP
         for (let i = 0; i < ui.cards.length; i++) {
             ui.cards[i].addEventListener('click', () => {
-                for (let a = 0; a < ui.planets.length; a++) {
-                if (ui.cards[i].dataset.planet ===  ui.planets[a].dataset.planet) {
-
-                    ui.planets[a].style.boxShadow = style.boxShad;
-                    ui.planets[a].style.width = "4em";
-                    ui.planets[a].style.height = "4em";
-
-                } else if (ui.planets[a].style.boxShadow = style.boxShad) {
-
-                    ui.planets[a].style.boxShadow = "";
-                    ui.planets[a].style.width = "3em";
-                    ui.planets[a].style.height = "3em";
-
-                }
-            }
+                ui.img.setAttribute("src", "assets/img/p" + i + ".png");
         });
         }
-
     </script>
 {% endblock %}
