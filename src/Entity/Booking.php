@@ -49,6 +49,11 @@ class Booking
 	 */
 	private $sessid;
 
+ /**
+  * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="bookings")
+  */
+ private $user;
+
 	public function setSessId(string $sessid)
 	{
 		$this->sessid = $sessid;
@@ -116,5 +121,17 @@ class Booking
 
     public function __toString() {
 	   return $this->getReference();
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
+
+        return $this;
     }
 }

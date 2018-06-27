@@ -39,9 +39,9 @@ class BookingController extends Controller
         	$booking->setSessId($request->getSession()->getId());
             $em = $this->getDoctrine()->getManager();
             $em->persist($booking);
-            $em->flush();
+           // $em->flush();
 
-            return $this->redirectToRoute('booking_index');
+            return $this->redirectToRoute('login');
         }
 
         return $this->render('booking/new.html.twig', [
