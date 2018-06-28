@@ -19,7 +19,7 @@
         <input type="hidden" name="_target_path" value="/account" />
         <input type="hidden" name="_target_path" value="{{ path('booking_show', { 'id': sessid }) }}"/>
     #}
-    <input type="hidden" name="_target_path" value="{{ path('booking_show', { 'id': sessid }) }}"/>
+    <input type="hidden" name="_target_path" value="{{ path('booking_show_by_ref') }}"/>
     <button type="submit">login</button>
     <a href="{{ path('user_registration') }}">S'inscrire</a>
 </form>

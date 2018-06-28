@@ -3,14 +3,18 @@
 namespace App\Controller;
 
 use App\Entity\Booking;
+use App\Entity\User;
 use App\Form\BookingType;
 use App\Repository\BookingRepository;
 use App\Repository\CabinRepository;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 /**
  * @Route("/booking")
@@ -40,8 +44,9 @@ class BookingController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($booking);
             $em->flush();
-	        $newId = $booking->getId();
-	        $request->getSession()->set('current', $newId);
+	        $request->getSession()->set('current', $booking->getId());
+	        $request->getSession()->set('current_ref', $booking->getReference());
+
             return $this->redirectToRoute('login');
         }
 
@@ -55,8 +60,40 @@ class BookingController extends Controller
     /**
      * @Route("/{id}", name="booking_show", methods="GET")
      */
-    public function show(Request $request, Booking $booking): Response
+    public function show(Request $request, int $id): Response
     {
+    	$bookingRepository = $this->getDoctrine()->getManager()->getRepository('App:Booking');
+	    $booking = $bookingRepository->findOneBy([
+	    	'id' => $id
+	    ]);
+		if (is_null($booking)) {
+			// @todo gerer la non existance du booking
+			// return $this->render('booking/error.html.twig', []);
+		}
+
+        return $this->render('booking/show.html.twig', ['booking' => $booking]);
+    }
+
+    /**
+     * @Route("/confirm_booking/", name="booking_show_by_ref", methods="GET")
+     * @Security("has_role('ROLE_USER')")
+     */
+    public function showPostLogin(Request $request): Response
+    {
+	    $user = $this->getUser();
+    	if (null === $user) {
+		    throw new AccessDeniedException('nope');
+	    }
+    	$bookingRepository = $this->getDoctrine()->getManager()->getRepository('App:Booking');
+	    $booking = $bookingRepository->findOneBy([
+	    	'reference' => $request->getSession()->get('current_ref')
+	    ]);
+	    $booking->setUser($user);
+		if (is_null($booking)) {
+			// @todo gerer la non existance du booking
+			// return $this->render('booking/error.html.twig', []);
+		}
+
         return $this->render('booking/show.html.twig', ['booking' => $booking]);
     }
 
