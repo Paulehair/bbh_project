@@ -17,6 +17,7 @@ for (let i = 0; i < ui.cards.length; i++) {
 // HEADER
 ui.burger.addEventListener('click', () => {
   ui.nav.classList.toggle('flex');
+  body.style.overflow = "hidden";
 });
 
 ui.roll.addEventListener('click', () => {

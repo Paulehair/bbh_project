@@ -1,5 +1,6 @@
 // RESET SCSS
-@import "./global/reset";
+
+
 
 // MIXINS
 @import "./global/variables";
@@ -16,9 +17,7 @@
 @import "./components/cabindetails";
 @import "./components/cabinlist";
 @import "./components/loginregister";
-@import "./components/ConfirmBooking";
 @import "./components/footer";
-@import "./components/activitylist";
 
 
 /* FONTS */
@@ -42,12 +41,11 @@ body {
   height: 100vh;
 
   background: $mainBkgd;
-  overflow-x: hidden;
 }
 
 .container {
   overflow: hidden;
-  width: 90%;
+  width: 80%;
   border: 1px solid $darkgrey;
   margin: 0 auto;
 }
@@ -66,15 +64,7 @@ a {
   color: $grey;
 }
 
-.Button{
-  background: $gradient;
-  line-height: 50px;
-  text-align: center;
-  color: #ffffff;
-  display: block;
-  font-family: $kraftMono;
-  font-size: 14px;
-  text-decoration: none;
-  padding: 0 20px;
-  cursor: pointer;
+html {
+  font-size: 62.5%;
+  width: 100%;
 }
