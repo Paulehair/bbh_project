@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
   height: 40rem;
   @include breakpoint(tablet) {
-    height: 70rem;
+    height: 120rem;
   }
 
   &-container {
@@ -36,6 +36,7 @@
     margin-bottom: 4.2rem;
     font-family: $kraftMono;
     color: $grey;
+    line-height: 120%;
     @include breakpoint(tablet) {
       background-image: url("");
       margin-left: 5.5rem;
