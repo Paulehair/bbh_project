@@ -1119,6 +1119,84 @@ table {
       border-bottom: 1px solid #383d3b;
       border-top: none; }
 
+.Login {
+  width: 90%;
+  height: 80vh;
+  margin: 40px auto;
+  border: solid 1px #A39B94;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: "kraft_monoregular";
+  display: flex;
+  justify-content: center;
+  margin-top: 150px; }
+  .Login_title {
+    font-family: "rajdhanisemibold";
+    font-size: 30px; }
+  @media (min-width: 768px) {
+    .Login {
+      padding: 80px; } }
+  .Login_container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+
+.RegisterForm {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 35px; }
+  .RegisterForm_label {
+    display: block;
+    color: #383d3b; }
+  .RegisterForm_input {
+    margin-top: 15px;
+    height: 35px;
+    width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #a39b94; }
+    .RegisterForm_input:focus {
+      outline: 0; }
+
+.RegisterItem_submit {
+  width: 100%; }
+
+.RegisterItem_btn {
+  border: none;
+  width: 301px; }
+
+.RegisterItem_link {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: 35px; }
+
+.Register {
+  width: 90%;
+  height: 80vh;
+  margin: 40px auto;
+  border: solid 1px #A39B94;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: "kraft_monoregular";
+  display: flex;
+  justify-content: center;
+  margin-top: 150px; }
+  .Register_title {
+    font-family: "rajdhanisemibold";
+    font-size: 30px; }
+  @media (min-width: 768px) {
+    .Register {
+      padding: 80px; } }
+  .Register_container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+
 .CabinList {
   width: 90%;
   display: block;
@@ -1283,7 +1361,8 @@ table {
   font-family: "kraft_monoregular";
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  margin-top: 150px; }
   @media (min-width: 768px) {
     .ConfirmBooking {
       padding: 80px; } }
@@ -1318,10 +1397,13 @@ table {
   margin-top: 45px; }
 
 .ConfirmBookingDetails_itemVal {
-  color: #a39b94; }
+  color: #a39b94;
+  line-height: 45px; }
 
 .ConfirmBookingText_text {
-  margin-top: 45px; }
+  margin-top: 45px;
+  line-height: 1.5;
+  color: #a39b94; }
   @media (min-width: 1440px) {
     .ConfirmBookingText_text {
       width: 300px; } }
