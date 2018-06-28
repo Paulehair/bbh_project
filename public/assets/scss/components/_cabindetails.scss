@@ -1,133 +1,125 @@
 .CabinDetails{
-    width: 90%;
-    display: block;
-    margin: 150px auto 20px auto;
-    border: solid 1px #A39B94;
-    box-sizing: border-box;
-    @include breakpoint(tablet){
-        padding: 30px 80px;
-    }
+  width: 90%;
+  display: block;
+  margin: 150px auto 20px auto;
+  border: solid 1px #A39B94;
+  box-sizing: border-box;
+  @include breakpoint(tablet){
+    padding: 30px 80px;
+  }
 }
-
-.Steps {
+.Steps{
   font-family: $kraftMono;
   font-size: 14px;
   color: #a39b94;
-
-  &_container {
+  &_container{
     width: 250px;
     margin: 0 auto;
     padding: 20px;
     display: flex;
     justify-content: space-between;
-    @include breakpoint(tablet) {
-      margin-left: 0;
+    @include breakpoint(tablet){
+      margin-left: 0px;
     }
   }
-
-  &_item {
-    &--current {
+  &_item{
+    &--current{
       color: #383d3b;
     }
   }
 }
-
-.InfoPannel {
+.InfoPannel{
   position: relative;
-
-  &_container {
+  &_container{
     display: flex;
     flex-direction: column;
-    @include breakpoint(tablet) {
+    @include breakpoint(tablet){
       flex-direction: row;
       justify-content: space-between;
       width: 100%;
       margin: 0 auto;
     }
-    @include breakpoint(laptop) {
+    @include breakpoint(laptop){
       width: 80%;
     }
   }
 }
-
-.Thumbnail {
+.Thumbnail{
   position: relative;
   width: 100%;
   height: 300px;
   background-size: cover;
-  @include breakpoint(tablet) {
+  @include breakpoint(tablet){
     order: 2;
     width: 300px;
     height: 500px;
     background-size: cover;
     background-position: 50%;
   }
-}
-    &_titleContainer{
-        color: #fff;
-        transform: translateY(-200%);
-        @include breakpoint(tablet){
-            transform: none;
-            color: #383D3B;
-        }
-    }
 
-  &_titleContainer {
+}
+.Infos{
+  padding: 20px;
+  box-sizing: border-box;
+  @include breakpoint(tablet){
+    order: 1;
+    width: 400px;
+  }
+
+  &_titleContainer{
     color: #fff;
-    transform: translateY(-155%);
-    @include breakpoint(tablet) {
+    transform: translateY(-200%);
+    @include breakpoint(tablet){
       transform: none;
       color: #383D3B;
     }
   }
 
-  &_title {
+  &_title{
     font-family: $radjhani;
     font-size: 30px;
   }
 
-  &_priceContainer {
+  &_priceContainer{
     margin-top: 10px;
   }
 
-  &_price {
+  &_price{
     font-family: $radjhani;
     font-size: 14px;
   }
 
-  &_description {
+  &_description{
     font-family: $kraftMono;
     font-size: 14px;
     color: #A39B94;
     line-height: 1.5;
-    @include breakpoint(tablet) {
+    @include breakpoint(tablet){
       margin-top: 50px;
     }
   }
 
-  &_btnContainer {
+  &_btnContainer{
     width: 100%;
     display: flex;
     justify-content: space-around;
     margin-top: 50px;
-    @include breakpoint(tablet) {
+    @include breakpoint(tablet){
       justify-content: flex-end;
     }
   }
 }
-
-.BookingDetails {
+.BookingDetails{
   margin-top: 50px;
 
-  &_container {
+  &_container{
     display: flex;
-  }
 
-  &_tableHead {
+  }
+  &_tableHead{
     width: 30%;
   }
-
-  &_HeadTitle {
+  &_HeadTitle{
     border-top: 1px solid #383d3b;
     border-bottom: 1px solid #383d3b;
     font-family: $kraftMono;
@@ -136,29 +128,25 @@
     line-height: 35px;
     text-align: center;
   }
-
-  &_content {
+  &_content{
     border-left: 1px solid #383d3b;
     width: 70%;
   }
-
-  &_item {
+  &_item{
     border-top: 1px solid #383d3b;
     border-bottom: 1px solid #383d3b;
     line-height: 50px;
     font-family: $kraftMono;
     color: #A39B94;
-
-    & > span {
+    &>span{
       margin-left: 15px;
     }
-
-    &:first-child {
+    &:first-child{
       border-top: 1px solid #383d3b;
       border-bottom: none;
     }
 
-    &:last-child {
+    &:last-child{
       border-bottom: 1px solid #383d3b;
       border-top: none;
     }

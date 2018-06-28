@@ -1,3 +1,132 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:after, blockquote:before {
+  content: '';
+  content: none; }
+
+q:after, q:before {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
 .Header {
   position: fixed;
   top: 0;
@@ -852,11 +981,9 @@ table {
   @media (min-width: 768px) {
     .detailsactivity-container {
       height: 45rem; } }
-
 .detailsactivity-preface {
   padding-bottom: 2rem;
   padding-left: 2rem; }
-
 .detailsactivity-btn {
   height: 1rem;
   width: 9rem;
@@ -866,13 +993,11 @@ table {
   background: #f52f57;
   padding: 5px 9px 6px 9px;
   text-decoration: none; }
-
 .detailsactivity-titlepreface {
   color: #ffffff;
   font-family: "rajdhanisemibold";
   font-size: 3rem;
   margin-bottom: 2rem; }
-
 .detailsactivity-firsttitle {
   padding-top: 2rem;
   padding-left: 2rem;
@@ -880,14 +1005,12 @@ table {
   font-family: "rajdhanisemibold";
   font-size: 2rem;
   margin-bottom: 2rem; }
-
 .detailsactivity-secondtitle {
   padding-left: 2rem;
   padding-right: 2rem;
   font-family: "rajdhanisemibold";
   font-size: 1.2rem;
   margin-bottom: 2rem; }
-
 .detailsactivity-paragraph {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -895,7 +1018,6 @@ table {
   color: #a39b94;
   font-size: 1.4rem;
   margin-bottom: 1.6rem; }
-
 .detailsactivity-description {
   height: 27rem;
   border-left: 1px solid black;
@@ -925,7 +1047,7 @@ table {
     justify-content: space-between; }
     @media (min-width: 768px) {
       .Steps_container {
-        margin-left: 0; } }
+        margin-left: 0px; } }
   .Steps_item--current {
     color: #383d3b; }
 
@@ -1222,10 +1344,8 @@ table {
 
 .ConfirmBookingDetails_item {
   margin-top: 45px; }
-
 .ConfirmBookingDetails_itemName {
   margin-top: 45px; }
-
 .ConfirmBookingDetails_itemVal {
   color: #a39b94; }
 
@@ -1234,7 +1354,6 @@ table {
   @media (min-width: 1440px) {
     .ConfirmBookingText_text {
       width: 300px; } }
-
 .ConfirmBookingText_link {
   width: 250px;
   margin: 0 auto;
@@ -1262,7 +1381,6 @@ table {
 
 .Nav_title {
   font-family: "rajdhanisemibold"; }
-
 .Nav_item {
   font-family: "rajdhanisemibold"; }
   .Nav_item > a {
@@ -1270,99 +1388,19 @@ table {
     text-decoration: none;
     line-height: 1.7;
     font-size: 16px; }
-
 .Nav_container {
   margin-top: 30px; }
-
-.activitylist-wrapper {
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  margin-top: 50px;
-  margin-left: 5%;
-  margin-right: 5%; }
-
-.activitylist-title {
-  margin-left: 50px;
-  margin-bottom: 40px;
-  font-family: "rajdhanisemibold";
-  font-size: 14px; }
-
-.activitylist-paragraph {
-  margin-left: 50px;
-  margin-bottom: 70px;
-  font-family: "kraft_monoregular";
-  font-size: 12px; }
-
-.activitylist-container {
-  margin-left: 2%; }
-  @media (min-width: 768px) {
-    .activitylist-container {
-      display: flex;
-      flex-direction: row;
-      justify-content: center; } }
-  .activitylist-container-content {
-    margin-bottom: 140px;
-    border-right: 1px solid black;
-    width: 371px;
-    height: 380px; }
-    @media (min-width: 768px) {
-      .activitylist-container-content {
-        border-bottom: 1px solid black;
-        border-left: 1px solid black; } }
-    @media (min-width: 768px) {
-      .activitylist-container-content {
-        margin-right: 100px; } }
-    .activitylist-container-content-img {
-      height: 100px;
-      width: 95%; }
-    .activitylist-container-content-title {
-      margin-left: 2rem;
-      margin-top: 50px;
-      margin-bottom: 20px;
-      font-family: "rajdhanisemibold";
-      font-size: 14px; }
-    .activitylist-container-content-tag {
-      margin-left: 2rem;
-      margin-bottom: 50px;
-      height: 1rem;
-      width: 65px;
-      font-family: "kraft_monoregular";
-      color: #ffffff;
-      font-size: 8px;
-      background: #f52f57;
-      padding: 5px 9px 6px 9px;
-      text-decoration: none; }
-    .activitylist-container-content-paragraph {
-      margin-left: 2rem;
-      font-family: "kraft_monoregular"; }
-    .activitylist-container-content-btn {
-      display: flex;
-      justify-content: center;
-      width: 150px;
-      height: 20px;
-      margin: 15% auto 0;
-      padding: 1em 2em;
-      background: linear-gradient(-145deg, rgba(153, 70, 200, 0.8), rgba(244, 43, 87, 0.8));
-      font-size: 1.4rem;
-      font-family: "kraft_monoregular";
-      color: #f0ede2;
-      text-align: center;
-      cursor: pointer;
-      text-decoration: none; }
 
 /* FONTS */
 @font-face {
   font-family: 'kraft_monoregular';
   src: url("../font/kraftmono-webfont.woff2") format("woff2"), url("../font/kraftmono-webfont.woff") format("woff"); }
-
 @font-face {
   font-family: 'kraft_monoitalic';
   src: url("../font/kraftmono-italic-webfont.woff2") format("woff2"), url("../font/kraftmono-italic-webfont.woff") format("woff"); }
-
 @font-face {
   font-family: 'rajdhanisemibold';
   src: url("../font/rajdhani-semibold-webfont.woff2") format("woff2"), url("../font/rajdhani-semibold-webfont.woff") format("woff"); }
-
 body {
   width: 100%;
   height: 100vh;
@@ -1388,6 +1426,10 @@ a {
   text-decoration: none;
   color: #a39b94; }
 
+html {
+  font-size: 62.5%;
+  width: 100%; }
+
 .Button {
   background: linear-gradient(-145deg, #9946c8, #f42b57);
   line-height: 50px;
@@ -1400,3 +1442,4 @@ a {
   padding: 0 20px;
   cursor: pointer; }
 
+/*# sourceMappingURL=main.css.map */
