@@ -929,21 +929,19 @@ table {
   border-spacing: 0; }
 
 .detailsactivity-container {
-  background-image: url(../img/allstars.jpg);
+  background-image: url(/assets/img/champs.png);
   background-repeat: no-repeat;
   background-size: cover;
   border-left: 1px solid black;
   border-right: 1px solid black;
-  height: 25rem;
-  margin-top: 2rem;
+  height: 400px;
+  margin-top: 150px;
   margin-left: 2rem;
   margin-right: 2rem;
   display: flex;
   align-items: flex-end; }
-  @media (min-width: 768px) {
-    .detailsactivity-container {
-      height: 45rem; } }
 .detailsactivity-preface {
+  margin-top: 800px;
   padding-bottom: 2rem;
   padding-left: 2rem; }
 .detailsactivity-btn {
@@ -951,9 +949,9 @@ table {
   width: 9rem;
   font-family: "kraft_monoregular";
   color: #ffffff;
-  font-size: 11px;
+  font-size: 14px;
   background: #f52f57;
-  padding: 5px 9px 6px 9px;
+  padding: 5px 5px 6px 5px;
   text-decoration: none; }
 .detailsactivity-titlepreface {
   color: #ffffff;
@@ -1313,41 +1311,49 @@ table {
 .activitylist-wrapper {
   border-left: 1px solid black;
   border-right: 1px solid black;
-  margin-top: 50px;
-  margin-left: 5%;
+  margin-top: 150px;
+  margin-left: 25px;
   margin-right: 5%; }
+  @media (min-width: 768px) {
+    .activitylist-wrapper {
+      margin-left: 70px; } }
 .activitylist-title {
   margin-left: 50px;
   margin-bottom: 40px;
   font-family: "rajdhanisemibold";
-  font-size: 14px; }
+  font-size: 20px; }
 .activitylist-paragraph {
   margin-left: 50px;
   margin-bottom: 70px;
   font-family: "kraft_monoregular";
-  font-size: 12px; }
+  font-size: 14px;
+  color: #a39b94; }
 .activitylist-container {
-  margin-left: 2%; }
+  margin-left: 2%;
+  padding-right: 2%; }
   @media (min-width: 768px) {
     .activitylist-container {
       display: flex;
+      flex-direction: column;
+      margin-left: 25%; } }
+  @media (min-width: 1024px) {
+    .activitylist-container {
+      margin-left: 0%;
+      display: flex;
       flex-direction: row;
-      justify-content: center; } }
+      justify-content: space-around; } }
   .activitylist-container-content {
-    margin-bottom: 140px;
     border-right: 1px solid black;
+    margin-bottom: 140px;
     width: 371px;
-    height: 380px; }
+    height: 450px; }
     @media (min-width: 768px) {
       .activitylist-container-content {
         border-bottom: 1px solid black;
         border-left: 1px solid black; } }
-    @media (min-width: 768px) {
-      .activitylist-container-content {
-        margin-right: 100px; } }
     .activitylist-container-content-img {
       height: 100px;
-      width: 95%; }
+      width: 371px; }
     .activitylist-container-content-title {
       margin-left: 2rem;
       margin-top: 50px;
@@ -1367,7 +1373,8 @@ table {
       text-decoration: none; }
     .activitylist-container-content-paragraph {
       margin-left: 2rem;
-      font-family: "kraft_monoregular"; }
+      font-family: "kraft_monoregular";
+      color: #a39b94; }
     .activitylist-container-content-btn {
       display: flex;
       justify-content: center;
@@ -1376,7 +1383,7 @@ table {
       margin: 15% auto 0;
       padding: 1em 2em;
       background: linear-gradient(-145deg, rgba(153, 70, 200, 0.8), rgba(244, 43, 87, 0.8));
-      font-size: 1.4rem;
+      font-size: 14px;
       font-family: "kraft_monoregular";
       color: #f0ede2;
       text-align: center;
