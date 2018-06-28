@@ -16,6 +16,8 @@ class ActivitiesType extends AbstractType
             ->add('detail')
             ->add('image')
             ->add('price')
+            ->add('type')
+            ->add('description')
         ;
     }
 

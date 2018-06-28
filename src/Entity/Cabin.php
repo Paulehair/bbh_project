@@ -33,6 +33,21 @@ class Cabin
      */
     private $booking;
 
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $description;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $numberOfPeople;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $area;
+
     public function __construct()
     {
         $this->booking = new ArrayCollection();
@@ -99,5 +114,41 @@ class Cabin
 
     public function __toString() {
 	    return $this->getName();
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(string $description): self
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    public function getNumberOfPeople(): ?int
+    {
+        return $this->numberOfPeople;
+    }
+
+    public function setNumberOfPeople(?int $numberOfPeople): self
+    {
+        $this->numberOfPeople = $numberOfPeople;
+
+        return $this;
+    }
+
+    public function getArea(): ?int
+    {
+        return $this->area;
+    }
+
+    public function setArea(?int $area): self
+    {
+        $this->area = $area;
+
+        return $this;
     }
 }

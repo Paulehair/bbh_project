@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Session\SessionBagInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
@@ -41,6 +43,30 @@ class Booking
      * 
      */
     private $reference;
+
+	/**
+	 * @ORM\Column(type="string", length=120)
+	 *
+	 */
+	private $sessid;
+
+	/**
+	 * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="bookings")
+	 */
+	private $user;
+
+	public function setSessId(string $sessid)
+	{
+		$this->sessid = $sessid;
+		return $this;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getSessid() {
+		return $this->sessid;
+	}
 
     public function getId()
     {
@@ -96,5 +122,17 @@ class Booking
 
     public function __toString() {
 	   return $this->getReference();
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
+
+        return $this;
     }
 }

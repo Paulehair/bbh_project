@@ -17,7 +17,7 @@ class BookingType extends AbstractType
     {
         $builder
             ->add('cabin', null, [
-	           // 'class'         => 'App\Entity\Cabin',
+	            'class'         => 'App\Entity\Cabin',
 	            'label'         => 'Cabin',
 	            'expanded'      => true,
 	            'multiple'      => false
