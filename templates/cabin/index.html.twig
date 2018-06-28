@@ -1,43 +1,65 @@
 {% extends 'base.html.twig' %}
-
-{% block title %}Cabin index{% endblock %}
-
 {% block body %}
-    <h1>Cabin index</h1>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>description</th>
-                <th>numberOfPeople</th>
-                <th>area</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for cabin in cabins %}
-            <tr>
-                <td>{{ cabin.id }}</td>
-                <td>{{ cabin.name }}</td>
-                <td>{{ cabin.price }}</td>
-                <td>{{ cabin.description }}</td>
-                <td>{{ cabin.numberOfPeople }}</td>
-                <td>{{ cabin.area }}</td>
-                <td>
-                    <a href="{{ path('cabin_show', {'id': cabin.id}) }}">show</a>
-                    <a href="{{ path('cabin_edit', {'id': cabin.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="4">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('cabin_new') }}">Create new</a>
+<section class="CabinList">
+        <div class="CabinList_main">
+                <h6 class="CabinList_title">Séléctionnez une cabine</h6>
+        </div>
+        <form action="" class="CabinForm">
+                <div class="CabinForm_item">
+                        <label for="date" class="CabinForm_label">Date</label>
+                        <div class="CabinForm_container">
+                                <svg class="CabinForm_icon">
+                                        <use xlink:Href="../assets/img/sprite.svg#arrow" aria-hidden="true"></use>
+                                </svg>
+                                <select name="date" id="" class="CabinForm_select">
+                                        <option value="january"></option>
+                                </select>
+                        </div>
+                </div>
+                <div class="CabinForm_item">
+                        <label for="amount" class="CabinForm_label">nombre de personnes</label>
+                        <div class="CabinForm_container">
+                                <svg class="CabinForm_icon">
+                                        <use xlink:Href="../assets/img/sprite.svg#arrow" aria-hidden="true"></use>
+                                </svg>
+                                <select name="amount" id="" class="CabinForm_select">
+                                        <option value="1">1 personne</option>
+                                        <option value="2">2 personnes</option>
+                                        <option value="3">3 personnes</option>
+                                </select>
+                        </div>
+                </div>
+        </form>
+        <div class="ResultsContainer">
+            {% for cabin in cabins %}
+            <div class="CabinCard">
+                    <div class="CardThumbnail">
+                            <span class="CardThumbnail_price">{{ cabin.price }} €</span>
+                            <img class="CardThumbnail_img" src="../assets/img/thumbnail.png" alt="">
+                    </div>
+                    <div class="CabinInfo">
+                            <div class="CabinInfo_upper">
+                                    <span class="CabinInfo_name">{{ cabin.name }}</span>
+                                    <div class="CabinInfo_passengers">
+                                            <svg class="CabinInfo_icon">
+                                                    <use xlink:Href="../assets/img/sprite.svg#passengers" aria-hidden="true"></use>
+                                            </svg>
+                                            <span>4-5</span>
+                                    </div>
+                            </div>
+                            <p class="CabinInfo_text">
+                                    cabine incroyablement bien foutue, canapés en cuir de phoque gris du pôle nord et cheminée à plasma. Inclus chaines pornos, putes et cocaînes
+                            </p>
+                            <div class="CabinInfo_btnContainer">
+                                    <a href="{{ path('cabin_show', {'id': cabin.id}) }}" class="Button">Plus de détails</a>
+                            </div>
+                    </div>
+            </div>
+            {% else %}
+                <div>
+                        <p>No cabin found :(</p>
+                </div>
+            {% endfor %}
+        </div>
+</section>
 {% endblock %}

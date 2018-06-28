@@ -1,30 +1,45 @@
 {% extends 'base.html.twig' %}
-
 {% block title %}Cabin{% endblock %}
-
 {% block body %}
-    <h1>Cabin</h1>
+    <section class="CabinDetails">
+        <a href="{{ path('cabin_index') }}">back to list</a>
+        <div class="Steps">
+            <div class="Steps_container">
+                <span class="Steps_item--current">Etape 1</span>
+                <span class="Steps_item">Etape 2</span>
+                <span class="Steps_item">Etape 3</span>
+            </div>
+        </div>
+        <div class="InfoPannel">
+            <div class="InfoPannel_container">
+                <div class="Thumbnail" style="background-image: url('../assets/img/thumbnail.png');"></div>
+                <div class="Infos">
+                    <div class="Infos_titleContainer">
+                        <h1 class="Infos_title">Cabine {{ cabin.name }}</h1>
+                        <div class="Infos_priceContainer">
+                            <span class="Infos_price">{{ cabin.price }} €</span>
+                        </div>
+                    </div>
+                    <p class="Infos_description">{{ cabin.description }}</p>
+                    <div class="BookingDetails">
+                        <div class="BookingDetails_container">
+                            <div class="BookingDetails_tableHead">
+                                <div class="BookingDetails_HeadTitle">Details</div>
+                            </div>
+                            <div class="BookingDetails_content">
+                                <div class="BookingDetails_item"><span>{{ cabin.name }}</span></div>
+                                <div class="BookingDetails_item"><span>{{ cabin.area }}</span></div>
+                                <div class="BookingDetails_item"><span>{{ cabin.price }}</span></div>
+                                <div class="BookingDetails_item"><span>{{ cabin.numberOfPeople }}</span></div>
+                            </div>
+                        </div>
+                    </div>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ cabin.id }}</td>
-            </tr>
-            <tr>
-                <th>Name</th>
-                <td>{{ cabin.name }}</td>
-            </tr>
-            <tr>
-                <th>Price</th>
-                <td>{{ cabin.price }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <a href="{{ path('cabin_index') }}">back to list</a>
-
-    <a href="{{ path('cabin_edit', {'id': cabin.id}) }}">edit</a>
-
-    {{ include('cabin/_delete_form.html.twig') }}
+                    <div class="Infos_btnContainer">
+                        <a href="#" class="Infos_btn Button">Confirmer la réservation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}

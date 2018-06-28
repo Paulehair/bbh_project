@@ -1,0 +1,41 @@
+.ConfirmBooking{
+  width: 90%;
+  display: block;
+  margin: 20px auto;
+  border: solid 1px #A39B94;
+  padding: 20px;
+  box-sizing: border-box;
+  @include breakpoint(tablet){
+    padding: 80px;
+  }
+  &_name {
+    font-family: $radjhani;
+    font-size: 45px;
+    color: $darkgrey;
+  }
+  &_reservation{
+    font-family: $radjhani;
+    color: $grey;
+    font-size: 26px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &_reservationItem{
+  }
+  &_resrvationValue{
+  }
+}
+
+.ConfirmBookingDetails{
+  &_item{
+  }
+  &_itemName{
+  }
+}
+.ConfirmBookingText{
+  &_text{
+  }
+  &_link{
+    width: 350px;
+  }
+}

@@ -965,6 +965,8 @@ table {
       padding: 80px; } }
   .CabinList_main {
     font-family: "rajdhanisemibold"; }
+  .CabinList_title {
+    font-size: 20px; }
 
 .CabinForm {
   margin-top: 50px; }
@@ -1093,6 +1095,30 @@ table {
   box-sizing: border-box;
   display: block; }
 
+.ConfirmBooking {
+  width: 90%;
+  display: block;
+  margin: 20px auto;
+  border: solid 1px #A39B94;
+  padding: 20px;
+  box-sizing: border-box; }
+  @media (min-width: 768px) {
+    .ConfirmBooking {
+      padding: 80px; } }
+  .ConfirmBooking_name {
+    font-family: "rajdhanisemibold";
+    font-size: 45px;
+    color: #383d3b; }
+  .ConfirmBooking_reservation {
+    font-family: "rajdhanisemibold";
+    color: #a39b94;
+    font-size: 26px;
+    display: flex;
+    justify-content: space-between; }
+
+.ConfirmBookingText_link {
+  width: 350px; }
+
 .Footer {
   width: 90%;
   margin: 20px auto;
@@ -1158,7 +1184,21 @@ a {
   color: #a39b94; }
 
 html {
-  font-size: 62.5%;
   width: 100%; }
+
+.boxShad {
+  box-shadow: 0 0 80px #381e55; }
+
+.Button {
+  background: linear-gradient(-145deg, #9946c8, #f42b57);
+  line-height: 50px;
+  text-align: center;
+  color: #ffffff;
+  display: block;
+  font-family: "kraft_monoregular";
+  font-size: 14px;
+  text-decoration: none;
+  padding: 0 20px;
+  cursor: pointer; }
 
 /*# sourceMappingURL=main.css.map */
