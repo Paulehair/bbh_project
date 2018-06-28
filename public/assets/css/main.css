@@ -322,14 +322,30 @@ table {
         cursor: pointer; }
 
 .Planet {
+  margin-top: 150px;
   width: 100%;
-  height: 50em;
+  height: 85%;
   background: no-repeat url(../../assets/img/planete.png);
   background-size: contain;
-  background-position: top right; }
+  background-position: 8em -3em; }
+  @media (min-width: 425px) {
+    .Planet {
+      background-position: 17em -3em; } }
+  @media (min-width: 768px) {
+    .Planet {
+      background-position: 20em -3em; } }
+  @media (min-width: 1024px) {
+    .Planet {
+      background-position: 45em -3em; } }
+  @media (min-width: 1440px) {
+    .Planet {
+      background-position: 70em -3em; } }
   .Planet_content {
     padding-top: 5%;
     height: fit-content; }
+    @media (min-width: 1024px) {
+      .Planet_content {
+        margin: 0 0 0 22%; } }
     .Planet_content_title {
       color: #383d3b;
       font-size: 35px;
@@ -340,7 +356,11 @@ table {
       width: 70%;
       font-size: 16px;
       font-family: "kraft_monoregular";
-      padding-left: 1em; }
+      padding-left: 1em;
+      line-height: 120%; }
+    @media (min-width: 1024px) {
+      .Planet_content {
+        width: 40%; } }
     .Planet_content_desc {
       padding: 1.5em; }
       .Planet_content_desc_top {
@@ -350,11 +370,17 @@ table {
           color: #a39b94;
           font-size: 20px;
           font-family: "kraft_monoregular"; }
+        .Planet_content_desc_top_line {
+          height: 2px;
+          background: #383d3b;
+          width: 150px;
+          align-self: flex-end;
+          margin: 0 0 0 5%; }
         .Planet_content_desc_top_txt {
           color: #383d3b;
           font-size: 20px;
           font-family: "rajdhanisemibold";
-          padding-left: 9.3em; }
+          padding-left: 1em; }
       .Planet_content_desc_bot {
         display: flex;
         padding-top: 2em; }
@@ -362,11 +388,17 @@ table {
           color: #a39b94;
           font-size: 20px;
           font-family: "kraft_monoregular"; }
+        .Planet_content_desc_bot_line {
+          height: 2px;
+          background: #383d3b;
+          width: 100px;
+          align-self: flex-end;
+          margin: 0 0 0 5%; }
         .Planet_content_desc_bot_txt {
           color: #383d3b;
           font-size: 20px;
           font-family: "rajdhanisemibold";
-          padding-left: 7em; }
+          padding-left: 1em; }
 
 .Contain {
   display: flex;
@@ -1411,6 +1443,9 @@ body {
 .flexCol {
   display: flex;
   flex-direction: column; }
+
+.overflowH {
+  overflow: hidden; }
 
 a {
   text-decoration: none;

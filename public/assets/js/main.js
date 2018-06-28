@@ -4,7 +4,8 @@ const ui = {
   burger: document.querySelector('.Header_burger'),
   menu: document.querySelector('.Header_nav_box_menu'),
   nav: document.querySelector('.Header_nav'),
-  roll: document.querySelector('#roll')
+  roll: document.querySelector('#roll'),
+  body: document.querySelector('body')
 }
 
 // MAP
@@ -17,6 +18,7 @@ for (let i = 0; i < ui.cards.length; i++) {
 // HEADER
 ui.burger.addEventListener('click', () => {
   ui.nav.classList.toggle('flex');
+  ui.body.classList.toggle('overflowH');
 });
 
 ui.roll.addEventListener('click', () => {

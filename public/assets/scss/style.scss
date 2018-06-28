@@ -15,7 +15,7 @@
 @import "./components/cabindetails";
 @import "./components/cabinlist";
 @import "./components/loginregister";
-@import "./components/ConfirmBooking";
+@import "./components/confirmbooking";
 @import "./components/footer";
 @import "./components/activitylist";
 
@@ -39,7 +39,6 @@
 body {
   width: 100%;
   height: 100vh;
-
   background: $mainBkgd;
   overflow-x: hidden;
 }
@@ -58,6 +57,10 @@ body {
 .flexCol {
   display: flex;
   flex-direction: column;
+}
+
+.overflowH {
+  overflow: hidden;
 }
 
 a {
