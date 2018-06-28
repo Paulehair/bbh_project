@@ -1,21 +1,19 @@
 .detailsactivity{
   &-container{
-    background-image: url(../img/allstars.jpg);
+    background-image: url(/assets/img/champs.png);
     background-repeat: no-repeat;
     background-size: cover;
     border-left: 1px solid black;
     border-right: 1px solid black;
-    height: 25rem;
-    margin-top: 2rem;
+    height: 400px;
+    margin-top: 150px;
     margin-left: 2rem;
     margin-right: 2rem;
     display: flex;
     align-items: flex-end;
-    @include breakpoint(tablet) {
-      height: 45rem;
-    }
   }
   &-preface{
+    margin-top: 800px;
     padding-bottom: 2rem;
     padding-left: 2rem;
   }
@@ -24,9 +22,9 @@
     width: 9rem;
     font-family: $kraftMono;
     color: #ffffff;
-    font-size: 11px;
+    font-size: 14px;
     background: #f52f57;;
-    padding: 5px 9px 6px 9px;
+    padding: 5px 5px 6px 5px;
     text-decoration: none;
   }
   &-titlepreface{
