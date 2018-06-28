@@ -260,18 +260,22 @@ table {
   .Map_img {
     object-fit: contain;
     width: 25em;
-    margin: 0 0 0 -2.8em; }
+    margin: 0 0 0 -2em; }
+    @media (min-width: 425px) {
+      .Map_img {
+        width: 30em;
+        margin: 0 0 0 1.5em; } }
     @media (min-width: 768px) {
       .Map_img {
         width: 40em;
         margin: 0 0 0 3.5em; } }
     @media (min-width: 1024px) {
       .Map_img {
-        margin: 0 0 0 2em;
+        margin: 0 0 0 10em;
         width: 50em; } }
     @media (min-width: 1440px) {
       .Map_img {
-        margin: 0 0 0 11em;
+        margin: 0 0 0 21em;
         width: 60em; } }
 
 .Card {
@@ -282,15 +286,24 @@ table {
   overflow-x: scroll;
   overflow-y: hidden; }
   .Card_slider {
-    width: 300%;
+    width: fit-content;
     height: fit-content;
     display: flex; }
     .Card_slider_ctnr {
-      border-top: 1px solid #353a38;
-      border-left: 1px solid #353a38;
+      border: 1px solid #353a38;
+      border-bottom: none;
       height: 42%;
-      width: 100%;
+      width: 18em;
       margin: 0 0 0 2.5%; }
+      @media (min-width: 425px) {
+        .Card_slider_ctnr {
+          width: 20em; } }
+      @media (min-width: 768px) {
+        .Card_slider_ctnr {
+          width: 30em; } }
+      @media (min-width: 1024px) {
+        .Card_slider_ctnr {
+          width: 40em; } }
       .Card_slider_ctnr_title {
         position: relative;
         padding: 1em;
@@ -975,11 +988,9 @@ table {
   @media (min-width: 768px) {
     .detailsactivity-container {
       height: 45rem; } }
-
 .detailsactivity-preface {
   padding-bottom: 2rem;
   padding-left: 2rem; }
-
 .detailsactivity-btn {
   height: 1rem;
   width: 9rem;
@@ -989,13 +1000,11 @@ table {
   background: #f52f57;
   padding: 5px 9px 6px 9px;
   text-decoration: none; }
-
 .detailsactivity-titlepreface {
   color: #ffffff;
   font-family: "rajdhanisemibold";
   font-size: 3rem;
   margin-bottom: 2rem; }
-
 .detailsactivity-firsttitle {
   padding-top: 2rem;
   padding-left: 2rem;
@@ -1003,14 +1012,12 @@ table {
   font-family: "rajdhanisemibold";
   font-size: 2rem;
   margin-bottom: 2rem; }
-
 .detailsactivity-secondtitle {
   padding-left: 2rem;
   padding-right: 2rem;
   font-family: "rajdhanisemibold";
   font-size: 1.2rem;
   margin-bottom: 2rem; }
-
 .detailsactivity-paragraph {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -1018,7 +1025,6 @@ table {
   color: #a39b94;
   font-size: 1.4rem;
   margin-bottom: 1.6rem; }
-
 .detailsactivity-description {
   height: 27rem;
   border-left: 1px solid black;
@@ -1345,10 +1351,8 @@ table {
 
 .ConfirmBookingDetails_item {
   margin-top: 45px; }
-
 .ConfirmBookingDetails_itemName {
   margin-top: 45px; }
-
 .ConfirmBookingDetails_itemVal {
   color: #a39b94; }
 
@@ -1357,7 +1361,6 @@ table {
   @media (min-width: 1440px) {
     .ConfirmBookingText_text {
       width: 300px; } }
-
 .ConfirmBookingText_link {
   width: 250px;
   margin: 0 auto;
@@ -1385,7 +1388,6 @@ table {
 
 .Nav_title {
   font-family: "rajdhanisemibold"; }
-
 .Nav_item {
   font-family: "rajdhanisemibold"; }
   .Nav_item > a {
@@ -1393,7 +1395,6 @@ table {
     text-decoration: none;
     line-height: 1.7;
     font-size: 16px; }
-
 .Nav_container {
   margin-top: 30px; }
 
@@ -1403,19 +1404,16 @@ table {
   margin-top: 50px;
   margin-left: 5%;
   margin-right: 5%; }
-
 .activitylist-title {
   margin-left: 50px;
   margin-bottom: 40px;
   font-family: "rajdhanisemibold";
   font-size: 14px; }
-
 .activitylist-paragraph {
   margin-left: 50px;
   margin-bottom: 70px;
   font-family: "kraft_monoregular";
   font-size: 12px; }
-
 .activitylist-container {
   margin-left: 2%; }
   @media (min-width: 768px) {
@@ -1477,15 +1475,12 @@ table {
 @font-face {
   font-family: 'kraft_monoregular';
   src: url("../font/kraftmono-webfont.woff2") format("woff2"), url("../font/kraftmono-webfont.woff") format("woff"); }
-
 @font-face {
   font-family: 'kraft_monoitalic';
   src: url("../font/kraftmono-italic-webfont.woff2") format("woff2"), url("../font/kraftmono-italic-webfont.woff") format("woff"); }
-
 @font-face {
   font-family: 'rajdhanisemibold';
   src: url("../font/rajdhani-semibold-webfont.woff2") format("woff2"), url("../font/rajdhani-semibold-webfont.woff") format("woff"); }
-
 body {
   width: 100%;
   height: 100vh;
@@ -1523,3 +1518,5 @@ a {
   text-decoration: none;
   padding: 0 20px;
   cursor: pointer; }
+
+/*# sourceMappingURL=main.css.map */

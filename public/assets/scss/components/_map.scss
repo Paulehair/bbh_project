@@ -15,7 +15,12 @@
   &_img {
     object-fit: contain;
     width: 25em;
-    margin: 0 0 0 -2.8em;
+    margin: 0 0 0 -2em;
+
+    @include breakpoint(mobileL) {
+      width: 30em;
+      margin: 0 0 0 1.5em;
+    }
 
     @include breakpoint(tablet) {
       width: 40em;
@@ -23,12 +28,12 @@
     }
 
     @include breakpoint(laptop) {
-      margin: 0 0 0 2em;
+      margin: 0 0 0 10em;
       width: 50em;
     }
 
     @include breakpoint(desktop) {
-      margin: 0 0 0 11em;
+      margin: 0 0 0 21em;
       width: 60em;
     }
   }

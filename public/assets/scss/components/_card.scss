@@ -7,16 +7,28 @@
   overflow-y: hidden;
 
   &_slider {
-    width: 300%;
+    width: fit-content;
     height: fit-content;
     display: flex;
 
     &_ctnr {
-      border-top: 1px solid $blackPlanet;
-      border-left: 1px solid $blackPlanet;
+      border: 1px solid $blackPlanet;
+      border-bottom: none;
       height: 42%;
-      width: 100%;
+      width: 18em;
       margin: 0 0 0 2.5%;
+
+      @include breakpoint(mobileL) {
+        width: 20em;
+      }
+
+      @include breakpoint(tablet) {
+        width: 30em;
+      }
+
+      @include breakpoint(laptop) {
+        width: 40em;
+      }
 
       &_title {
         position: relative;
