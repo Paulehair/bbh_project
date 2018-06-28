@@ -1,11 +1,9 @@
 // RESET SCSS
-
-
-
 // MIXINS
 @import "./global/variables";
 @import "./mixins/breakpoints";
 // COMPONENTS
+
 @import "./components/header";
 @import "./components/map";
 @import "./components/card";
