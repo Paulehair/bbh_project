@@ -7,7 +7,8 @@
 
 
   &_content {
-    padding-top: 18%;
+    padding-top: 5%;
+    height: fit-content;
 
     &_title {
       color: $darkgrey;
@@ -19,7 +20,7 @@
     &_txt {
       color: $grey;
       width: 70%;
-      font-size: 20px;
+      font-size: $fontP;
       font-family: $kraftMono;
       padding-left: 1em;
     }

@@ -1,7 +1,7 @@
 .Header {
   position: fixed;
   top: 0;
-  left: 8%;
+  left: 8.5%;
   z-index: 1;
   display: flex;
   height: 3%;
@@ -15,7 +15,10 @@
       margin: 0 auto;
       height: fit-content; } }
   .Header_logo {
-    object-fit: contain; }
+    object-fit: contain;
+    width: 3em;
+    height: 3em;
+    margin: 2px 0 0 0; }
     @media (min-width: 1024px) {
       .Header_logo {
         margin: 2.5% 0 0 3%;
@@ -23,7 +26,7 @@
   .Header_burger {
     width: 2em;
     height: 2em;
-    margin-left: 70%; }
+    margin: 2% 0 0 70%; }
     @media (min-width: 768px) {
       .Header_burger {
         margin-left: 80%; } }
@@ -34,18 +37,20 @@
     display: none;
     flex-direction: column;
     background: #f0ece1;
-    width: 98%;
-    height: 100vh;
+    width: 97%;
+    height: fit-content;
     padding-top: 5em;
     position: absolute;
     top: 3em;
     left: 0; }
+    @media (min-width: 768px) {
+      .Header_nav {
+        height: 100vh; } }
     @media (min-width: 1024px) {
       .Header_nav {
-        width: 100%;
-        height: 106%;
+        width: 80%;
         display: flex;
-        background: none;
+        height: 100%;
         flex-direction: row;
         justify-content: space-evenly;
         padding: 0 2%;
@@ -54,7 +59,7 @@
         left: unset;
         margin: 0 0 0 2%; } }
     .Header_nav_box {
-      margin: 5% 0 0 5%;
+      margin: 2% 0 0 5%;
       font-family: "rajdhanisemibold";
       font-size: 1.5em;
       width: 132.66px; }
@@ -113,6 +118,7 @@
         background: #f52f57; }
 
 .Map {
+  margin: 10% auto;
   position: relative;
   width: 100%;
   height: 50%; }
@@ -124,37 +130,38 @@
     padding: 1em; }
   .Map_img {
     object-fit: contain;
-    width: 31em;
-    margin: 0 0 0 -5em; }
+    width: 25em;
+    margin: 0 0 0 -2.8em; }
     @media (min-width: 768px) {
       .Map_img {
-        margin: 0 0 0 -1em;
-        width: 40em; } }
+        width: 40em;
+        margin: 0 0 0 3.5em; } }
     @media (min-width: 1024px) {
       .Map_img {
         margin: 0 0 0 2em;
         width: 50em; } }
     @media (min-width: 1440px) {
       .Map_img {
-        margin: 0 0 0 8em;
+        margin: 0 0 0 11em;
         width: 60em; } }
 
 .Card {
   width: 100%;
-  height: 20em;
+  height: fit-content;
   margin: 10% auto 0 auto;
   padding-bottom: 10%;
   overflow-x: scroll;
   overflow-y: hidden; }
   .Card_slider {
-    width: 235%;
-    height: 236%;
+    width: 300%;
+    height: fit-content;
     display: flex; }
     .Card_slider_ctnr {
       border-top: 1px solid #353a38;
       border-left: 1px solid #353a38;
       height: 42%;
-      margin: 0 0 0 4%; }
+      width: 100%;
+      margin: 0 0 0 2.5%; }
       .Card_slider_ctnr_title {
         position: relative;
         padding: 1em;
@@ -192,7 +199,8 @@
   background-size: contain;
   background-position: top right; }
   .Planet_content {
-    padding-top: 18%; }
+    padding-top: 5%;
+    height: fit-content; }
     .Planet_content_title {
       color: #383d3b;
       font-size: 45px;
@@ -201,7 +209,7 @@
     .Planet_content_txt {
       color: #a39b94;
       width: 70%;
-      font-size: 20px;
+      font-size: 16px;
       font-family: "kraft_monoregular";
       padding-left: 1em; }
     .Planet_content_desc {
@@ -980,11 +988,12 @@
 body {
   width: 100%;
   height: 100vh;
-  background: #f0ede2; }
+  background: #f0ede2;
+  overflow-x: hidden; }
 
 .container {
   overflow: hidden;
-  width: 80%;
+  width: 90%;
   border: 1px solid #383d3b;
   margin: 0 auto; }
 
@@ -998,9 +1007,5 @@ body {
 a {
   text-decoration: none;
   color: #a39b94; }
-
-html {
-  font-size: 62.5%;
-  width: 100%; }
 
 /*# sourceMappingURL=main.css.map */
