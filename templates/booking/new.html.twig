@@ -13,18 +13,12 @@
 
         <div class="CabinForm_item">
             <div class="CabinForm_container">
-                <svg class="CabinForm_icon">
-                    <use xlink:Href="../assets/img/sprite.svg#arrow" aria-hidden="true"></use>
-                </svg>
                 {{ form_row(form.month, {'attr': {'class': 'CabinForm_select'}}) }}
             </div>
         </div>
 
         <div class="CabinForm_item">
             <div class="CabinForm_container">
-                <svg class="CabinForm_icon">
-                    <use xlink:Href="../assets/img/sprite.svg#arrow" aria-hidden="true"></use>
-                </svg>
                 {{ form_row(form.guestQuantity, {'attr': {'class': 'CabinForm_select'}}) }}
             </div>
         </div>
@@ -53,13 +47,14 @@
                         cabine incroyablement bien foutue, canapés en cuir de phoque gris du pôle nord et cheminée à plasma. Inclus chaines pornos, putes et cocaînes
                     </p>
                     <div class="CabinInfo_btnContainer">
-                        <button class="Button">{{ form_widget(cabin) }}Sélectionner la cabine</button>
+                        {{ form_widget(cabin) }}
+                        <p class="CabinInfo_btnTxt">Sélectionner cette cabine</p>
                     </div>
                 </div>
             </div>
         {% endfor %}
         </div>
-        <button class="Button">{{ button_label|default('Partir en couilles') }}</button>
+        <button class="Button CabinForm_submit">{{ button_label|default('Suivant') }}</button>
         {{ form_end(form) }}
     </section>
 {% endblock %}

@@ -1,65 +1,38 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-<section class="CabinList">
-        <div class="CabinList_main">
-                <h6 class="CabinList_title">Séléctionnez une cabine</h6>
-        </div>
-        <form action="" class="CabinForm">
-                <div class="CabinForm_item">
-                        <label for="date" class="CabinForm_label">Date</label>
-                        <div class="CabinForm_container">
-                                <svg class="CabinForm_icon">
-                                        <use xlink:Href="../assets/img/sprite.svg#arrow" aria-hidden="true"></use>
-                                </svg>
-                                <select name="date" id="" class="CabinForm_select">
-                                        <option value="january"></option>
-                                </select>
-                        </div>
-                </div>
-                <div class="CabinForm_item">
-                        <label for="amount" class="CabinForm_label">nombre de personnes</label>
-                        <div class="CabinForm_container">
-                                <svg class="CabinForm_icon">
-                                        <use xlink:Href="../assets/img/sprite.svg#arrow" aria-hidden="true"></use>
-                                </svg>
-                                <select name="amount" id="" class="CabinForm_select">
-                                        <option value="1">1 personne</option>
-                                        <option value="2">2 personnes</option>
-                                        <option value="3">3 personnes</option>
-                                </select>
-                        </div>
-                </div>
-        </form>
-        <div class="ResultsContainer">
-            {% for cabin in cabins %}
-            <div class="CabinCard">
-                    <div class="CardThumbnail">
-                            <span class="CardThumbnail_price">{{ cabin.price }} €</span>
-                            <img class="CardThumbnail_img" src="../assets/img/thumbnail.png" alt="">
-                    </div>
-                    <div class="CabinInfo">
-                            <div class="CabinInfo_upper">
-                                    <span class="CabinInfo_name">{{ cabin.name }}</span>
-                                    <div class="CabinInfo_passengers">
-                                            <svg class="CabinInfo_icon">
-                                                    <use xlink:Href="../assets/img/sprite.svg#passengers" aria-hidden="true"></use>
-                                            </svg>
-                                            <span>4-5</span>
-                                    </div>
-                            </div>
-                            <p class="CabinInfo_text">
-                                    cabine incroyablement bien foutue, canapés en cuir de phoque gris du pôle nord et cheminée à plasma. Inclus chaines pornos, putes et cocaînes
-                            </p>
-                            <div class="CabinInfo_btnContainer">
-                                    <a href="{{ path('cabin_show', {'id': cabin.id}) }}" class="Button">Plus de détails</a>
-                            </div>
-                    </div>
+{% for cabin in cabins %}
+<section class="CabinDetails">
+    <div class="InfoPannel">
+        <div class="InfoPannel_container">
+            <div class="Thumbnail" style="background-image: url('../assets/img/thumbnail.png');">
+                <!--
+                  <img class="Thumbnail_img" src="./assets/img/thumbnail.png" alt="">
+                -->
             </div>
-            {% else %}
-                <div>
-                        <p>No cabin found :(</p>
+            <div class="Infos">
+                <div class="Infos_titleContainer">
+                    <h1 class="Infos_title">{{ cabin.name }}</h1>
                 </div>
-            {% endfor %}
+                <p class="Infos_description">{{ cabin.description }}</p>
+                <div class="BookingDetails">
+                    <div class="BookingDetails_container">
+                        <div class="BookingDetails_tableHead">
+                            <div class="BookingDetails_HeadTitle">Details</div>
+                        </div>
+                        <div class="BookingDetails_content">
+                            <div class="BookingDetails_item"><span>{{ cabin.area }} m²</span></div>
+                            <div class="BookingDetails_item"><span>{{ cabin.price }} €</span></div>
+                            <div class="BookingDetails_item"><span>{{ cabin.numberOfPeople }} personnes</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Infos_btnContainer">
+                    <a href="{{ path('booking_new') }}" class="Infos_btn Button">Réserver</a>
+                </div>
+            </div>
         </div>
+    </div>
 </section>
+{% endfor %}
 {% endblock %}

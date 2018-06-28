@@ -22,7 +22,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 class BookingController extends Controller
 {
     /** @
-     * @Route("/", name="booking_index", methods="GET")
+     * @Route("/show_all", name="booking_index", methods="GET")
      */
     public function index(BookingRepository $bookingRepository): Response
     {
@@ -30,7 +30,7 @@ class BookingController extends Controller
     }
 
     /**
-     * @Route("/new", name="booking_new", methods="GET|POST")
+     * @Route("/", name="booking_new", methods="GET|POST")
      */
     public function new(Request $request, ValidatorInterface $validator, CabinRepository $cabinRepository): Response
     {
@@ -70,7 +70,6 @@ class BookingController extends Controller
 			// @todo gerer la non existance du booking
 			// return $this->render('booking/error.html.twig', []);
 		}
-
         return $this->render('booking/show.html.twig', ['booking' => $booking]);
     }
 
@@ -88,11 +87,13 @@ class BookingController extends Controller
 	    $booking = $bookingRepository->findOneBy([
 	    	'reference' => $request->getSession()->get('current_ref')
 	    ]);
+
+	    if (is_null($booking)) {
+		    // @todo gerer la non existance du booking
+		    return $this->redirectToRoute('app_default_admin');
+	    }
 	    $booking->setUser($user);
-		if (is_null($booking)) {
-			// @todo gerer la non existance du booking
-			// return $this->render('booking/error.html.twig', []);
-		}
+
 
         return $this->render('booking/show.html.twig', ['booking' => $booking]);
     }

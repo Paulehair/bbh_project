@@ -1,12 +1,12 @@
-.CabinDetails {
-  width: 90%;
-  display: block;
-  margin: 20px auto;
-  border: solid 1px #A39B94;
-  box-sizing: border-box;
-  @include breakpoint(tablet) {
-    padding: 30px 80px;
-  }
+.CabinDetails{
+    width: 90%;
+    display: block;
+    margin: 150px auto 20px auto;
+    border: solid 1px #A39B94;
+    box-sizing: border-box;
+    @include breakpoint(tablet){
+        padding: 30px 80px;
+    }
 }
 
 .Steps {
@@ -63,14 +63,14 @@
     background-position: 50%;
   }
 }
-
-.Infos {
-  padding: 20px;
-  box-sizing: border-box;
-  @include breakpoint(tablet) {
-    order: 1;
-    width: 400px;
-  }
+    &_titleContainer{
+        color: #fff;
+        transform: translateY(-200%);
+        @include breakpoint(tablet){
+            transform: none;
+            color: #383D3B;
+        }
+    }
 
   &_titleContainer {
     color: #fff;

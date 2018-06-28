@@ -197,14 +197,30 @@
         cursor: pointer; }
 
 .Planet {
+  margin-top: 150px;
   width: 100%;
-  height: 50em;
+  height: 85%;
   background: no-repeat url(../../assets/img/planete.png);
   background-size: contain;
-  background-position: top right; }
+  background-position: 8em -3em; }
+  @media (min-width: 425px) {
+    .Planet {
+      background-position: 17em -3em; } }
+  @media (min-width: 768px) {
+    .Planet {
+      background-position: 20em -3em; } }
+  @media (min-width: 1024px) {
+    .Planet {
+      background-position: 45em -3em; } }
+  @media (min-width: 1440px) {
+    .Planet {
+      background-position: 70em -3em; } }
   .Planet_content {
     padding-top: 5%;
     height: fit-content; }
+    @media (min-width: 1024px) {
+      .Planet_content {
+        margin: 0 0 0 22%; } }
     .Planet_content_title {
       color: #383d3b;
       font-size: 35px;
@@ -215,7 +231,11 @@
       width: 70%;
       font-size: 16px;
       font-family: "kraft_monoregular";
-      padding-left: 1em; }
+      padding-left: 1em;
+      line-height: 120%; }
+    @media (min-width: 1024px) {
+      .Planet_content {
+        width: 40%; } }
     .Planet_content_desc {
       padding: 1.5em; }
       .Planet_content_desc_top {
@@ -225,11 +245,17 @@
           color: #a39b94;
           font-size: 20px;
           font-family: "kraft_monoregular"; }
+        .Planet_content_desc_top_line {
+          height: 2px;
+          background: #383d3b;
+          width: 150px;
+          align-self: flex-end;
+          margin: 0 0 0 5%; }
         .Planet_content_desc_top_txt {
           color: #383d3b;
           font-size: 20px;
           font-family: "rajdhanisemibold";
-          padding-left: 9.3em; }
+          padding-left: 1em; }
       .Planet_content_desc_bot {
         display: flex;
         padding-top: 2em; }
@@ -237,11 +263,17 @@
           color: #a39b94;
           font-size: 20px;
           font-family: "kraft_monoregular"; }
+        .Planet_content_desc_bot_line {
+          height: 2px;
+          background: #383d3b;
+          width: 100px;
+          align-self: flex-end;
+          margin: 0 0 0 5%; }
         .Planet_content_desc_bot_txt {
           color: #383d3b;
           font-size: 20px;
           font-family: "rajdhanisemibold";
-          padding-left: 7em; }
+          padding-left: 1em; }
 
 .Contain {
   display: flex;
@@ -820,9 +852,11 @@ table {
   @media (min-width: 768px) {
     .detailsactivity-container {
       height: 45rem; } }
+
 .detailsactivity-preface {
   padding-bottom: 2rem;
   padding-left: 2rem; }
+
 .detailsactivity-btn {
   height: 1rem;
   width: 9rem;
@@ -832,11 +866,13 @@ table {
   background: #f52f57;
   padding: 5px 9px 6px 9px;
   text-decoration: none; }
+
 .detailsactivity-titlepreface {
   color: #ffffff;
   font-family: "rajdhanisemibold";
   font-size: 3rem;
   margin-bottom: 2rem; }
+
 .detailsactivity-firsttitle {
   padding-top: 2rem;
   padding-left: 2rem;
@@ -844,12 +880,14 @@ table {
   font-family: "rajdhanisemibold";
   font-size: 2rem;
   margin-bottom: 2rem; }
+
 .detailsactivity-secondtitle {
   padding-left: 2rem;
   padding-right: 2rem;
   font-family: "rajdhanisemibold";
   font-size: 1.2rem;
   margin-bottom: 2rem; }
+
 .detailsactivity-paragraph {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -857,6 +895,7 @@ table {
   color: #a39b94;
   font-size: 1.4rem;
   margin-bottom: 1.6rem; }
+
 .detailsactivity-description {
   height: 27rem;
   border-left: 1px solid black;
@@ -867,7 +906,7 @@ table {
 .CabinDetails {
   width: 90%;
   display: block;
-  margin: 20px auto;
+  margin: 150px auto 20px auto;
   border: solid 1px #A39B94;
   box-sizing: border-box; }
   @media (min-width: 768px) {
@@ -927,7 +966,7 @@ table {
       width: 400px; } }
   .Infos_titleContainer {
     color: #fff;
-    transform: translateY(-155%); }
+    transform: translateY(-200%); }
     @media (min-width: 768px) {
       .Infos_titleContainer {
         transform: none;
@@ -992,7 +1031,7 @@ table {
 .CabinList {
   width: 90%;
   display: block;
-  margin: 20px auto;
+  margin: 150px auto 20px auto;
   border: solid 1px #A39B94;
   padding: 20px;
   box-sizing: border-box; }
@@ -1017,6 +1056,10 @@ table {
     @media (min-width: 768px) {
       .CabinForm_container {
         width: 300px; } }
+  .CabinForm_container label {
+    font-family: "kraft_monoregular";
+    font-size: 14px;
+    color: #383D3B; }
   .CabinForm_item {
     display: flex;
     flex-direction: column;
@@ -1024,8 +1067,8 @@ table {
     @media (min-width: 768px) {
       .CabinForm_item {
         flex-direction: row;
-        width: 500px;
-        justify-content: space-between;
+        width: 450px;
+        justify-content: space-around;
         align-items: center; } }
   .CabinForm_icon {
     width: 17px;
@@ -1056,6 +1099,11 @@ table {
     box-sizing: border-box;
     padding: 0 20px;
     width: 100%; }
+    .CabinForm_select:focus {
+      outline: none; }
+  .CabinForm_submit {
+    margin: 20px auto;
+    text-align: center; }
 
 .ResultsContainer {
   display: flex;
@@ -1110,8 +1158,11 @@ table {
   .CabinInfo_btnContainer {
     margin-top: 40px;
     display: flex;
-    justify-content: space-around;
-    width: 100%; }
+    width: 100%;
+    align-items: center; }
+  .CabinInfo_btnTxt {
+    font-family: "kraft_monoregular";
+    font-size: 14px; }
 
 .Connexion {
   width: 90%;
@@ -1130,6 +1181,64 @@ table {
   padding: 10px;
   box-sizing: border-box;
   display: block; }
+
+.ConfirmBooking {
+  width: 90%;
+  height: 100vh;
+  margin: 20px auto;
+  border: solid 1px #A39B94;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: "kraft_monoregular";
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  @media (min-width: 768px) {
+    .ConfirmBooking {
+      padding: 80px; } }
+  .ConfirmBooking_name {
+    font-family: "rajdhanisemibold";
+    font-size: 45px;
+    color: #383d3b; }
+  .ConfirmBooking_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    @media (min-width: 1440px) {
+      .ConfirmBooking_container {
+        flex-direction: row;
+        padding: 0 100px; } }
+  .ConfirmBooking_reservation {
+    margin-top: 20px;
+    font-family: "rajdhanisemibold";
+    color: #a39b94;
+    font-size: 26px;
+    display: flex;
+    justify-content: space-between; }
+  .ConfirmBooking_reservationItem {
+    line-height: 20px; }
+  .ConfirmBooking_resrvationValue {
+    margin-top: 35px; }
+
+.ConfirmBookingDetails_item {
+  margin-top: 45px; }
+
+.ConfirmBookingDetails_itemName {
+  margin-top: 45px; }
+
+.ConfirmBookingDetails_itemVal {
+  color: #a39b94; }
+
+.ConfirmBookingText_text {
+  margin-top: 45px; }
+  @media (min-width: 1440px) {
+    .ConfirmBookingText_text {
+      width: 300px; } }
+
+.ConfirmBookingText_link {
+  width: 250px;
+  margin: 0 auto;
+  margin-top: 45px; }
 
 .Footer {
   width: 90%;
@@ -1153,6 +1262,7 @@ table {
 
 .Nav_title {
   font-family: "rajdhanisemibold"; }
+
 .Nav_item {
   font-family: "rajdhanisemibold"; }
   .Nav_item > a {
@@ -1160,19 +1270,99 @@ table {
     text-decoration: none;
     line-height: 1.7;
     font-size: 16px; }
+
 .Nav_container {
   margin-top: 30px; }
+
+.activitylist-wrapper {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  margin-top: 50px;
+  margin-left: 5%;
+  margin-right: 5%; }
+
+.activitylist-title {
+  margin-left: 50px;
+  margin-bottom: 40px;
+  font-family: "rajdhanisemibold";
+  font-size: 14px; }
+
+.activitylist-paragraph {
+  margin-left: 50px;
+  margin-bottom: 70px;
+  font-family: "kraft_monoregular";
+  font-size: 12px; }
+
+.activitylist-container {
+  margin-left: 2%; }
+  @media (min-width: 768px) {
+    .activitylist-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; } }
+  .activitylist-container-content {
+    margin-bottom: 140px;
+    border-right: 1px solid black;
+    width: 371px;
+    height: 380px; }
+    @media (min-width: 768px) {
+      .activitylist-container-content {
+        border-bottom: 1px solid black;
+        border-left: 1px solid black; } }
+    @media (min-width: 768px) {
+      .activitylist-container-content {
+        margin-right: 100px; } }
+    .activitylist-container-content-img {
+      height: 100px;
+      width: 95%; }
+    .activitylist-container-content-title {
+      margin-left: 2rem;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      font-family: "rajdhanisemibold";
+      font-size: 14px; }
+    .activitylist-container-content-tag {
+      margin-left: 2rem;
+      margin-bottom: 50px;
+      height: 1rem;
+      width: 65px;
+      font-family: "kraft_monoregular";
+      color: #ffffff;
+      font-size: 8px;
+      background: #f52f57;
+      padding: 5px 9px 6px 9px;
+      text-decoration: none; }
+    .activitylist-container-content-paragraph {
+      margin-left: 2rem;
+      font-family: "kraft_monoregular"; }
+    .activitylist-container-content-btn {
+      display: flex;
+      justify-content: center;
+      width: 150px;
+      height: 20px;
+      margin: 15% auto 0;
+      padding: 1em 2em;
+      background: linear-gradient(-145deg, rgba(153, 70, 200, 0.8), rgba(244, 43, 87, 0.8));
+      font-size: 1.4rem;
+      font-family: "kraft_monoregular";
+      color: #f0ede2;
+      text-align: center;
+      cursor: pointer;
+      text-decoration: none; }
 
 /* FONTS */
 @font-face {
   font-family: 'kraft_monoregular';
   src: url("../font/kraftmono-webfont.woff2") format("woff2"), url("../font/kraftmono-webfont.woff") format("woff"); }
+
 @font-face {
   font-family: 'kraft_monoitalic';
   src: url("../font/kraftmono-italic-webfont.woff2") format("woff2"), url("../font/kraftmono-italic-webfont.woff") format("woff"); }
+
 @font-face {
   font-family: 'rajdhanisemibold';
   src: url("../font/rajdhani-semibold-webfont.woff2") format("woff2"), url("../font/rajdhani-semibold-webfont.woff") format("woff"); }
+
 body {
   width: 100%;
   height: 100vh;
@@ -1191,12 +1381,22 @@ body {
   display: flex;
   flex-direction: column; }
 
+.overflowH {
+  overflow: hidden; }
+
 a {
   text-decoration: none;
   color: #a39b94; }
 
-html {
-  font-size: 62.5%;
-  width: 100%; }
+.Button {
+  background: linear-gradient(-145deg, #9946c8, #f42b57);
+  line-height: 50px;
+  text-align: center;
+  color: #ffffff;
+  display: block;
+  font-family: "kraft_monoregular";
+  font-size: 14px;
+  text-decoration: none;
+  padding: 0 20px;
+  cursor: pointer; }
 
-/*# sourceMappingURL=main.css.map */
