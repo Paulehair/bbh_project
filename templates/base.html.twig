@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link href="/assets/css/main.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+    <header class="Header">
+        <img class="Header_logo" src="/assets/img/smartphone.png">
+
+        <img class="Header_burger" src="/assets/img/burger.svg" alt="burger menu" title="burger menu">
+
+        <nav class="Header_nav">
+            <div id="roll" class="Header_nav_box">
+                <p class="Header_nav_box_nbr">01</p>
+                <p class="Header_nav_box_item"><a class="Header_nav_box_item" href="{{ path('experience') }}">L'EXPERIENCE</a></p>
+
+                <div class="Header_nav_box_menu">
+                    <p class="Header_nav_box_menu_item"><a class="Header_nav_box_menu_item" href="{{ path('spaceship') }}">Vaisseau</a></p>
+                    <p class="Header_nav_box_menu_item"><a class="Header_nav_box_menu_item" href="{{ path('cabin_index') }}">Cabines</a></p>
+                    <p class="Header_nav_box_menu_item">Activités</p>
+                </div>
+            </div>
+            <div class="Header_nav_box">
+                <p class="Header_nav_box_nbr">02</p>
+                <p class="Header_nav_box_item"><a class="Header_nav_box_item" href="{{ path('booking_new') }}">RESERVER</a></p>
+            </div>
+            <div class="Header_nav_box">
+                <p class="Header_nav_box_nbr">03</p>
+                <p class="Header_nav_box_item">CONTACT</p>
+            </div>
+            <div class="Header_nav_box">
+                <div class="Header_nav_box_square"></div>
+                <p class="Header_nav_box_item">SE CONNECTER</p>
+            </div>
+        </nav>
+    </header>
+
+    {% block body %}
+    {% endblock %}
+    <footer class="Footer">
+    <div class="Footer_container">
+        <nav class="Footer_nav">
+          
+            <ul class="Nav">
+              <span class="Nav_title">Dionysos</span>
+
+              <div class="Nav_container">
+                  <li class="Nav_item"><a class="Nav_link" href="">Nous contacter</a></li>
+                  <li class="Nav_item"><a class="Nav_link" href="">carrière</a></li>
+                  <li class="Nav_item"><a class="Nav_link" href="">Presse</a></li>
+                  <li class="Nav_item"><a class="Nav_link" href="">Règles</a></li>
+                  <li class="Nav_item"><a class="Nav_link" href="">Aides</a></li>
+              </div>
+
+            </ul>
+
+          </nav>
+
+          <nav class="Footer_nav">
+              <ul class="Nav">
+                <span class="Nav_title">Découvrir</span>
+                <div class="Nav_container">
+                    <li class="Nav_item"><a class="Nav_link" href="">L'experience</a></li>
+                    <li class="Nav_item"><a class="Nav_link" href="">Sécurité</a></li>
+                    <li class="Nav_item"><a class="Nav_link" href="">Prérequis</a></li>
+                    <li class="Nav_item"><a class="Nav_link" href="">Vie à bord</a></li>
+                </div>
+              </ul>
+            </nav>
+    </div>
+    </footer>
+    {% block javascripts %}
+      <script src="/assets/js/main.js" type="text/javascript">
+    {% endblock %}
+    </body>
+</html>
+
+
+

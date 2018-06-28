@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Planet index{% endblock %}
+
+{% block body %}
+
+    <section class="container">
+        <section class="Map">
+            <h2 class="Map_title">Explorer le secteur</h2>
+            <img src="/assets/img/p0.png" alt="planets" class="Map_img" title="planets">
+        </section>
+
+        <section class="Card">
+            <div class="Card_slider">
+        {% for planet in planets %}
+            <div class="Card_slider_ctnr">
+                <h2 class="Card_slider_ctnr_title">{{ planet.name }}</h2>
+                <p class="Card_slider_ctnr_txt">{{ planet.description }}</p>
+                <p class="Card_slider_ctnr_btn"><a href="{{ path('planet_show', {'id': planet.id}) }}">Voir plus</a></p>
+            </div>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+             </div>
+        </section>
+    </section>
+{% endblock %}

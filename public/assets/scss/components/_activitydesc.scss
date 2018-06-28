@@ -1,0 +1,68 @@
+.detailsactivity{
+  &-container{
+    background-image: url(../img/allstars.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    height: 25rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    display: flex;
+    align-items: flex-end;
+    @include breakpoint(tablet) {
+      height: 45rem;
+    }
+  }
+  &-preface{
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+  }
+  &-btn{
+    height: 1rem;
+    width: 9rem;
+    font-family: $kraftMono;
+    color: #ffffff;
+    font-size: 11px;
+    background: #f52f57;;
+    padding: 5px 9px 6px 9px;
+    text-decoration: none;
+  }
+  &-titlepreface{
+    color: #ffffff;
+    font-family: $radjhani;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  &-firsttitle{
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-family: $radjhani;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  &-secondtitle{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-family: $radjhani;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  &-paragraph{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-family: $kraftMono;
+    color: $grey;
+    font-size: 1.4rem;
+    margin-bottom: 1.6rem;
+  }
+  &-description{
+    height: 27rem;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}

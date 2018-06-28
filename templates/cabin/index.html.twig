@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+{% for cabin in cabins %}
+<section class="CabinDetails">
+    <div class="InfoPannel">
+        <div class="InfoPannel_container">
+            <div class="Thumbnail" style="background-image: url('../assets/img/thumbnail.png');">
+                <!--
+                  <img class="Thumbnail_img" src="./assets/img/thumbnail.png" alt="">
+                -->
+            </div>
+            <div class="Infos">
+                <div class="Infos_titleContainer">
+                    <h1 class="Infos_title">{{ cabin.name }}</h1>
+                </div>
+                <p class="Infos_description">{{ cabin.description }}</p>
+                <div class="BookingDetails">
+                    <div class="BookingDetails_container">
+                        <div class="BookingDetails_tableHead">
+                            <div class="BookingDetails_HeadTitle">Details</div>
+                        </div>
+                        <div class="BookingDetails_content">
+                            <div class="BookingDetails_item"><span>{{ cabin.area }} m²</span></div>
+                            <div class="BookingDetails_item"><span>{{ cabin.price }} €</span></div>
+                            <div class="BookingDetails_item"><span>{{ cabin.numberOfPeople }} personnes</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Infos_btnContainer">
+                    <a href="{{ path('booking_new') }}" class="Infos_btn Button">Réserver</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,77 @@
+.ConfirmBooking{
+  width: 90%;
+  height: 100vh;
+  margin: 20px auto;
+  border: solid 1px #A39B94;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: $kraftMono;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include breakpoint(tablet){
+    padding: 80px;
+  }
+
+  &_name {
+    font-family: $radjhani;
+    font-size: 45px;
+    color: $darkgrey;
+  }
+
+  &_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include breakpoint(desktop){
+      flex-direction: row;
+      padding: 0 100px;
+    }
+  }
+
+  &_subContainer{
+
+  }
+
+  &_reservation{
+    margin-top: 20px;
+    font-family: $radjhani;
+    color: $grey;
+    font-size: 26px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &_reservationItem{
+    line-height: 20px;
+  }
+  &_resrvationValue{
+    margin-top: 35px;
+  }
+}
+
+.ConfirmBookingDetails{
+  &_item{
+    margin-top: 45px;
+
+  }
+  &_itemName{
+    margin-top: 45px;
+  }
+  &_itemVal{
+    color: $grey;
+  }
+}
+.ConfirmBookingText{
+  &_text{
+    margin-top: 45px;
+    @include breakpoint(desktop){
+      width: 300px;
+    }
+  }
+  &_link{
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 45px;
+  }
+}

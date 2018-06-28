@@ -1,0 +1,71 @@
+.Card {
+  width: 100%;
+  height: fit-content;
+  margin: 10% auto 0 auto;
+  padding-bottom: 10%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  &_slider {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+
+    &_ctnr {
+      border: 1px solid $blackPlanet;
+      border-bottom: none;
+      height: 42%;
+      width: 18em;
+      margin: 0 0 0 2.5%;
+
+      @include breakpoint(mobileL) {
+        width: 20em;
+      }
+
+      @include breakpoint(tablet) {
+        width: 30em;
+      }
+
+      @include breakpoint(laptop) {
+        width: 40em;
+      }
+
+      &_title {
+        position: relative;
+        padding: 1em;
+        font-family: $radjhani;
+        font-size: 30px;
+        
+        &:after {
+          content: "";
+          background: url(../img/traits.png) no-repeat;
+          background-size: cover;
+          position: absolute;
+          top: 50%;
+          left: 10%;
+          width: 50%;
+          height: 15%;
+          z-index: -1;
+        }
+      }
+
+      &_txt {
+        padding: 1em;
+        font-size: $fontP;
+        font-family: $kraftMono;
+      }
+      
+      &_btn {
+        width: 60%;
+        height: 6%;
+        margin: 15% auto 0;
+        padding: 1em 2em;
+        background: $gradient;
+        font-size: $fontCall;
+        color: $mainBkgd;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+  }
+}

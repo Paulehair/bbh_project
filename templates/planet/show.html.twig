@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Planet{% endblock %}
+
+{% block body %}
+    <section class="Planet">
+        <div class="Planet_content">
+            <h2 class="Planet_content_title">{{ planet.name }}</h2>
+            <p class="Planet_content_txt">
+                {{ planet.description }}
+            </p>
+
+            <div class="Planet_content_desc">
+                <div class="Planet_content_desc_top">
+                    <p class="Planet_content_desc_top_type">Type</p>
+                    <div class="Planet_content_desc_top_line"></div>
+                    <p class="Planet_content_desc_top_txt">{{ planet.type }}</p>
+                </div>
+
+                <div class="Planet_content_desc_bot">
+                    <p class="Planet_content_desc_bot_type">Diamètre</p>
+                    <div class="Planet_content_desc_bot_line"></div>
+                    <p class="Planet_content_desc_bot_txt">{{ planet.diameter }} km</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+{% endblock %}
+
