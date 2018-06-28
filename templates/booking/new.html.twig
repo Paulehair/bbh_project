@@ -52,19 +52,14 @@
                     <p class="CabinInfo_text">
                         cabine incroyablement bien foutue, canapés en cuir de phoque gris du pôle nord et cheminée à plasma. Inclus chaines pornos, putes et cocaînes
                     </p>
-
                     <div class="CabinInfo_btnContainer">
-                        <a href="" class="Button">{{ form_widget(cabin) }} Plus de détails</a>
+                        <button class="Button">{{ form_widget(cabin) }}Sélectionner la cabine</button>
                     </div>
-
                 </div>
             </div>
-
         {% endfor %}
         </div>
-
-        <button class="btn">{{ button_label|default('Save') }}</button>
+        <button class="Button">{{ button_label|default('Partir en couilles') }}</button>
         {{ form_end(form) }}
     </section>
-    <a href="{{ path('booking_index') }}">back to list</a>
 {% endblock %}
