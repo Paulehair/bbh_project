@@ -4,17 +4,27 @@
 
 {% block body %}
     <h1>Booking</h1>
-
     <table class="table">
         <tbody>
             <tr>
                 <th>Id</th>
-                <th>Name</th>
-
+                <th>Réservation N°</th>
+                <th>Cabine</th>
+                <th>Nombre de passagers</th>
+                <th>Mois</th>
+                <th>Prix</th>
+                <th>Prénom</th>
+                <th>Nom</th>
             </tr>
             <tr>
                 <td>{{ booking.id }}</td>
-                <td>{{ booking.cabin }}</td>
+                <td>{{ booking.reference }}</td>
+                <td>{{ booking.cabin.name }}</td>
+                <td>{{ booking.guestQuantity }}</td>
+                <td>{{ booking.month }}</td>
+                <td>{{ booking.cabin.price }} €</td>
+                <td>{{ booking.user.firstName }}</td>
+                <td>{{ booking.user.lastName }}</td>
             </tr>
         </tbody>
     </table>

@@ -3,43 +3,30 @@
 namespace App\Controller;
 
 use App\Entity\Booking;
+use App\Entity\User;
 use App\Form\BookingType;
 use App\Repository\BookingRepository;
 use App\Repository\CabinRepository;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Serializer\Encoder\JsonEncoder;
-use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
-use Symfony\Component\Serializer\Serializer;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 /**
  * @Route("/booking")
  */
 class BookingController extends Controller
 {
-    /**
+    /** @
      * @Route("/", name="booking_index", methods="GET")
      */
     public function index(BookingRepository $bookingRepository): Response
     {
         return $this->render('booking/index.html.twig', ['bookings' => $bookingRepository->findAll()]);
-/**
-        $myBookings = $bookingRepository->findAll();
-
-	    $encoders = [new JsonEncoder()];
-	    $normalizer = new ObjectNormalizer();
-	    $normalizer->setCircularReferenceLimit(2);
-	    $normalizer->setCircularReferenceHandler(function ($object) {
-		    return $object->getId();
-	    });
-
-	    $serializer = new Serializer([$normalizer], $encoders);
-	    header("Access-Control-Allow-Origin: *");
-        return new JsonResponse($serializer->serialize($myBookings, 'json'), 200, [], true);**/
     }
 
     /**
@@ -47,24 +34,20 @@ class BookingController extends Controller
      */
     public function new(Request $request, ValidatorInterface $validator, CabinRepository $cabinRepository): Response
     {
-    	/**
-    	$book = $request->getContent();
-    	$bookObject = $serialize->deserialize($book, Booking::class);
-    	$errors = $validator->validate($bookObject);
-**/
-
-
         $booking = new Booking();
         $form = $this->createForm(BookingType::class, $booking);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
         	$booking->setReference(uniqid());
+        	$booking->setSessId($request->getSession()->getId());
             $em = $this->getDoctrine()->getManager();
             $em->persist($booking);
             $em->flush();
+	        $request->getSession()->set('current', $booking->getId());
+	        $request->getSession()->set('current_ref', $booking->getReference());
 
-            return $this->redirectToRoute('booking_index');
+            return $this->redirectToRoute('login');
         }
 
         return $this->render('booking/new.html.twig', [
@@ -77,8 +60,40 @@ class BookingController extends Controller
     /**
      * @Route("/{id}", name="booking_show", methods="GET")
      */
-    public function show(Booking $booking): Response
+    public function show(Request $request, int $id): Response
     {
+    	$bookingRepository = $this->getDoctrine()->getManager()->getRepository('App:Booking');
+	    $booking = $bookingRepository->findOneBy([
+	    	'id' => $id
+	    ]);
+		if (is_null($booking)) {
+			// @todo gerer la non existance du booking
+			// return $this->render('booking/error.html.twig', []);
+		}
+
+        return $this->render('booking/show.html.twig', ['booking' => $booking]);
+    }
+
+    /**
+     * @Route("/confirm_booking/", name="booking_show_by_ref", methods="GET")
+     * @Security("has_role('ROLE_USER')")
+     */
+    public function showPostLogin(Request $request): Response
+    {
+	    $user = $this->getUser();
+    	if (null === $user) {
+		    throw new AccessDeniedException('nope');
+	    }
+    	$bookingRepository = $this->getDoctrine()->getManager()->getRepository('App:Booking');
+	    $booking = $bookingRepository->findOneBy([
+	    	'reference' => $request->getSession()->get('current_ref')
+	    ]);
+	    $booking->setUser($user);
+		if (is_null($booking)) {
+			// @todo gerer la non existance du booking
+			// return $this->render('booking/error.html.twig', []);
+		}
+
         return $this->render('booking/show.html.twig', ['booking' => $booking]);
     }
 
@@ -115,4 +130,25 @@ class BookingController extends Controller
 
         return $this->redirectToRoute('booking_index');
     }
+
+	/**
+	 * @Route("/{id}/edit", name="booking_edit", methods="GET|POST")
+	 */
+	public function addUser(Request $request, Booking $booking): Response
+	{
+		$form = $this->createForm(BookingType::class, $booking);
+		$form->handleRequest($request);
+
+		if ($form->isSubmitted() && $form->isValid()) {
+			$this->getDoctrine()->getManager()->flush();
+
+			return $this->redirectToRoute('booking_edit', ['id' => $booking->getId()]);
+		}
+
+		return $this->render('booking/edit.html.twig', [
+			'booking' => $booking,
+			'form' => $form->createView(),
+		]);
+	}
 }
+

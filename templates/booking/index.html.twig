@@ -14,6 +14,7 @@
                 <th>Cabin Price</th>
                 <th>Departure Month</th>
                 <th>Reference</th>
+                <th>User Id</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -26,6 +27,7 @@
                 <td>{{ booking.cabin.price }}</td>
                 <td>{{ booking.month }}</td>
                 <td>{{ booking.reference }}</td>
+                <td>{{ booking.user }}</td>
                 <td>
                     <a href="{{ path('booking_show', {'id': booking.id}) }}">show</a>
                     <a href="{{ path('booking_edit', {'id': booking.id}) }}">edit</a>
