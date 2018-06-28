@@ -32,6 +32,7 @@
           width: 40%;
           font-family: $kraftMono;
           text-align: center;
+          font-size: 16px;
           @include breakpoint(tablet) {
             width: 100%;
           }
@@ -63,10 +64,16 @@
     &_Txt {
       font-family: $kraftMono;
       color: #A39B94;
+      @include breakpoint(tablet) {
+      font-size: 16px;
+      }
     }
 
     &_Title {
       font-family: $kraftMono;
+      @include breakpoint(tablet) {
+      font-size: 16px;
+      }
     }
 
     &_Line {
@@ -137,7 +144,10 @@
       justify-content: space-around;
 
       & > svg {
-        width: 100px;
+        width: 80px;
+        @include breakpoint(tablet) {
+          width: 100Px;
+        }
       }
 
       & > h6 {

@@ -1,5 +1,6 @@
 // RESET SCSS
 
+
 // MIXINS
 @import "./global/variables";
 @import "./mixins/breakpoints";
@@ -10,7 +11,6 @@
 @import "./components/planetdesc";
 @import "./components/experience";
 @import "./components/fiche";
-@import "./components/final";
 @import "./components/homepage";
 @import "./components/activitydesc";
 @import "./components/cabindetails";
@@ -38,6 +38,7 @@
 body {
   width: 100%;
   height: 100vh;
+
   background: $mainBkgd;
 }
 
