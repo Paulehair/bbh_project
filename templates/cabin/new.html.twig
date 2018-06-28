@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Cabin{% endblock %}
+
+{% block body %}
+    <h1>Create new Cabin</h1>
+
+    {{ include('cabin/_form.html.twig') }}
+
+    <a href="{{ path('cabin_index') }}">back to list</a>
+{% endblock %}

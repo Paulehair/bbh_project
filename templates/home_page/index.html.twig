@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+{% block title %}Hello {{ controller_name }}!{% endblock %}
+
+{% block body %}
+<section class="experience">
+    <div class="experience-container">
+      <h1 class="experience-title">Ceci n'est pas une croisière</h1>
+      <p class="experience-paragraph">Lorem ipsum dolor sit amet, et, consectetur Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <a href="{{ path('experience') }}" class="experience-btn">Découvrir</a>
+    </div>
+  </section>
+
+  <section class="spaceship">
+    <div class="spaceship-container">
+      <h2 class="spaceship-title">Le vaisseau</h2>
+      <p class="spaceship-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <h2 class="spaceship-carac">Caractéristiques</h2>
+        <p class="spaceship-paragraph">hyperespace générateur <br />de gravité capsules de <br />sauvetage</p>
+        <a href="{{ path('spaceship') }}" class="spaceship-btn">Explorer</a>
+    </div>
+  </section>
+
+  <section class="homeContainer">
+        <section class="Map homeMap">
+            <h2 class="Map_title homeMap-title">Explorer le secteur</h2>
+            <img src="/assets/img/p0.png" alt="planets" class="Map_img homeMap-img" title="planets">
+          <a href="{{ path('planet_index') }}" class="homeMap-btn Button">Voir les étapes</a>
+        </section>
+    </section>
+
+<section class="activity">
+  <div class="activity-container">
+    <div class="activity-container-text">
+      <h1 class="activity-container-text-title">Les activités</h1>
+      <p class="activity-container-text-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore ptatem.</p>
+    </div>
+    <div class="activity-wrapper">
+      <div class="activity-wrapper-second">
+        <img src="assets/img/show1.jpg" alt="" class="activity-wrapper-second-img">
+        <div class="activity-wrapper-second-content">
+          <h3 class="activity-wrapper-second-content-title">Escales</h3>
+          <p class="activity-wrapper-second-content-paragraph">Découverte des planètes avoisinantes</p>
+        </div>
+      </div>
+      <div class="activity-wrapper-second">
+        <img src="assets/img/show2.jpg" alt="" class="activity-wrapper-second-img">
+        <div class="activity-wrapper-second-content">
+          <h3 class="activity-wrapper-second-content-title">Escales</h3>
+          <p class="activity-wrapper-second-content-paragraph">Découverte des planètes avoisinantes</p>
+        </div>
+      </div>
+  </div>
+  <a href="{{ path('activities_index') }}" class="activity-btn">Voir plus</a>
+</div>
+</section>
+{% endblock %}

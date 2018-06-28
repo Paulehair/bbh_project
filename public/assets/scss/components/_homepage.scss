@@ -1,0 +1,250 @@
+.experience {
+  width: 90%;
+  margin: 0 auto;
+  border-top: 1px solid #A39B94;
+  border-left: 1px solid #A39B94;
+  border-right: 1px solid #A39B94;
+  background-image: url("../img/planete4.png");
+  background-size: 100%;
+  background-position: -40% 50% 50%;
+  background-repeat: no-repeat;
+  height: 40rem;
+  @include breakpoint(tablet) {
+    height: 120rem;
+  }
+
+  &-container {
+    width: 85%;
+    margin: 0 auto;
+    background-size: 100%;
+    padding-top: 250px;
+    @include breakpoint(tablet) {
+      padding-top: 300px;
+      background-image: url("");
+    }
+  }
+
+  &-title {
+    font-size: 40px;
+    font-family: $radjhani;
+    margin-bottom: 3.2rem;
+  }
+
+  &-paragraph {
+    font-size: 14px;
+    width: 80%;
+    margin-bottom: 4.2rem;
+    font-family: $kraftMono;
+    color: $grey;
+    line-height: 120%;
+    @include breakpoint(tablet) {
+      background-image: url("");
+      margin-left: 5.5rem;
+      letter-spacing: 1px;
+      width: 60%;
+    }
+  }
+
+  &-btn {
+    width: 60%;
+    height: 6%;
+    margin: 15% auto 0;
+    padding: 15px 35px;
+    background: linear-gradient(-145deg, rgba(153, 70, 200, 0.8), rgba(244, 43, 87, 0.8));
+    font-size: 1.4rem;
+    font-family: $kraftMono;
+    color: #f0ede2;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+      @include breakpoint(tablet) {
+        padding: 15px 35px;
+      }
+  }
+}
+
+.spaceship {
+  width: 90%;
+  margin: 0 auto;
+  border-left: 1px solid #A39B94;
+  border-right: 1px solid #A39B94;
+  height: 50rem;
+  background-image: url("../img/spaceship1.png");
+  background-position: top 35% right 0;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  @include breakpoint(tablet) {
+    background-size: 60%;
+  }
+
+
+  &-container {
+    padding-top: 5%;
+    width: 85%;
+    margin: 0 auto;
+    @include breakpoint(tablet) {}
+  }
+
+  &-title {
+    font-size: 4.5rem;
+    font-family: $radjhani;
+  }
+
+  &-paragraph {
+    margin-top: 5rem;
+    margin-left: 4rem;
+    margin-bottom: 8rem;
+    font-family: $kraftMono;
+    line-height: 120%;
+    font-size: 14px;
+    color: $grey;
+  }
+
+  &-carac {
+    margin-top: 10rem;
+    font-family: $kraftMono;
+    font-size: 1.6rem;
+
+  }
+
+  &-btn {
+    width: 60%;
+    height: 6%;
+    margin: 15% auto 0;
+    padding: 1em 2em;
+    background: linear-gradient(-145deg, rgba(153, 70, 200, 0.8), rgba(244, 43, 87, 0.8));
+    font-size: 1.4rem;
+    font-family: $kraftMono;
+    color: #f0ede2;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.homeContainer {
+  width: 90%;
+  margin: 0 auto;
+  border-right: 1px solid $grey;
+  border-left: 1px solid $grey;
+}
+
+.homeMap {
+  width: 90%;
+  margin: 0 auto;
+  &-title {
+    font-size: 1.6rems;
+  }
+  &-btn {
+    width: 50%;
+    margin: 2em auto;
+    font-size: 1.4rem;
+    @include breakpoint(tablet) {
+      width:30%;
+    }
+  }
+}
+
+.activity {
+  width: 90%;
+  margin: 0 auto;
+  border-right: 1px solid $grey;
+  border-left: 1px solid $grey;
+  border-bottom: 1px solid $grey;
+
+  &-container {
+    &-text {
+      width: 85%;
+      margin:0 auto;
+      color: $darkgrey;
+      &-title {
+        padding-top: 2rem;
+        margin-left: 4.5rem;
+        margin-bottom: 3rem;
+        font-size: 1.6rem;
+        font-family: $radjhani;
+        color: $darkgrey;
+      }
+
+      &-paragraph {
+        margin-top: 4rem;
+        margin-left: 4.5rem;
+        margin-bottom: 4rem;
+        font-size: 14px;
+        line-height: 120%;
+        font-family: $kraftMono;
+        color: $darkgrey;
+        width: 70%;
+      }
+    }
+  }
+
+  &-wrapper {
+    @include breakpoint(tablet) {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
+    }
+    &-second {
+      margin-top: 7rem;
+      margin-bottom: 7rem;
+      margin-left: 4.5rem;
+      display: flex;
+      justify-content: space-around;
+      @include breakpoint(tablet) {
+        display: flex;
+        flex-direction: column;
+      }
+
+
+      &-img {
+        overflow: hidden;
+        margin-right: 4rem;
+        height: 10rem;
+        width: 10rem;
+        @include breakpoint(tablet) {
+          height: 18rem;
+          width: 18rem;
+        }
+        @include breakpoint(laptop) {
+          height: 22rem;
+          width: 27rem;
+        }
+      }
+
+      &-content {
+        &-title {
+          margin-top: 14px;
+          margin-bottom: 2rem;
+          font-family: $radjhani;
+          font-size: 16px;
+          color: $darkgrey;
+        }
+
+        &-paragraph {
+          font-family: $kraftMono;
+          font-size: 1.2rem;
+          color: $darkgrey;
+        }
+      }
+    }
+
+  }
+
+  &-btn {
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    height: 1rem;
+    margin: 5% auto 0;
+    padding: 1em 2em;
+    background-color: $white;
+    font-size: 12px;
+    font-family: $kraftMono;
+    color: $grey;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}

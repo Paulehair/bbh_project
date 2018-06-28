@@ -1,0 +1,150 @@
+.Header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $mainBkgd;
+  z-index: 1;
+  display: flex;
+  height: 10%;
+  width: 100%;
+  margin: 0 auto;
+  @include breakpoint(tablet) {}
+  @include breakpoint(laptop) {
+    margin: 0 auto;
+    height: 150px;
+  }
+
+  & > svg {
+    object-fit: contain;
+    width: 30%;
+    height: 3em;
+    margin-top: 5%;
+    margin-left: 7%;
+    @include breakpoint(laptop) {
+      margin-left: 8%;
+      width: 15%;
+      margin-top: 0;
+      height: fit-content;
+    }
+  }
+
+  &_burger {
+    width: auto;
+    height: 25px;
+    margin: 5% 0 0 50%;
+    @include breakpoint(tablet) {
+      margin-left: 80%;
+    }
+    @include breakpoint(laptop) {
+      display: none;
+      margin: 2% 0 0 65%;
+    }
+  }
+
+  &_nav {
+    display: none;
+    flex-direction: column;
+    background: $white;
+    width: 100%;
+    z-index: -1;
+        margin-top: 100px;
+    height: 100%;
+    padding-top: 5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include breakpoint(tablet) {
+      // margin: 0 0 0 -4%;
+      height: 100vh;
+    }
+    @include breakpoint(laptop) {
+      width: 65%;
+      margin-left: 30%;
+      display: flex;
+      height: 150px;
+      flex-direction: row;
+      justify-content: space-evenly;
+      padding: 0 2%;
+      position: fixed;
+      margin-top: 0px;
+      top: unset;
+      left: unset;
+    }
+
+    &_box {
+      font-family: $radjhani;
+      margin: 5% auto 10%;
+      font-size: 24px;
+      width: 132.66px;
+      @include breakpoint(mobileL) {}
+      @include breakpoint(tablet) {
+        margin: 5% auto 10%;
+      }
+      @include breakpoint(laptop) {
+        margin: 25px auto;
+        padding-top: 10px;
+        height: 150%;
+        font-size: 18px;
+      }
+
+      &:first-child:hover .Header_nav_box_menu {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      &_menu {
+        display: none;
+        position: absolute;
+        top: 8%;
+        right: 7%;
+        margin: 1.5em 0 0;
+        color: $grey;
+        @include breakpoint(tablet) {
+          right: 17%;
+        }
+        @include breakpoint(laptop) {
+          margin: 0;
+          position: unset;
+          visibility: hidden;
+          opacity: 0;
+          transition: opacity 0.5s ease;
+          display: unset;
+          background: $white;
+        }
+
+        &:hover {
+          visibility: visible;
+          opacity: 1;
+        }
+
+        &_item {
+          padding-top: 10px;
+          cursor: pointer;
+          transition: all 0.5s ease;
+
+          &:hover {
+            color: $darkgrey;
+          }
+        }
+      }
+
+      &_nbr {
+        color: $grey;
+        margin-bottom: 1em;
+      }
+
+      &_item {
+        color: $darkgrey;
+        cursor: pointer;
+        width: max-content;
+      }
+
+      &_square {
+        margin: 0 0 1em;
+        width: 1em;
+        height: 1em;
+        background: $red;
+      }
+    }
+  }
+}

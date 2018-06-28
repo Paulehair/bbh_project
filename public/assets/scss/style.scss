@@ -1,0 +1,86 @@
+// RESET SCSS
+@import "./global/reset";
+// MIXINS
+@import "./global/variables";
+@import "./mixins/breakpoints";
+// COMPONENTS
+
+@import "./components/header";
+@import "./components/map";
+@import "./components/card";
+@import "./components/planetdesc";
+@import "./components/experience";
+@import "./components/fiche";
+@import "./components/homepage";
+@import "./components/activitydesc";
+@import "./components/cabindetails";
+@import "./components/cabinlist";
+@import "./components/loginregister";
+@import "./components/confirmbooking";
+@import "./components/footer";
+
+
+/* FONTS */
+@font-face {
+  font-family: 'kraft_monoregular';
+  src: url('../font/kraftmono-webfont.woff2') format('woff2'), url('../font/kraftmono-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'kraft_monoitalic';
+  src: url('../font/kraftmono-italic-webfont.woff2') format('woff2'), url('../font/kraftmono-italic-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'rajdhanisemibold';
+  src: url('../font/rajdhani-semibold-webfont.woff2') format('woff2'), url('../font/rajdhani-semibold-webfont.woff') format('woff');
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: $mainBkgd;
+}
+
+.container {
+  overflow: hidden;
+  width: 80%;
+  border: 1px solid $darkgrey;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.overflowH {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: $grey;
+}
+
+html {
+  font-size: 62.5%;
+  width: 100%;
+}
+
+.Button{
+  background: $gradient;
+  line-height: 50px;
+  text-align: center;
+  color: #ffffff;
+  display: block;
+  font-family: $kraftMono;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 0 20px;
+  cursor: pointer;
+}

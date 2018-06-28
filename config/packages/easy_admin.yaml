@@ -1,0 +1,8 @@
+easy_admin:
+    entities:
+#        # List the entity class name you want to manage
+        - App\Entity\Booking
+        - App\Entity\User
+        - App\Entity\Cabin
+        - App\Entity\Month
+        - App\Entity\Planet

@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Activities index{% endblock %}
+
+{% block body %}
+    <section class="activitylist">
+        <div class="activitylist-wrapper">
+            <h1 class="activitylist-title">Liste des Activités</h1>
+            <p class="activitylist-paragraph">Voici l’ensemble des activités possibles au sein de la croisière Dyonisos.</p>
+            <div class="activitylist-container">
+        {% for activity in activities %}
+                <div class="activitylist-container-content">
+                    <img src="/assets/img/{{ activity.image }}" alt="img" class="activitylist-container-content-img">
+                    <h2 class="activitylist-container-content-title">{{ activity.name }}</h2>
+                    <p class="activitylist-container-content-tag">{{ activity.type }}</p>
+                    <p class="activitylist-container-content-paragraph">{{ activity.detail }}</p>
+
+                </div>
+        {% else %}
+            </div>
+        </div>
+            <tr>
+              <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+    </section>
+{% endblock %}

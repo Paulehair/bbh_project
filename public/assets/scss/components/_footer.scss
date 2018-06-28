@@ -1,0 +1,41 @@
+.Footer{
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    &_container{
+        display: flex; 
+    }
+    &_nav:last-child{
+        margin-left: 40px;
+        @include breakpoint(tablet){
+            margin-left: 120px;
+        }
+    }
+    &_details{
+        margin-top: 40px;
+        border-top: 1px solid #979797;
+    }
+    &_logo{
+        font-family: $radjhani;
+        letter-spacing: 5px;
+        padding-top: 20px;
+    }
+}
+.Nav{
+   &_title{
+       font-family: $radjhani;
+   } 
+   &_item{
+        font-family: $radjhani;
+       &>a{
+        color: #383D3B;
+        text-decoration: none;
+        line-height: 1.7;
+        font-size: 16px;
+       }
+   }
+   &_container{
+       margin-top: 30px;
+   }
+}
