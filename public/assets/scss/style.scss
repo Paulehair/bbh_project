@@ -1,5 +1,5 @@
 // RESET SCSS
-
+@import "./global/reset";
 
 // MIXINS
 @import "./global/variables";
@@ -42,11 +42,12 @@ body {
   height: 100vh;
 
   background: $mainBkgd;
+  overflow-x: hidden;
 }
 
 .container {
   overflow: hidden;
-  width: 80%;
+  width: 90%;
   border: 1px solid $darkgrey;
   margin: 0 auto;
 }
@@ -63,15 +64,6 @@ body {
 a {
   text-decoration: none;
   color: $grey;
-}
-
-html {
- // font-size: 62.5%;
-  width: 100%;
-}
-
-.boxShad {
-  box-shadow: $boxShad;
 }
 
 .Button{
