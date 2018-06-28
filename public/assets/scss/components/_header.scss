@@ -68,7 +68,7 @@
       @include breakpoint(tablet) {
         margin: 3% auto;
       }
-      
+
       @include breakpoint(laptop) {
         margin: 0 auto;
         height: 150%;
@@ -78,19 +78,19 @@
         visibility: visible;
         opacity: 1;
       }
-      
+
       &_menu {
         display: none;
         position: absolute;
         top: 8%;
-        right: 7%;         
+        right: 7%;
         margin: 1.5em 0 0 0;
         color: $grey;
-        
+
         @include breakpoint(tablet) {
           right: 17%;
         }
-        
+
         @include breakpoint(laptop) {
           margin: 0 0;
           position: unset;

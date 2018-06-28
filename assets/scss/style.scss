@@ -1,5 +1,3 @@
-// RESET SCSS
-
 
 // MIXINS
 @import "./global/variables";
@@ -11,13 +9,13 @@
 @import "./components/planetdesc";
 @import "./components/experience";
 @import "./components/fiche";
+@import "./components/final";
 @import "./components/homepage";
 @import "./components/activitydesc";
 @import "./components/cabindetails";
 @import "./components/cabinlist";
 @import "./components/loginregister";
 @import "./components/footer";
-
 
 /* FONTS */
 @font-face {
@@ -36,34 +34,15 @@
 }
 
 body {
-  width: 100%;
   height: 100vh;
-
   background: $mainBkgd;
 }
 
 .container {
   overflow: hidden;
-  width: 80%;
-  border: 1px solid $darkgrey;
-  margin: 0 auto;
+  height: 100%;
 }
 
-.flex {
-  display: flex;
-}
-
-.flexCol {
-  display: flex;
-  flex-direction: column;
-}
-
-a {
-  text-decoration: none;
-  color: $grey;
-}
-
-html {
-  font-size: 62.5%;
-  width: 100%;
+.boxShad {
+  box-shadow: $boxShad;
 }
