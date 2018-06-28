@@ -4,132 +4,172 @@
   display: flex;
   width: 80%;
   height: 10%;
-  margin: 4% auto; }
+  margin: 4% auto;
+}
+.Header_logo {
+  margin: 1.4% 0 0 0;
+  font-family: "rajdhanisemibold";
+  font-size: 20px;
+}
+@media (min-width: 1024px) {
   .Header_logo {
-    margin: 1.4% 0 0 0;
-    font-family: "rajdhanisemibold";
-    font-size: 20px; }
-    @media (min-width: 1024px) {
-      .Header_logo {
-        margin: 2.5% 0 0 3%;
-        height: fit-content; } }
+    margin: 2.5% 0 0 3%;
+    height: fit-content;
+  }
+}
+.Header_burger {
+  width: 2em;
+  height: 2em;
+  margin-left: 60%;
+}
+@media (min-width: 768px) {
   .Header_burger {
-    width: 2em;
-    height: 2em;
-    margin-left: 60%; }
-    @media (min-width: 768px) {
-      .Header_burger {
-        margin-left: 80%; } }
-    @media (min-width: 1024px) {
-      .Header_burger {
-        display: none; } }
-  .Header_nav {
+    margin-left: 80%;
+  }
+}
+@media (min-width: 1024px) {
+  .Header_burger {
     display: none;
-    flex-direction: column;
-    background: #f0ece1;
+  }
+}
+.Header_nav {
+  display: none;
+  flex-direction: column;
+  background: #f0ece1;
+  width: 100%;
+  height: 100vh;
+  padding-top: 5em;
+  position: absolute;
+  top: 3em;
+  left: 0;
+}
+@media (min-width: 1024px) {
+  .Header_nav {
     width: 100%;
-    height: 100vh;
-    padding-top: 5em;
-    position: absolute;
-    top: 3em;
-    left: 0; }
-    @media (min-width: 1024px) {
-      .Header_nav {
-        width: 100%;
-        height: 106%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        padding: 0 2%;
-        position: unset;
-        top: unset;
-        left: unset;
-        margin: 0 0 0 2%; } }
-    .Header_nav_box {
-      margin: 5% 0 0 5%;
-      font-family: "rajdhanisemibold";
-      font-size: 1.5em;
-      width: 132.66px; }
-      @media (min-width: 425px) {
-        .Header_nav_box {
-          margin: 3% 20%; } }
-      @media (min-width: 768px) {
-        .Header_nav_box {
-          margin: 3% auto; } }
-      @media (min-width: 1024px) {
-        .Header_nav_box {
-          margin: 0 auto;
-          height: 150%; } }
-      .Header_nav_box:first-child:hover .Header_nav_box_menu {
-        visibility: visible;
-        opacity: 1; }
-      .Header_nav_box_menu {
-        display: none;
-        position: absolute;
-        top: 8%;
-        right: 7%;
-        margin: 1.5em 0 0 0;
-        color: #a39b94; }
-        @media (min-width: 768px) {
-          .Header_nav_box_menu {
-            right: 17%; } }
-        @media (min-width: 1024px) {
-          .Header_nav_box_menu {
-            margin: 0 0;
-            position: unset;
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            display: unset;
-            background: #f0ece1; } }
-        .Header_nav_box_menu:hover {
-          visibility: visible;
-          opacity: 1; }
-        .Header_nav_box_menu_item {
-          padding: 0.2em;
-          cursor: pointer;
-          transition: all 0.5s ease; }
-          .Header_nav_box_menu_item:hover {
-            color: #383d3b; }
-      .Header_nav_box_nbr {
-        color: #a39b94;
-        margin-bottom: 1em; }
-      .Header_nav_box_item {
-        color: #383d3b;
-        cursor: pointer;
-        width: max-content; }
-      .Header_nav_box_square {
-        margin-bottom: 1em;
-        width: 1em;
-        height: 1em;
-        background: #f52f57; }
+    height: 106%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0 2%;
+    position: unset;
+    top: unset;
+    left: unset;
+    margin: 0 0 0 2%;
+  }
+}
+.Header_nav_box {
+  margin: 5% 0 0 5%;
+  font-family: "rajdhanisemibold";
+  font-size: 1.5em;
+  width: 132.66px;
+}
+@media (min-width: 425px) {
+  .Header_nav_box {
+    margin: 3% 20%;
+  }
+}
+@media (min-width: 768px) {
+  .Header_nav_box {
+    margin: 3% auto;
+  }
+}
+@media (min-width: 1024px) {
+  .Header_nav_box {
+    margin: 0 auto;
+    height: 150%;
+  }
+}
+.Header_nav_box:first-child:hover .Header_nav_box_menu {
+  visibility: visible;
+  opacity: 1;
+}
+.Header_nav_box_menu {
+  display: none;
+  position: absolute;
+  top: 8%;
+  right: 7%;
+  margin: 1.5em 0 0 0;
+  color: #a39b94;
+}
+@media (min-width: 768px) {
+  .Header_nav_box_menu {
+    right: 17%;
+  }
+}
+@media (min-width: 1024px) {
+  .Header_nav_box_menu {
+    margin: 0 0;
+    position: unset;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: unset;
+    background: #f0ece1;
+  }
+}
+.Header_nav_box_menu:hover {
+  visibility: visible;
+  opacity: 1;
+}
+.Header_nav_box_menu_item {
+  padding: 0.2em;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.Header_nav_box_menu_item:hover {
+  color: #383d3b;
+}
+.Header_nav_box_nbr {
+  color: #a39b94;
+  margin-bottom: 1em;
+}
+.Header_nav_box_item {
+  color: #383d3b;
+  cursor: pointer;
+  width: max-content;
+}
+.Header_nav_box_square {
+  margin-bottom: 1em;
+  width: 1em;
+  height: 1em;
+  background: #f52f57;
+}
 
 .Map {
   position: relative;
   width: 100%;
-  height: 50%; }
-  .Map_title {
-    color: #383d3b;
-    font-family: "rajdhanisemibold";
-    font-size: 1.8em;
-    width: 40%;
-    padding: 1em; }
+  height: 50%;
+}
+.Map_title {
+  color: #383d3b;
+  font-family: "rajdhanisemibold";
+  font-size: 1.8em;
+  width: 40%;
+  padding: 1em;
+}
+.Map_img {
+  object-fit: contain;
+  width: 31em;
+  margin: 0 0 0 -5em;
+}
+@media (min-width: 768px) {
   .Map_img {
-    object-fit: contain;
-    width: 31em;
-    margin: 0 0 0 -5em; }
-    @media (min-width: 768px) {
-      .Map_img {
-        margin: 0 0 0 -1em;
-        width: 40em; } }
-    @media (min-width: 1024px) {
-      .Map_img {
-        margin: 0 0 0 2em;
-        width: 50em; } }
-    @media (min-width: 1440px) {
-      .Map_img {
-        margin: 0 0 0 8em;
-        width: 60em; } }
+    margin: 0 0 0 -1em;
+    width: 40em;
+  }
+}
+@media (min-width: 1024px) {
+  .Map_img {
+    margin: 0 0 0 2em;
+    width: 50em;
+  }
+}
+@media (min-width: 1440px) {
+  .Map_img {
+    margin: 0 0 0 8em;
+    width: 60em;
+  }
+}
 
 .Card {
   width: 100%;
@@ -137,91 +177,109 @@
   margin: 10% auto 0 auto;
   padding-bottom: 10%;
   overflow-x: scroll;
-  overflow-y: hidden; }
-  .Card_slider {
-    width: 235%;
-    height: 236%;
-    display: flex; }
-    .Card_slider_ctnr {
-      border-top: 1px solid #353a38;
-      border-left: 1px solid #353a38;
-      height: 42%;
-      margin: 0 0 0 4%; }
-      .Card_slider_ctnr_title {
-        position: relative;
-        padding: 1em;
-        font-family: "rajdhanisemibold";
-        font-size: 30px; }
-        .Card_slider_ctnr_title:after {
-          content: "";
-          background: url(../img/traits.png) no-repeat;
-          background-size: cover;
-          position: absolute;
-          top: 50%;
-          left: 10%;
-          width: 50%;
-          height: 15%;
-          z-index: -1; }
-      .Card_slider_ctnr_txt {
-        padding: 1em;
-        font-size: 16px;
-        font-family: "kraft_monoregular"; }
-      .Card_slider_ctnr_btn {
-        width: 60%;
-        height: 6%;
-        margin: 15% auto 0;
-        padding: 1em 2em;
-        background: linear-gradient(-145deg, rgba(153, 70, 200, 0.8), rgba(244, 43, 87, 0.8));
-        font-size: 14px;
-        color: #f0ede2;
-        text-align: center;
-        cursor: pointer; }
+  overflow-y: hidden;
+}
+.Card_slider {
+  width: 235%;
+  height: 236%;
+  display: flex;
+}
+.Card_slider_ctnr {
+  border-top: 1px solid #353a38;
+  border-left: 1px solid #353a38;
+  height: 42%;
+  margin: 0 0 0 4%;
+}
+.Card_slider_ctnr_title {
+  position: relative;
+  padding: 1em;
+  font-family: "rajdhanisemibold";
+  font-size: 30px;
+}
+.Card_slider_ctnr_title:after {
+  content: "";
+  background: url(../img/traits.png) no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  width: 50%;
+  height: 15%;
+  z-index: -1;
+}
+.Card_slider_ctnr_txt {
+  padding: 1em;
+  font-size: 16px;
+  font-family: "kraft_monoregular";
+}
+.Card_slider_ctnr_btn {
+  width: 60%;
+  height: 6%;
+  margin: 15% auto 0;
+  padding: 1em 2em;
+  background: linear-gradient(-145deg, rgba(153, 70, 200, 0.8), rgba(244, 43, 87, 0.8));
+  font-size: 14px;
+  color: #f0ede2;
+  text-align: center;
+  cursor: pointer;
+}
 
 .Planet {
   width: 100%;
   height: 50em;
   background: no-repeat url(../../assets/img/planete.png);
   background-size: contain;
-  background-position: top right; }
-  .Planet_content {
-    padding-top: 18%; }
-    .Planet_content_title {
-      color: #383d3b;
-      font-size: 45px;
-      font-family: "rajdhanisemibold";
-      padding: 0.5em; }
-    .Planet_content_txt {
-      color: #a39b94;
-      width: 70%;
-      font-size: 20px;
-      font-family: "kraft_monoregular";
-      padding-left: 1em; }
-    .Planet_content_desc {
-      padding: 1.5em; }
-      .Planet_content_desc_top {
-        display: flex;
-        padding-top: 2em; }
-        .Planet_content_desc_top_type {
-          color: #a39b94;
-          font-size: 20px;
-          font-family: "kraft_monoregular"; }
-        .Planet_content_desc_top_txt {
-          color: #383d3b;
-          font-size: 20px;
-          font-family: "rajdhanisemibold";
-          padding-left: 9.3em; }
-      .Planet_content_desc_bot {
-        display: flex;
-        padding-top: 2em; }
-        .Planet_content_desc_bot_type {
-          color: #a39b94;
-          font-size: 20px;
-          font-family: "kraft_monoregular"; }
-        .Planet_content_desc_bot_txt {
-          color: #383d3b;
-          font-size: 20px;
-          font-family: "rajdhanisemibold";
-          padding-left: 7em; }
+  background-position: top right;
+}
+.Planet_content {
+  padding-top: 18%;
+}
+.Planet_content_title {
+  color: #383d3b;
+  font-size: 45px;
+  font-family: "rajdhanisemibold";
+  padding: 0.5em;
+}
+.Planet_content_txt {
+  color: #a39b94;
+  width: 70%;
+  font-size: 20px;
+  font-family: "kraft_monoregular";
+  padding-left: 1em;
+}
+.Planet_content_desc {
+  padding: 1.5em;
+}
+.Planet_content_desc_top {
+  display: flex;
+  padding-top: 2em;
+}
+.Planet_content_desc_top_type {
+  color: #a39b94;
+  font-size: 20px;
+  font-family: "kraft_monoregular";
+}
+.Planet_content_desc_top_txt {
+  color: #383d3b;
+  font-size: 20px;
+  font-family: "rajdhanisemibold";
+  padding-left: 9.3em;
+}
+.Planet_content_desc_bot {
+  display: flex;
+  padding-top: 2em;
+}
+.Planet_content_desc_bot_type {
+  color: #a39b94;
+  font-size: 20px;
+  font-family: "kraft_monoregular";
+}
+.Planet_content_desc_bot_txt {
+  color: #383d3b;
+  font-size: 20px;
+  font-family: "rajdhanisemibold";
+  padding-left: 7em;
+}
 
 .Contain {
   display: flex;
@@ -229,223 +287,290 @@
   height: 110vh;
   background: url("../img/astronot.png") no-repeat;
   background-size: 35%;
-  background-position: 50% 30%; }
-  @media (min-width: 768px) {
-    .Contain {
-      background-size: 15%;
-      background-position: 100% 30%; } }
+  background-position: 50% 30%;
+}
+@media (min-width: 768px) {
+  .Contain {
+    background-size: 15%;
+    background-position: 100% 30%;
+  }
+}
 
 .Experience {
   width: 90%;
   display: block;
   margin: 20Px auto;
-  border: solid 1px #A39B94; }
+  border: solid 1px #A39B94;
+}
+.Experience_End {
+  width: 80%;
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  border: solid 1px #A39B94;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+@media (min-width: 768px) {
   .Experience_End {
-    width: 80%;
-    height: 80vh;
-    display: flex;
-    flex-wrap: wrap;
-    border: solid 1px #A39B94;
-    margin: 0 auto;
-    margin-bottom: 50px; }
-    @media (min-width: 768px) {
-      .Experience_End {
-        height: 50vh;
-        margin-top: 200px;
-        width: 90%;
-        margin-bottom: 100px; } }
-    .Experience_End_Txt {
-      width: 50%;
-      justify-content: center;
-      display: flex;
-      align-items: center; }
-      @media (min-width: 768px) {
-        .Experience_End_Txt {
-          width: 16%; } }
-      .Experience_End_Txt > p {
-        font-size: 72px;
-        font-family: "rajdhanisemibold";
-        width: 50%;
-        text-align: center; }
-  .Experience_Main {
-    margin-left: 4.75%;
-    margin-right: 4.75%;
-    display: block;
-    color: black;
-    padding-bottom: 130px; }
-    .Experience_Main > h6 {
-      font-family: "rajdhanisemibold";
-      font-size: 45px;
-      padding-bottom: 80px; }
-      @media (min-width: 768px) {
-        .Experience_Main > h6 {
-          width: 40%;
-          line-height: 120%; } }
-    .Experience_Main > p {
-      font-family: "kraft_monoregular";
-      font-size: 16px;
-      color: #A39B94;
-      line-height: 120%; }
-      @media (min-width: 768px) {
-        .Experience_Main > p {
-          width: 60%;
-          line-height: 150%; } }
+    height: 50vh;
+    margin-top: 200px;
+    width: 90%;
+    margin-bottom: 100px;
+  }
+}
+.Experience_End_Txt {
+  width: 50%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .Experience_End_Txt {
+    width: 16%;
+  }
+}
+.Experience_End_Txt > p {
+  font-size: 72px;
+  font-family: "rajdhanisemibold";
+  width: 50%;
+  text-align: center;
+}
+.Experience_Main {
+  margin-left: 4.75%;
+  margin-right: 4.75%;
+  display: block;
+  color: black;
+  padding-bottom: 130px;
+}
+.Experience_Main > h6 {
+  font-family: "rajdhanisemibold";
+  font-size: 45px;
+  padding-bottom: 80px;
+}
+@media (min-width: 768px) {
+  .Experience_Main > h6 {
+    width: 40%;
+    line-height: 120%;
+  }
+}
+.Experience_Main > p {
+  font-family: "kraft_monoregular";
+  font-size: 16px;
+  color: #A39B94;
+  line-height: 120%;
+}
+@media (min-width: 768px) {
+  .Experience_Main > p {
+    width: 60%;
+    line-height: 150%;
+  }
+}
+.Experience_Second {
+  margin-left: 4.75%;
+  margin-right: 4.75%;
+}
+@media (min-width: 768px) {
   .Experience_Second {
-    margin-left: 4.75%;
-    margin-right: 4.75%; }
-    @media (min-width: 768px) {
-      .Experience_Second {
-        display: flex;
-        margin-top: 80px; } }
-    .Experience_Second_Under {
-      color: #f0ede2; }
-      .Experience_Second_Under:before {
-        content: "";
-        position: absolute;
-        width: 45px;
-        background-color: #f53058;
-        height: 16px;
-        z-index: -1; }
-    @media (min-width: 768px) {
-      .Experience_Second_Content {
-        width: 55%; } }
-    .Experience_Second_Content > h6 {
-      padding-bottom: 80px;
-      font-family: "rajdhanisemibold";
-      font-size: 45px; }
-    .Experience_Second_Txt {
-      font-family: "kraft_monoregular";
-      padding-bottom: 20px;
-      font-size: 16px;
-      color: #A39B94;
-      width: 90%;
-      line-height: 120%; }
-      @media (min-width: 768px) {
-        .Experience_Second_Txt {
-          line-height: 150%; } }
-    .Experience_Second_Img {
-      width: 100%;
-      height: 300px; }
-      .Experience_Second_Img > img {
-        margin-top: 20%;
-        width: 100%;
-        height: auto; }
+    display: flex;
+    margin-top: 80px;
+  }
+}
+.Experience_Second_Under {
+  color: #f0ede2;
+}
+.Experience_Second_Under:before {
+  content: "";
+  position: absolute;
+  width: 45px;
+  background-color: #f53058;
+  height: 16px;
+  z-index: -1;
+}
+@media (min-width: 768px) {
+  .Experience_Second_Content {
+    width: 55%;
+  }
+}
+.Experience_Second_Content > h6 {
+  padding-bottom: 80px;
+  font-family: "rajdhanisemibold";
+  font-size: 45px;
+}
+.Experience_Second_Txt {
+  font-family: "kraft_monoregular";
+  padding-bottom: 20px;
+  font-size: 16px;
+  color: #A39B94;
+  width: 90%;
+  line-height: 120%;
+}
+@media (min-width: 768px) {
+  .Experience_Second_Txt {
+    line-height: 150%;
+  }
+}
+.Experience_Second_Img {
+  width: 100%;
+  height: 300px;
+}
+.Experience_Second_Img > img {
+  margin-top: 20%;
+  width: 100%;
+  height: auto;
+}
 
 .Fiche {
   width: 90%;
   margin: 50px auto;
-  border: solid 1px #A39B94; }
+  border: solid 1px #A39B94;
+}
+.Fiche_Card {
+  display: block;
+  width: 90%;
+  margin: 100px auto;
+}
+@media (min-width: 768px) {
   .Fiche_Card {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.Fiche_Card_Item {
+  display: flex;
+  height: 150px;
+  margin-top: 30px;
+  width: 100%;
+  background-color: #F9F5EA;
+}
+@media (min-width: 768px) {
+  .Fiche_Card_Item {
     display: block;
-    width: 90%;
-    margin: 100px auto; }
-    @media (min-width: 768px) {
-      .Fiche_Card {
-        display: flex;
-        justify-content: space-between; } }
-    .Fiche_Card_Item {
-      display: flex;
-      height: 150px;
-      margin-top: 30px;
-      width: 100%;
-      background-color: #F9F5EA; }
-      @media (min-width: 768px) {
-        .Fiche_Card_Item {
-          display: block;
-          width: 30%;
-          height: 300px; } }
-      .Fiche_Card_Item > p {
-        padding-top: 15px;
-        width: 50%; }
-        .Fiche_Card_Item > p:nth-child(1) {
-          width: 40%;
-          font-family: "kraft_monoregular";
-          text-align: center; }
-          @media (min-width: 768px) {
-            .Fiche_Card_Item > p:nth-child(1) {
-              width: 100%; } }
-        .Fiche_Card_Item > p:nth-child(2) {
-          color: #A39B94;
-          width: 60%;
-          font-family: "kraft_monoregular";
-          font-size: 13Px;
-          line-height: 120%;
-          padding-right: 20px; }
-          @media (min-width: 768px) {
-            .Fiche_Card_Item > p:nth-child(2) {
-              width: 80%;
-              padding-top: 50px;
-              padding-left: 15%;
-              font-size: 14px; } }
-  .Fiche_Att {
-    display: block;
-    width: 90%;
-    margin: 100px auto; }
-    .Fiche_Att_Txt {
-      font-family: "kraft_monoregular";
-      color: #A39B94; }
-    .Fiche_Att_Title {
-      font-family: "kraft_monoregular"; }
-    .Fiche_Att_Line {
-      display: flex;
-      align-items: flex-end; }
-      .Fiche_Att_Line > div {
-        margin-top: 10px;
-        display: flex;
-        align-items: flex-end;
-        width: 80px;
-        background-color: #4A4D4C;
-        height: 2px; }
-    .Fiche_Att_Item {
-      justify-content: space-between;
-      display: flex;
-      width: 60%;
-      margin-bottom: 25px; }
-      @media (min-width: 768px) {
-        .Fiche_Att_Item {
-          width: 30%; } }
-  .Fiche_Dec {
-    width: 90%;
-    margin: 0 auto; }
-    .Fiche_Dec > img {
-      width: 100%;
-      height: auto; }
+    width: 30%;
+    height: 300px;
+  }
+}
+.Fiche_Card_Item > p {
+  padding-top: 15px;
+  width: 50%;
+}
+.Fiche_Card_Item > p:nth-child(1) {
+  width: 40%;
+  font-family: "kraft_monoregular";
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .Fiche_Card_Item > p:nth-child(1) {
+    width: 100%;
+  }
+}
+.Fiche_Card_Item > p:nth-child(2) {
+  color: #A39B94;
+  width: 60%;
+  font-family: "kraft_monoregular";
+  font-size: 13Px;
+  line-height: 120%;
+  padding-right: 20px;
+}
+@media (min-width: 768px) {
+  .Fiche_Card_Item > p:nth-child(2) {
+    width: 80%;
+    padding-top: 50px;
+    padding-left: 15%;
+    font-size: 14px;
+  }
+}
+.Fiche_Att {
+  display: block;
+  width: 90%;
+  margin: 100px auto;
+}
+.Fiche_Att_Txt {
+  font-family: "kraft_monoregular";
+  color: #A39B94;
+}
+.Fiche_Att_Title {
+  font-family: "kraft_monoregular";
+}
+.Fiche_Att_Line {
+  display: flex;
+  align-items: flex-end;
+}
+.Fiche_Att_Line > div {
+  margin-top: 10px;
+  display: flex;
+  align-items: flex-end;
+  width: 80px;
+  background-color: #4A4D4C;
+  height: 2px;
+}
+.Fiche_Att_Item {
+  justify-content: space-between;
+  display: flex;
+  width: 60%;
+  margin-bottom: 25px;
+}
+@media (min-width: 768px) {
+  .Fiche_Att_Item {
+    width: 30%;
+  }
+}
+.Fiche_Dec {
+  width: 90%;
+  margin: 0 auto;
+}
+.Fiche_Dec > img {
+  width: 100%;
+  height: auto;
+}
+.Fiche_Title {
+  display: block;
+  width: 90%;
+  margin: 50px auto;
+}
+@media (min-width: 768px) {
   .Fiche_Title {
-    display: block;
-    width: 90%;
-    margin: 50px auto; }
-    @media (min-width: 768px) {
-      .Fiche_Title {
-        margin-top: 100Px; } }
-    .Fiche_Title_Under {
-      width: 5px;
-      background-color: #D1CEC5;
-      height: 80px; }
-    .Fiche_Title_Line {
-      width: 100%;
-      height: 5px;
-      background-color: #D1CEC5; }
-      @media (min-width: 768px) {
-        .Fiche_Title_Line {
-          margin-top: 50px;
-          margin-bottom: 50px; } }
-    .Fiche_Title_Content {
-      margin-top: 30px;
-      margin-bottom: 30px;
-      align-items: center;
-      display: flex;
-      width: 100%;
-      justify-content: space-around; }
-      .Fiche_Title_Content > svg {
-        width: 100px; }
-      .Fiche_Title_Content > h6 {
-        font-size: 32Px;
-        width: 40%;
-        font-family: "rajdhanisemibold"; }
-        @media (min-width: 768px) {
-          .Fiche_Title_Content > h6 {
-            font-size: 45px;
-            width: 30%; } }
+    margin-top: 100Px;
+  }
+}
+.Fiche_Title_Under {
+  width: 5px;
+  background-color: #D1CEC5;
+  height: 80px;
+}
+.Fiche_Title_Line {
+  width: 100%;
+  height: 5px;
+  background-color: #D1CEC5;
+}
+@media (min-width: 768px) {
+  .Fiche_Title_Line {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+.Fiche_Title_Content {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.Fiche_Title_Content > svg {
+  width: 100px;
+}
+.Fiche_Title_Content > h6 {
+  font-size: 32Px;
+  width: 40%;
+  font-family: "rajdhanisemibold";
+}
+@media (min-width: 768px) {
+  .Fiche_Title_Content > h6 {
+    font-size: 45px;
+    width: 30%;
+  }
+}
 
 .Contain {
   display: flex;
@@ -453,107 +578,138 @@
   height: 110vh;
   background: url("../img/astronot.png") no-repeat;
   background-size: 35%;
-  background-position: 50% 30%; }
-  @media (min-width: 768px) {
-    .Contain {
-      background-size: 15%;
-      background-position: 100% 30%; } }
+  background-position: 50% 30%;
+}
+@media (min-width: 768px) {
+  .Contain {
+    background-size: 15%;
+    background-position: 100% 30%;
+  }
+}
 
 .Experience {
   width: 90%;
   display: block;
   margin: 20Px auto;
-  border: solid 1px #A39B94; }
+  border: solid 1px #A39B94;
+}
+.Experience_End {
+  width: 80%;
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  border: solid 1px #A39B94;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+@media (min-width: 768px) {
   .Experience_End {
-    width: 80%;
-    height: 80vh;
-    display: flex;
-    flex-wrap: wrap;
-    border: solid 1px #A39B94;
-    margin: 0 auto;
-    margin-bottom: 50px; }
-    @media (min-width: 768px) {
-      .Experience_End {
-        height: 50vh;
-        margin-top: 200px;
-        width: 90%;
-        margin-bottom: 100px; } }
-    .Experience_End_Txt {
-      width: 50%;
-      justify-content: center;
-      display: flex;
-      align-items: center; }
-      @media (min-width: 768px) {
-        .Experience_End_Txt {
-          width: 16%; } }
-      .Experience_End_Txt > p {
-        font-size: 72px;
-        font-family: "rajdhanisemibold";
-        width: 50%;
-        text-align: center; }
-  .Experience_Main {
-    margin-left: 4.75%;
-    margin-right: 4.75%;
-    display: block;
-    color: black;
-    padding-bottom: 130px; }
-    .Experience_Main > h6 {
-      font-family: "rajdhanisemibold";
-      font-size: 45px;
-      padding-bottom: 80px; }
-      @media (min-width: 768px) {
-        .Experience_Main > h6 {
-          width: 40%;
-          line-height: 120%; } }
-    .Experience_Main > p {
-      font-family: "kraft_monoregular";
-      font-size: 16px;
-      color: #A39B94;
-      line-height: 120%; }
-      @media (min-width: 768px) {
-        .Experience_Main > p {
-          width: 60%;
-          line-height: 150%; } }
+    height: 50vh;
+    margin-top: 200px;
+    width: 90%;
+    margin-bottom: 100px;
+  }
+}
+.Experience_End_Txt {
+  width: 50%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .Experience_End_Txt {
+    width: 16%;
+  }
+}
+.Experience_End_Txt > p {
+  font-size: 72px;
+  font-family: "rajdhanisemibold";
+  width: 50%;
+  text-align: center;
+}
+.Experience_Main {
+  margin-left: 4.75%;
+  margin-right: 4.75%;
+  display: block;
+  color: black;
+  padding-bottom: 130px;
+}
+.Experience_Main > h6 {
+  font-family: "rajdhanisemibold";
+  font-size: 45px;
+  padding-bottom: 80px;
+}
+@media (min-width: 768px) {
+  .Experience_Main > h6 {
+    width: 40%;
+    line-height: 120%;
+  }
+}
+.Experience_Main > p {
+  font-family: "kraft_monoregular";
+  font-size: 16px;
+  color: #A39B94;
+  line-height: 120%;
+}
+@media (min-width: 768px) {
+  .Experience_Main > p {
+    width: 60%;
+    line-height: 150%;
+  }
+}
+.Experience_Second {
+  margin-left: 4.75%;
+  margin-right: 4.75%;
+}
+@media (min-width: 768px) {
   .Experience_Second {
-    margin-left: 4.75%;
-    margin-right: 4.75%; }
-    @media (min-width: 768px) {
-      .Experience_Second {
-        display: flex;
-        margin-top: 80px; } }
-    .Experience_Second_Under {
-      color: #f0ede2; }
-      .Experience_Second_Under:before {
-        content: "";
-        position: absolute;
-        width: 45px;
-        background-color: #f53058;
-        height: 16px;
-        z-index: -1; }
-    @media (min-width: 768px) {
-      .Experience_Second_Content {
-        width: 55%; } }
-    .Experience_Second_Content > h6 {
-      padding-bottom: 80px;
-      font-family: "rajdhanisemibold";
-      font-size: 45px; }
-    .Experience_Second_Txt {
-      font-family: "kraft_monoregular";
-      padding-bottom: 20px;
-      font-size: 16px;
-      color: #A39B94;
-      width: 90%;
-      line-height: 120%; }
-      @media (min-width: 768px) {
-        .Experience_Second_Txt {
-          line-height: 150%; } }
-    .Experience_Second_Img {
-      width: 100%;
-      height: 300px; }
-      .Experience_Second_Img > img {
-        margin-top: 20%;
-        width: 100%;
-        height: auto; }
+    display: flex;
+    margin-top: 80px;
+  }
+}
+.Experience_Second_Under {
+  color: #f0ede2;
+}
+.Experience_Second_Under:before {
+  content: "";
+  position: absolute;
+  width: 45px;
+  background-color: #f53058;
+  height: 16px;
+  z-index: -1;
+}
+@media (min-width: 768px) {
+  .Experience_Second_Content {
+    width: 55%;
+  }
+}
+.Experience_Second_Content > h6 {
+  padding-bottom: 80px;
+  font-family: "rajdhanisemibold";
+  font-size: 45px;
+}
+.Experience_Second_Txt {
+  font-family: "kraft_monoregular";
+  padding-bottom: 20px;
+  font-size: 16px;
+  color: #A39B94;
+  width: 90%;
+  line-height: 120%;
+}
+@media (min-width: 768px) {
+  .Experience_Second_Txt {
+    line-height: 150%;
+  }
+}
+.Experience_Second_Img {
+  width: 100%;
+  height: 300px;
+}
+.Experience_Second_Img > img {
+  margin-top: 20%;
+  width: 100%;
+  height: auto;
+}
 
 .experience {
   margin-top: 2rem;
@@ -565,151 +721,184 @@
   background-image: url(../img/moon.png);
   background-repeat: no-repeat;
   background-size: contain;
-  height: 70rem; }
-  @media (min-width: 768px) {
-    .experience {
-      background-position: right; } }
+  height: 70rem;
+}
+@media (min-width: 768px) {
+  .experience {
+    background-position: right;
+  }
+}
+.experience-container {
+  background-image: url(../img/spaceship.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-left: 4.5rem;
+  padding-top: 40rem;
+}
+@media (min-width: 768px) {
   .experience-container {
-    background-image: url(../img/spaceship.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    margin-left: 4.5rem;
-    padding-top: 40rem; }
-    @media (min-width: 768px) {
-      .experience-container {
-        background-image: url();
-        margin-left: 15rem; } }
-  .experience-title {
-    font-size: 4rem;
-    font-family: "rajdhanisemibold";
-    margin-bottom: 3.2rem; }
+    background-image: url();
+    margin-left: 15rem;
+  }
+}
+.experience-title {
+  font-size: 4rem;
+  font-family: "rajdhanisemibold";
+  margin-bottom: 3.2rem;
+}
+.experience-paragraph {
+  font-size: 1.6rem;
+  margin-bottom: 4.2rem;
+  font-family: "kraft_monoregular";
+  color: #a39b94;
+}
+@media (min-width: 768px) {
   .experience-paragraph {
-    font-size: 1.6rem;
-    margin-bottom: 4.2rem;
-    font-family: "kraft_monoregular";
-    color: #a39b94; }
-    @media (min-width: 768px) {
-      .experience-paragraph {
-        background-image: url();
-        margin-left: 5.5rem; } }
-  .experience-btn {
-    width: 60%;
-    height: 6%;
-    margin: 15% auto 0;
-    padding: 1em 2em;
-    background: linear-gradient(-145deg, rgba(153, 70, 200, 0.8), rgba(244, 43, 87, 0.8));
-    font-size: 1.4rem;
-    font-family: "kraft_monoregular";
-    color: #f0ede2;
-    text-align: center;
-    cursor: pointer;
-    text-decoration: none; }
+    background-image: url();
+    margin-left: 5.5rem;
+  }
+}
+.experience-btn {
+  width: 60%;
+  height: 6%;
+  margin: 15% auto 0;
+  padding: 1em 2em;
+  background: linear-gradient(-145deg, rgba(153, 70, 200, 0.8), rgba(244, 43, 87, 0.8));
+  font-size: 1.4rem;
+  font-family: "kraft_monoregular";
+  color: #f0ede2;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
 
 .spaceship {
   margin-left: 2rem;
   margin-right: 2rem;
   border-left: 1px solid black;
   border-right: 1px solid black;
-  height: 70rem; }
+  height: 70rem;
+}
+.spaceship-container {
+  margin-left: 4.5rem;
+  padding-top: 8rem;
+}
+@media (min-width: 768px) {
   .spaceship-container {
-    margin-left: 4.5rem;
-    padding-top: 8rem; }
-    @media (min-width: 768px) {
-      .spaceship-container {
-        margin-left: 15rem; } }
-  .spaceship-title {
-    font-size: 4.5rem;
-    font-family: "rajdhanisemibold"; }
-  .spaceship-paragraph {
-    margin-top: 8rem;
-    margin-left: 4rem;
-    margin-bottom: 8rem;
-    font-family: "kraft_monoregular";
-    font-size: 1.6rem;
-    color: #a39b94; }
-  .spaceship-carac {
-    background-image: url(../img/traits.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-top: 10rem;
-    font-family: "kraft_monoregular";
-    font-size: 1.6rem; }
-  .spaceship-btn {
-    width: 60%;
-    height: 6%;
-    margin: 15% auto 0;
-    padding: 1em 2em;
-    background: linear-gradient(-145deg, rgba(153, 70, 200, 0.8), rgba(244, 43, 87, 0.8));
-    font-size: 1.4rem;
-    font-family: "kraft_monoregular";
-    color: #f0ede2;
-    text-align: center;
-    cursor: pointer;
-    text-decoration: none; }
+    margin-left: 15rem;
+  }
+}
+.spaceship-title {
+  font-size: 4.5rem;
+  font-family: "rajdhanisemibold";
+}
+.spaceship-paragraph {
+  margin-top: 8rem;
+  margin-left: 4rem;
+  margin-bottom: 8rem;
+  font-family: "kraft_monoregular";
+  font-size: 1.6rem;
+  color: #a39b94;
+}
+.spaceship-carac {
+  background-image: url(../img/traits.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 10rem;
+  font-family: "kraft_monoregular";
+  font-size: 1.6rem;
+}
+.spaceship-btn {
+  width: 60%;
+  height: 6%;
+  margin: 15% auto 0;
+  padding: 1em 2em;
+  background: linear-gradient(-145deg, rgba(153, 70, 200, 0.8), rgba(244, 43, 87, 0.8));
+  font-size: 1.4rem;
+  font-family: "kraft_monoregular";
+  color: #f0ede2;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
 
 .activity {
-  background: #f52f57; }
-  .activity-container-title {
-    padding-top: 2rem;
-    margin-left: 4.5rem;
-    margin-bottom: 3rem;
-    font-size: 1.8rem;
-    font-family: "rajdhanisemibold";
-    color: #f0ece1; }
-  .activity-container-paragraph {
-    margin-top: 4rem;
-    margin-left: 4.5rem;
-    margin-bottom: 4rem;
-    font-size: 1.6rem;
-    font-family: "kraft_monoregular";
-    color: #f0ece1; }
+  background: #f52f57;
+}
+.activity-container-title {
+  padding-top: 2rem;
+  margin-left: 4.5rem;
+  margin-bottom: 3rem;
+  font-size: 1.8rem;
+  font-family: "rajdhanisemibold";
+  color: #f0ece1;
+}
+.activity-container-paragraph {
+  margin-top: 4rem;
+  margin-left: 4.5rem;
+  margin-bottom: 4rem;
+  font-size: 1.6rem;
+  font-family: "kraft_monoregular";
+  color: #f0ece1;
+}
+.activity-wrapper-second {
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+  margin-left: 4.5rem;
+  display: flex;
+  justify-content: space-around;
+}
+@media (min-width: 768px) {
   .activity-wrapper-second {
-    margin-top: 7rem;
-    margin-bottom: 7rem;
-    margin-left: 4.5rem;
     display: flex;
-    justify-content: space-around; }
-    @media (min-width: 768px) {
-      .activity-wrapper-second {
-        display: flex;
-        flex-direction: row; } }
-    .activity-wrapper-second-img {
-      margin-right: 4rem;
-      height: 10rem;
-      width: 10rem; }
-      @media (min-width: 768px) {
-        .activity-wrapper-second-img {
-          height: 30rem;
-          width: 30rem; } }
-      @media (min-width: 1024px) {
-        .activity-wrapper-second-img {
-          height: 45rem;
-          width: 45rem; } }
-    .activity-wrapper-second-content-title {
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-      font-family: "rajdhanisemibold";
-      font-size: 1.4rem;
-      color: #f0ece1; }
-    .activity-wrapper-second-content-paragraph {
-      font-family: "kraft_monoregular";
-      font-size: 1.2rem;
-      color: #f0ece1; }
-  .activity-btn {
-    display: flex;
-    justify-content: center;
-    width: 11rem;
-    height: 1rem;
-    margin: 15% auto 0;
-    padding: 1em 2em;
-    background-color: #f0ece1;
-    font-size: 1.4rem;
-    font-family: "kraft_monoregular";
-    color: black;
-    text-align: center;
-    cursor: pointer;
-    text-decoration: none; }
+    flex-direction: row;
+  }
+}
+.activity-wrapper-second-img {
+  margin-right: 4rem;
+  height: 10rem;
+  width: 10rem;
+}
+@media (min-width: 768px) {
+  .activity-wrapper-second-img {
+    height: 30rem;
+    width: 30rem;
+  }
+}
+@media (min-width: 1024px) {
+  .activity-wrapper-second-img {
+    height: 45rem;
+    width: 45rem;
+  }
+}
+.activity-wrapper-second-content-title {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-family: "rajdhanisemibold";
+  font-size: 1.4rem;
+  color: #f0ece1;
+}
+.activity-wrapper-second-content-paragraph {
+  font-family: "kraft_monoregular";
+  font-size: 1.2rem;
+  color: #f0ece1;
+}
+.activity-btn {
+  display: flex;
+  justify-content: center;
+  width: 11rem;
+  height: 1rem;
+  margin: 15% auto 0;
+  padding: 1em 2em;
+  background-color: #f0ece1;
+  font-size: 1.4rem;
+  font-family: "kraft_monoregular";
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
 
 .detailsactivity-container {
   background-image: url(../img/allstars.jpg);
@@ -722,13 +911,17 @@
   margin-left: 2rem;
   margin-right: 2rem;
   display: flex;
-  align-items: flex-end; }
-  @media (min-width: 768px) {
-    .detailsactivity-container {
-      height: 45rem; } }
+  align-items: flex-end;
+}
+@media (min-width: 768px) {
+  .detailsactivity-container {
+    height: 45rem;
+  }
+}
 .detailsactivity-preface {
   padding-bottom: 2rem;
-  padding-left: 2rem; }
+  padding-left: 2rem;
+}
 .detailsactivity-btn {
   height: 1rem;
   width: 9rem;
@@ -737,163 +930,210 @@
   font-size: 1.4rem;
   background: #f52f57;
   padding: 5px 9px 6px 9px;
-  text-decoration: none; }
+  text-decoration: none;
+}
 .detailsactivity-titlepreface {
   color: #ffffff;
   font-family: "rajdhanisemibold";
   font-size: 3rem;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+}
 .detailsactivity-firsttitle {
   padding-top: 2rem;
   padding-left: 2rem;
   padding-right: 2rem;
   font-family: "rajdhanisemibold";
   font-size: 2rem;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+}
 .detailsactivity-secondtitle {
   padding-left: 2rem;
   padding-right: 2rem;
   font-family: "rajdhanisemibold";
   font-size: 1.2rem;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+}
 .detailsactivity-paragraph {
   padding-left: 2rem;
   padding-right: 2rem;
   font-family: "kraft_monoregular";
   color: #a39b94;
   font-size: 1.4rem;
-  margin-bottom: 1.6rem; }
+  margin-bottom: 1.6rem;
+}
 .detailsactivity-description {
   height: 27rem;
   border-left: 1px solid black;
   border-right: 1px solid black;
   margin-left: 2rem;
-  margin-right: 2rem; }
+  margin-right: 2rem;
+}
 
 .CabinDetails {
   width: 90%;
   display: block;
   margin: 20px auto;
   border: solid 1px #A39B94;
-  box-sizing: border-box; }
-  @media (min-width: 768px) {
-    .CabinDetails {
-      padding: 30px 80px; } }
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .CabinDetails {
+    padding: 30px 80px;
+  }
+}
 
 .Steps {
   font-family: "kraft_monoregular";
   font-size: 14px;
-  color: #a39b94; }
+  color: #a39b94;
+}
+.Steps_container {
+  width: 250px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
   .Steps_container {
-    width: 250px;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between; }
-    @media (min-width: 768px) {
-      .Steps_container {
-        margin-left: 0px; } }
-  .Steps_item--current {
-    color: #383d3b; }
+    margin-left: 0px;
+  }
+}
+.Steps_item--current {
+  color: #383d3b;
+}
 
 .InfoPannel {
-  position: relative; }
+  position: relative;
+}
+.InfoPannel_container {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
   .InfoPannel_container {
-    display: flex;
-    flex-direction: column; }
-    @media (min-width: 768px) {
-      .InfoPannel_container {
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-        margin: 0 auto; } }
-    @media (min-width: 1024px) {
-      .InfoPannel_container {
-        width: 80%; } }
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1024px) {
+  .InfoPannel_container {
+    width: 80%;
+  }
+}
 
 .Thumbnail {
   position: relative;
   width: 100%;
   height: 300px;
-  background-size: cover; }
-  @media (min-width: 768px) {
-    .Thumbnail {
-      order: 2;
-      width: 300px;
-      height: 500px;
-      background-size: cover;
-      background-position: 50%; } }
+  background-size: cover;
+}
+@media (min-width: 768px) {
+  .Thumbnail {
+    order: 2;
+    width: 300px;
+    height: 500px;
+    background-size: cover;
+    background-position: 50%;
+  }
+}
 
 .Infos {
   padding: 20px;
-  box-sizing: border-box; }
-  @media (min-width: 768px) {
-    .Infos {
-      order: 1;
-      width: 400px; } }
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .Infos {
+    order: 1;
+    width: 400px;
+  }
+}
+.Infos_titleContainer {
+  color: #fff;
+  transform: translateY(-155%);
+}
+@media (min-width: 768px) {
   .Infos_titleContainer {
-    color: #fff;
-    transform: translateY(-155%); }
-    @media (min-width: 768px) {
-      .Infos_titleContainer {
-        transform: none;
-        color: #383D3B; } }
-  .Infos_title {
-    font-family: "rajdhanisemibold";
-    font-size: 30px; }
-  .Infos_priceContainer {
-    margin-top: 10px; }
-  .Infos_price {
-    font-family: "rajdhanisemibold";
-    font-size: 14px; }
+    transform: none;
+    color: #383D3B;
+  }
+}
+.Infos_title {
+  font-family: "rajdhanisemibold";
+  font-size: 30px;
+}
+.Infos_priceContainer {
+  margin-top: 10px;
+}
+.Infos_price {
+  font-family: "rajdhanisemibold";
+  font-size: 14px;
+}
+.Infos_description {
+  font-family: "kraft_monoregular";
+  font-size: 14px;
+  color: #A39B94;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
   .Infos_description {
-    font-family: "kraft_monoregular";
-    font-size: 14px;
-    color: #A39B94;
-    line-height: 1.5; }
-    @media (min-width: 768px) {
-      .Infos_description {
-        margin-top: 50px; } }
+    margin-top: 50px;
+  }
+}
+.Infos_btnContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+@media (min-width: 768px) {
   .Infos_btnContainer {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 50px; }
-    @media (min-width: 768px) {
-      .Infos_btnContainer {
-        justify-content: flex-end; } }
+    justify-content: flex-end;
+  }
+}
 
 .BookingDetails {
-  margin-top: 50px; }
-  .BookingDetails_container {
-    display: flex; }
-  .BookingDetails_tableHead {
-    width: 30%; }
-  .BookingDetails_HeadTitle {
-    border-top: 1px solid #383d3b;
-    border-bottom: 1px solid #383d3b;
-    font-family: "kraft_monoregular";
-    color: #383d3b;
-    font-size: 14px;
-    line-height: 35px;
-    text-align: center; }
-  .BookingDetails_content {
-    border-left: 1px solid #383d3b;
-    width: 70%; }
-  .BookingDetails_item {
-    border-top: 1px solid #383d3b;
-    border-bottom: 1px solid #383d3b;
-    line-height: 50px;
-    font-family: "kraft_monoregular";
-    color: #A39B94; }
-    .BookingDetails_item > span {
-      margin-left: 15px; }
-    .BookingDetails_item:first-child {
-      border-top: 1px solid #383d3b;
-      border-bottom: none; }
-    .BookingDetails_item:last-child {
-      border-bottom: 1px solid #383d3b;
-      border-top: none; }
+  margin-top: 50px;
+}
+.BookingDetails_container {
+  display: flex;
+}
+.BookingDetails_tableHead {
+  width: 30%;
+}
+.BookingDetails_HeadTitle {
+  border-top: 1px solid #383d3b;
+  border-bottom: 1px solid #383d3b;
+  font-family: "kraft_monoregular";
+  color: #383d3b;
+  font-size: 14px;
+  line-height: 35px;
+  text-align: center;
+}
+.BookingDetails_content {
+  border-left: 1px solid #383d3b;
+  width: 70%;
+}
+.BookingDetails_item {
+  border-top: 1px solid #383d3b;
+  border-bottom: 1px solid #383d3b;
+  line-height: 50px;
+  font-family: "kraft_monoregular";
+  color: #A39B94;
+}
+.BookingDetails_item > span {
+  margin-left: 15px;
+}
+.BookingDetails_item:first-child {
+  border-top: 1px solid #383d3b;
+  border-bottom: none;
+}
+.BookingDetails_item:last-child {
+  border-bottom: 1px solid #383d3b;
+  border-top: none;
+}
 
 .CabinList {
   width: 90%;
@@ -901,121 +1141,154 @@
   margin: 20px auto;
   border: solid 1px #A39B94;
   padding: 20px;
-  box-sizing: border-box; }
-  @media (min-width: 768px) {
-    .CabinList {
-      padding: 80px; } }
-  .CabinList_main {
-    font-family: "rajdhanisemibold"; }
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .CabinList {
+    padding: 80px;
+  }
+}
+.CabinList_main {
+  font-family: "rajdhanisemibold";
+}
 
 .CabinForm {
-  margin-top: 50px; }
-  @media (min-width: 768px) {
-    .CabinForm {
-      display: flex;
-      justify-content: space-between; } }
+  margin-top: 50px;
+}
+@media (min-width: 768px) {
+  .CabinForm {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.CabinForm_container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+@media (min-width: 768px) {
   .CabinForm_container {
-    display: flex;
-    flex-direction: column;
-    position: relative; }
-    @media (min-width: 768px) {
-      .CabinForm_container {
-        width: 300px; } }
+    width: 300px;
+  }
+}
+.CabinForm_item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+@media (min-width: 768px) {
   .CabinForm_item {
-    display: flex;
-    flex-direction: column;
-    margin-top: 40px; }
-    @media (min-width: 768px) {
-      .CabinForm_item {
-        flex-direction: row;
-        width: 500px;
-        justify-content: space-between;
-        align-items: center; } }
-  .CabinForm_icon {
-    width: 17px;
-    height: 17px;
-    position: absolute;
-    right: 20px;
-    fill: #383D3B;
-    top: 50%; }
+    flex-direction: row;
+    width: 500px;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.CabinForm_icon {
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  right: 20px;
+  fill: #383D3B;
+  top: 50%;
+}
+.CabinForm_label {
+  font-family: "kraft_monoregular";
+  font-size: 14px;
+  color: #383D3B;
+}
+@media (min-width: 768px) {
   .CabinForm_label {
-    font-family: "kraft_monoregular";
-    font-size: 14px;
-    color: #383D3B; }
-    @media (min-width: 768px) {
-      .CabinForm_label {
-        height: 18px; } }
-  .CabinForm_select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -o-appearance: none;
-    appearance: none;
-    height: 50px;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid #383D3B;
-    background: none;
-    color: #95938C;
-    font-family: "kraft_monoregular";
-    box-sizing: border-box;
-    padding: 0 20px;
-    width: 100%; }
+    height: 18px;
+  }
+}
+.CabinForm_select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  height: 50px;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid #383D3B;
+  background: none;
+  color: #95938C;
+  font-family: "kraft_monoregular";
+  box-sizing: border-box;
+  padding: 0 20px;
+  width: 100%;
+}
 
 .ResultsContainer {
   display: flex;
   flex-direction: column;
-  margin-top: 40px; }
-  @media (min-width: 1024px) {
-    .ResultsContainer {
-      flex-direction: row;
-      justify-content: space-between; } }
+  margin-top: 40px;
+}
+@media (min-width: 1024px) {
+  .ResultsContainer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 
 .CabinCard {
   border: 1px solid #979797;
-  margin-top: 43px; }
-  @media (min-width: 1024px) {
-    .CabinCard {
-      width: 350px;
-      margin-top: 0px; } }
+  margin-top: 43px;
+}
+@media (min-width: 1024px) {
+  .CabinCard {
+    width: 350px;
+    margin-top: 0px;
+  }
+}
 
 .CardThumbnail {
-  position: relative; }
-  .CardThumbnail_img {
-    width: 100%; }
-  .CardThumbnail_price {
-    position: absolute;
-    color: #ffffff;
-    font-family: "kraft_monoregular";
-    bottom: 20px;
-    left: 20px; }
+  position: relative;
+}
+.CardThumbnail_img {
+  width: 100%;
+}
+.CardThumbnail_price {
+  position: absolute;
+  color: #ffffff;
+  font-family: "kraft_monoregular";
+  bottom: 20px;
+  left: 20px;
+}
 
 .CabinInfo {
   box-sizing: border-box;
-  padding: 20px; }
-  .CabinInfo_upper {
-    display: flex;
-    justify-content: space-between;
-    font-family: "kraft_monoregular";
-    font-size: 14px; }
-  .CabinInfo_icon {
-    width: 12px;
-    height: 12px;
-    fill: #95938C;
-    margin-right: 15px; }
-  .CabinInfo_text {
-    font-family: "kraft_monoregular";
-    font-size: 14px;
-    line-height: 1.5;
-    color: #a39b94;
-    margin-top: 40px; }
-  .CabinInfo_name {
-    font-family: "rajdhanisemibold";
-    font-size: 16px; }
-  .CabinInfo_btnContainer {
-    margin-top: 40px;
-    display: flex;
-    justify-content: space-around;
-    width: 100%; }
+  padding: 20px;
+}
+.CabinInfo_upper {
+  display: flex;
+  justify-content: space-between;
+  font-family: "kraft_monoregular";
+  font-size: 14px;
+}
+.CabinInfo_icon {
+  width: 12px;
+  height: 12px;
+  fill: #95938C;
+  margin-right: 15px;
+}
+.CabinInfo_text {
+  font-family: "kraft_monoregular";
+  font-size: 14px;
+  line-height: 1.5;
+  color: #a39b94;
+  margin-top: 40px;
+}
+.CabinInfo_name {
+  font-family: "rajdhanisemibold";
+  font-size: 16px;
+}
+.CabinInfo_btnContainer {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
 
 .Connexion {
   width: 90%;
@@ -1023,84 +1296,125 @@
   margin: 20px auto;
   border: solid 1px #A39B94;
   padding: 20px;
-  box-sizing: border-box; }
-  @media (min-width: 768px) {
-    .Connexion {
-      padding: 80px; } }
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .Connexion {
+    padding: 80px;
+  }
+}
 
 .BackArrow {
   width: 42px;
   height: 42px;
   padding: 10px;
   box-sizing: border-box;
-  display: block; }
+  display: block;
+}
 
 .Footer {
   width: 90%;
   margin: 20px auto;
   padding: 20px;
-  box-sizing: border-box; }
-  .Footer_container {
-    display: flex; }
+  box-sizing: border-box;
+}
+.Footer_container {
+  display: flex;
+}
+.Footer_nav:last-child {
+  margin-left: 40px;
+}
+@media (min-width: 768px) {
   .Footer_nav:last-child {
-    margin-left: 40px; }
-    @media (min-width: 768px) {
-      .Footer_nav:last-child {
-        margin-left: 120px; } }
-  .Footer_details {
-    margin-top: 40px;
-    border-top: 1px solid #979797; }
-  .Footer_logo {
-    font-family: "rajdhanisemibold";
-    letter-spacing: 5px;
-    padding-top: 20px; }
+    margin-left: 120px;
+  }
+}
+.Footer_details {
+  margin-top: 40px;
+  border-top: 1px solid #979797;
+}
+.Footer_logo {
+  font-family: "rajdhanisemibold";
+  letter-spacing: 5px;
+  padding-top: 20px;
+}
 
 .Nav_title {
-  font-family: "rajdhanisemibold"; }
+  font-family: "rajdhanisemibold";
+}
 .Nav_item {
-  font-family: "rajdhanisemibold"; }
-  .Nav_item > a {
-    color: #383D3B;
-    text-decoration: none;
-    line-height: 1.7;
-    font-size: 16px; }
+  font-family: "rajdhanisemibold";
+}
+.Nav_item > a {
+  color: #383D3B;
+  text-decoration: none;
+  line-height: 1.7;
+  font-size: 16px;
+}
 .Nav_container {
-  margin-top: 30px; }
+  margin-top: 30px;
+}
 
 /* FONTS */
 @font-face {
-  font-family: 'kraft_monoregular';
-  src: url("../font/kraftmono-webfont.woff2") format("woff2"), url("../font/kraftmono-webfont.woff") format("woff"); }
+  font-family: "kraft_monoregular";
+  src: url("../font/kraftmono-webfont.woff2") format("woff2"), url("../font/kraftmono-webfont.woff") format("woff");
+}
 @font-face {
-  font-family: 'kraft_monoitalic';
-  src: url("../font/kraftmono-italic-webfont.woff2") format("woff2"), url("../font/kraftmono-italic-webfont.woff") format("woff"); }
+  font-family: "kraft_monoitalic";
+  src: url("../font/kraftmono-italic-webfont.woff2") format("woff2"), url("../font/kraftmono-italic-webfont.woff") format("woff");
+}
 @font-face {
-  font-family: 'rajdhanisemibold';
-  src: url("../font/rajdhani-semibold-webfont.woff2") format("woff2"), url("../font/rajdhani-semibold-webfont.woff") format("woff"); }
+  font-family: "rajdhanisemibold";
+  src: url("../font/rajdhani-semibold-webfont.woff2") format("woff2"), url("../font/rajdhani-semibold-webfont.woff") format("woff");
+}
 body {
   width: 100%;
   height: 100vh;
-  background: #f0ede2; }
+  background: #f0ede2;
+}
 
 .container {
   overflow: hidden;
   width: 80%;
   border: 1px solid #383d3b;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 .flex {
-  display: flex; }
+  display: flex;
+}
 
 .flexCol {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 a {
   text-decoration: none;
-  color: #a39b94; }
+  color: #a39b94;
+}
 
 html {
   font-size: 62.5%;
-  width: 100%; }
+  width: 100%;
+}
+
+.boxShad {
+  box-shadow: 0 0 80px #381e55;
+}
+
+.Button {
+  background: linear-gradient(-145deg, rgba(153, 70, 200, 0.8), rgba(244, 43, 87, 0.8));
+  line-height: 50px;
+  text-align: center;
+  color: #ffffff;
+  display: block;
+  font-family: "kraft_monoregular";
+  font-size: 14px;
+  text-decoration: none;
+  padding: 0 20px;
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=main.css.map */

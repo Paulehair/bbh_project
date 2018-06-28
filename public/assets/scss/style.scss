@@ -66,3 +66,20 @@ html {
   font-size: 62.5%;
   width: 100%;
 }
+
+.boxShad {
+  box-shadow: $boxShad;
+}
+
+.Button{
+  background: $gradient;
+  line-height: 50px;
+  text-align: center;
+  color: #ffffff;
+  display: block;
+  font-family: $kraftMono;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 0 20px;
+  cursor: pointer;
+}
