@@ -997,7 +997,7 @@ table {
 .CabinDetails {
   width: 90%;
   display: block;
-  margin: 20px auto;
+  margin: 150px auto 20px auto;
   border: solid 1px #A39B94;
   box-sizing: border-box; }
   @media (min-width: 768px) {
@@ -1057,7 +1057,7 @@ table {
       width: 400px; } }
   .Infos_titleContainer {
     color: #fff;
-    transform: translateY(-155%); }
+    transform: translateY(-200%); }
     @media (min-width: 768px) {
       .Infos_titleContainer {
         transform: none;
@@ -1122,7 +1122,7 @@ table {
 .CabinList {
   width: 90%;
   display: block;
-  margin: 20px auto;
+  margin: 150px auto 20px auto;
   border: solid 1px #A39B94;
   padding: 20px;
   box-sizing: border-box; }
@@ -1147,6 +1147,10 @@ table {
     @media (min-width: 768px) {
       .CabinForm_container {
         width: 300px; } }
+  .CabinForm_container label {
+    font-family: "kraft_monoregular";
+    font-size: 14px;
+    color: #383D3B; }
   .CabinForm_item {
     display: flex;
     flex-direction: column;
@@ -1154,8 +1158,8 @@ table {
     @media (min-width: 768px) {
       .CabinForm_item {
         flex-direction: row;
-        width: 500px;
-        justify-content: space-between;
+        width: 450px;
+        justify-content: space-around;
         align-items: center; } }
   .CabinForm_icon {
     width: 17px;
@@ -1186,6 +1190,11 @@ table {
     box-sizing: border-box;
     padding: 0 20px;
     width: 100%; }
+    .CabinForm_select:focus {
+      outline: none; }
+  .CabinForm_submit {
+    margin: 20px auto;
+    text-align: center; }
 
 .ResultsContainer {
   display: flex;
@@ -1240,8 +1249,11 @@ table {
   .CabinInfo_btnContainer {
     margin-top: 40px;
     display: flex;
-    justify-content: space-around;
-    width: 100%; }
+    width: 100%;
+    align-items: center; }
+  .CabinInfo_btnTxt {
+    font-family: "kraft_monoregular";
+    font-size: 14px; }
 
 .Connexion {
   width: 90%;
