@@ -3,33 +3,15 @@
 {% block title %}Activities{% endblock %}
 
 {% block body %}
-    <h1>Activities</h1>
-
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ activity.id }}</td>
-            </tr>
-            <tr>
-                <th>Name</th>
-                <td>{{ activity.name }}</td>
-            </tr>
-            <tr>
-                <th>Detail</th>
-                <td>{{ activity.detail }}</td>
-            </tr>
-            <tr>
-                <th>Image</th>
-                <td>{{ activity.image }}</td>
-            </tr>
-            <tr>
-                <th>Price</th>
-                <td>{{ activity.price }}</td>
-            </tr>
-        </tbody>
-    </table>
-
+    <div class="detailsactivity-container">
+        <div class="detailsactivity-preface">
+            <h1 class="detailsactivity-titlepreface">{{ activity.name }}</h1>
+            <p class="detailsactivity-btn">Sport extrême</p>
+        </div>
+    </div>
+    <div class="detailsactivity-description">
+        <h2 class="detailsactivity-firsttitle">{{ activity.detail }}</h2>
+    </div>
     <a href="{{ path('activities_index') }}">back to list</a>
 
     <a href="{{ path('activities_edit', {'id': activity.id}) }}">edit</a>

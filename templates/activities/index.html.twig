@@ -3,25 +3,27 @@
 {% block title %}Activities index{% endblock %}
 
 {% block body %}
-   <section class="activitylist-wrapper">
-    <div class="activitylist-container">
-      <h1 class="activitylist-container-title">Liste des activités</h1>
-      <p class="activitylist-container-paragraph">Voiçi l’ensemble des activités possibles
-        au sein de la croisière Dyonisos.</p>
+    <section class="activitylist">
+        <div class="activitylist-wrapper">
+            <h1 class="activitylist-title">Liste des Activités</h1>
+            <p class="activitylist-paragraph">Voiçi l’ensemble des activités possibles au sein de la croisière Dyonisos.</p>
+            <div class="activitylist-container">
         {% for activity in activities %}
-            <div class="activitylist-container-list">
-        <div class="activitylist-container-list-content">
-          <img src="" alt="" class="activitylist-container-list-content-img">
-          <h2 class="activitylist-container-list-content-title">{{ activity.name }}</h2>
-          <p class="activitylist-container-list-content-paragraph">{{ activity.detail }}</p>
-          <a href="{{ path('activities_show', {'id': activity.id}) }}" class="activitylist-container-list-content-btn">En savoir plus</a>
-        </div>
-      </div>
+
+                <div class="activitylist-container-content">
+                    <img src="{{ activity.image }}" alt="img" class="activitylist-container-content-img">
+                    <h2 class="activitylist-container-content-title">{{ activity.name }}</h2>
+                    <p class="activitylist-container-content-tag">Sport extrême</p>
+                    <p class="activitylist-container-content-paragraph">{{ activity.detail }} </p>
+                    <a href="{{ path('activities_show', {'id': activity.id}) }}" class="activitylist-container-content-btn">En savoir plus</a>
+                </div>
+
         {% else %}
+            </div>
             <tr>
                 <td colspan="6">no records found</td>
             </tr>
-        {% endfor %}      
-    </div>
-  </section>
+        {% endfor %}
+        </div>
+    </section>
 {% endblock %}
