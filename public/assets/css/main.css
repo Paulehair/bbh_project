@@ -645,7 +645,10 @@ table {
   background-size: 100%;
   background-position: -40% 50% 50%;
   background-repeat: no-repeat;
-  height: 70rem; }
+  height: 40rem; }
+  @media (min-width: 768px) {
+    .experience {
+      height: 70rem; } }
   .experience-container {
     width: 85%;
     margin: 0 auto;
@@ -653,7 +656,7 @@ table {
     padding-top: 250px; }
     @media (min-width: 768px) {
       .experience-container {
-        padding-top: 200px;
+        padding-top: 300px;
         background-image: url(""); } }
   .experience-title {
     font-size: 40px;
@@ -692,7 +695,7 @@ table {
   margin: 0 auto;
   border-left: 1px solid #A39B94;
   border-right: 1px solid #A39B94;
-  height: 70rem;
+  height: 50rem;
   background-image: url("../img/spaceship1.png");
   background-position: top 35% right 0;
   background-size: 100%;
@@ -732,26 +735,54 @@ table {
     cursor: pointer;
     text-decoration: none; }
 
+.homeContainer {
+  width: 90%;
+  margin: 0 auto;
+  border-right: 1px solid #a39b94;
+  border-left: 1px solid #a39b94; }
+
+.homeMap {
+  width: 90%;
+  margin: 0 auto; }
+  .homeMap-title {
+    font-size: 1.6rems; }
+  .homeMap-btn {
+    width: 50%;
+    margin: 2em auto;
+    font-size: 1.4rem; }
+    @media (min-width: 768px) {
+      .homeMap-btn {
+        width: 30%; } }
+
 .activity {
-  background: #f52f57; }
-  .activity-container-title {
-    padding-top: 2rem;
-    margin-left: 4.5rem;
-    margin-bottom: 3rem;
-    font-size: 24px;
-    font-family: "rajdhanisemibold";
-    color: #f0ece1; }
-  .activity-container-paragraph {
-    margin-top: 4rem;
-    margin-left: 4.5rem;
-    margin-bottom: 4rem;
-    font-size: 14px;
-    line-height: 120%;
-    font-family: "kraft_monoregular";
-    color: #f0ece1;
-    width: 70%; }
+  width: 90%;
+  margin: 0 auto;
+  border-right: 1px solid #a39b94;
+  border-left: 1px solid #a39b94;
+  border-bottom: 1px solid #a39b94; }
+  .activity-container-text {
+    width: 85%;
+    margin: 0 auto;
+    color: #383d3b; }
+    .activity-container-text-title {
+      padding-top: 2rem;
+      margin-left: 4.5rem;
+      margin-bottom: 3rem;
+      font-size: 1.6rem;
+      font-family: "rajdhanisemibold";
+      color: #383d3b; }
+    .activity-container-text-paragraph {
+      margin-top: 4rem;
+      margin-left: 4.5rem;
+      margin-bottom: 4rem;
+      font-size: 14px;
+      line-height: 120%;
+      font-family: "kraft_monoregular";
+      color: #383d3b;
+      width: 70%; }
   @media (min-width: 768px) {
     .activity-wrapper {
+      width: 100%;
       display: flex;
       justify-content: space-around;
       flex-direction: row; } }
@@ -783,17 +814,17 @@ table {
       margin-bottom: 2rem;
       font-family: "rajdhanisemibold";
       font-size: 16px;
-      color: #f0ece1; }
+      color: #383d3b; }
     .activity-wrapper-second-content-paragraph {
       font-family: "kraft_monoregular";
       font-size: 1.2rem;
-      color: #f0ece1; }
+      color: #383d3b; }
   .activity-btn {
     display: flex;
     justify-content: center;
     width: 80px;
     height: 1rem;
-    margin: 15% auto 0;
+    margin: 5% auto 0;
     padding: 1em 2em;
     background-color: #f0ece1;
     font-size: 12px;
@@ -802,131 +833,6 @@ table {
     text-align: center;
     cursor: pointer;
     text-decoration: none; }
-
-a,
-abbr,
-acronym,
-address,
-applet,
-article,
-aside,
-audio,
-b,
-big,
-blockquote,
-body,
-canvas,
-caption,
-center,
-cite,
-code,
-dd,
-del,
-details,
-dfn,
-div,
-dl,
-dt,
-em,
-embed,
-fieldset,
-figcaption,
-figure,
-footer,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header,
-hgroup,
-html,
-i,
-iframe,
-img,
-ins,
-kbd,
-label,
-legend,
-li,
-mark,
-menu,
-nav,
-object,
-ol,
-output,
-p,
-pre,
-q,
-ruby,
-s,
-samp,
-section,
-small,
-span,
-strike,
-strong,
-sub,
-summary,
-sup,
-table,
-tbody,
-td,
-tfoot,
-th,
-thead,
-time,
-tr,
-tt,
-u,
-ul,
-var,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol,
-ul {
-  list-style: none; }
-
-blockquote,
-q {
-  quotes: none; }
-
-blockquote:after, blockquote:before {
-  content: '';
-  content: none; }
-
-q:after, q:before {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
 
 .detailsactivity-container {
   background-image: url(../img/allstars.jpg);
@@ -943,9 +849,11 @@ table {
   @media (min-width: 768px) {
     .detailsactivity-container {
       height: 45rem; } }
+
 .detailsactivity-preface {
   padding-bottom: 2rem;
   padding-left: 2rem; }
+
 .detailsactivity-btn {
   height: 1rem;
   width: 9rem;
@@ -955,11 +863,13 @@ table {
   background: #f52f57;
   padding: 5px 9px 6px 9px;
   text-decoration: none; }
+
 .detailsactivity-titlepreface {
   color: #ffffff;
   font-family: "rajdhanisemibold";
   font-size: 3rem;
   margin-bottom: 2rem; }
+
 .detailsactivity-firsttitle {
   padding-top: 2rem;
   padding-left: 2rem;
@@ -967,12 +877,14 @@ table {
   font-family: "rajdhanisemibold";
   font-size: 2rem;
   margin-bottom: 2rem; }
+
 .detailsactivity-secondtitle {
   padding-left: 2rem;
   padding-right: 2rem;
   font-family: "rajdhanisemibold";
   font-size: 1.2rem;
   margin-bottom: 2rem; }
+
 .detailsactivity-paragraph {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -980,6 +892,7 @@ table {
   color: #a39b94;
   font-size: 1.4rem;
   margin-bottom: 1.6rem; }
+
 .detailsactivity-description {
   height: 27rem;
   border-left: 1px solid black;
@@ -1300,6 +1213,7 @@ table {
 
 .Nav_title {
   font-family: "rajdhanisemibold"; }
+
 .Nav_item {
   font-family: "rajdhanisemibold"; }
   .Nav_item > a {
@@ -1307,6 +1221,7 @@ table {
     text-decoration: none;
     line-height: 1.7;
     font-size: 16px; }
+
 .Nav_container {
   margin-top: 30px; }
 
@@ -1316,16 +1231,19 @@ table {
   margin-top: 50px;
   margin-left: 5%;
   margin-right: 5%; }
+
 .activitylist-title {
   margin-left: 50px;
   margin-bottom: 40px;
   font-family: "rajdhanisemibold";
   font-size: 14px; }
+
 .activitylist-paragraph {
   margin-left: 50px;
   margin-bottom: 70px;
   font-family: "kraft_monoregular";
   font-size: 12px; }
+
 .activitylist-container {
   margin-left: 2%; }
   @media (min-width: 768px) {
@@ -1387,12 +1305,15 @@ table {
 @font-face {
   font-family: 'kraft_monoregular';
   src: url("../font/kraftmono-webfont.woff2") format("woff2"), url("../font/kraftmono-webfont.woff") format("woff"); }
+
 @font-face {
   font-family: 'kraft_monoitalic';
   src: url("../font/kraftmono-italic-webfont.woff2") format("woff2"), url("../font/kraftmono-italic-webfont.woff") format("woff"); }
+
 @font-face {
   font-family: 'rajdhanisemibold';
   src: url("../font/rajdhani-semibold-webfont.woff2") format("woff2"), url("../font/rajdhani-semibold-webfont.woff") format("woff"); }
+
 body {
   width: 100%;
   height: 100vh;
@@ -1427,5 +1348,3 @@ a {
   text-decoration: none;
   padding: 0 20px;
   cursor: pointer; }
-
-/*# sourceMappingURL=main.css.map */
