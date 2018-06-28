@@ -1,7 +1,7 @@
 .CabinList{
     width: 90%;
     display: block;
-    margin: 20px auto;
+    margin: 150px auto 20px auto;
     border: solid 1px #A39B94;
     padding: 20px;
     box-sizing: border-box;
@@ -29,14 +29,19 @@
             width: 300px;
         }
     }
+    &_container label {
+        font-family: $kraftMono;
+        font-size: 14px;
+        color: #383D3B;
+    }
     &_item{
         display: flex;
         flex-direction: column;
         margin-top: 40px;
         @include breakpoint(tablet){
             flex-direction: row;
-            width: 500px;
-            justify-content: space-between;
+            width: 450px;
+            justify-content: space-around;
             align-items: center;
         }
     }
@@ -71,7 +76,13 @@
         box-sizing: border-box;
         padding: 0 20px;
         width: 100%;
-      
+        &:focus {
+            outline: none;
+        }
+    }
+    &_submit {
+        margin: 20px auto;
+        text-align: center;
     }
 }
 .ResultsContainer{
@@ -134,7 +145,11 @@
     &_btnContainer{
         margin-top: 40px;
         display: flex;
-        justify-content: space-around;
         width: 100%;
+        align-items: center;
+    }
+    &_btnTxt {
+        font-family: $kraftMono;
+        font-size: 14px;
     }
 }
