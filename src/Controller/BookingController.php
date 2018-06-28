@@ -70,7 +70,6 @@ class BookingController extends Controller
 			// @todo gerer la non existance du booking
 			// return $this->render('booking/error.html.twig', []);
 		}
-
         return $this->render('booking/show.html.twig', ['booking' => $booking]);
     }
 
