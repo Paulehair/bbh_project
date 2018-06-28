@@ -1,207 +1,82 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-a,
-abbr,
-acronym,
-address,
-applet,
-article,
-aside,
-audio,
-b,
-big,
-blockquote,
-body,
-canvas,
-caption,
-center,
-cite,
-code,
-dd,
-del,
-details,
-dfn,
-div,
-dl,
-dt,
-em,
-embed,
-fieldset,
-figcaption,
-figure,
-footer,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header,
-hgroup,
-html,
-i,
-iframe,
-img,
-ins,
-kbd,
-label,
-legend,
-li,
-mark,
-menu,
-nav,
-object,
-ol,
-output,
-p,
-pre,
-q,
-ruby,
-s,
-samp,
-section,
-small,
-span,
-strike,
-strong,
-sub,
-summary,
-sup,
-table,
-tbody,
-td,
-tfoot,
-th,
-thead,
-time,
-tr,
-tt,
-u,
-ul,
-var,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol,
-ul {
-  list-style: none; }
-
-blockquote,
-q {
-  quotes: none; }
-
-blockquote:after, blockquote:before {
-  content: '';
-  content: none; }
-
-q:after, q:before {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
 .Header {
   position: fixed;
   top: 0;
-  left: 8.5%;
+  left: 0;
+  background-color: #f0ede2;
   z-index: 1;
   display: flex;
-  height: 3%;
-  width: 90%;
-  margin: 4% auto; }
-  @media (min-width: 768px) {
-    .Header {
-      left: 10%; } }
+  height: 10%;
+  width: 100%;
+  margin: 0 auto; }
   @media (min-width: 1024px) {
     .Header {
       margin: 0 auto;
-      height: fit-content; } }
-  .Header_logo {
+      height: 150px; } }
+  .Header > svg {
     object-fit: contain;
-    width: 3em;
+    width: 30%;
     height: 3em;
-    margin: 2px 0 0 0; }
+    margin-top: 5%;
+    margin-left: 7%; }
     @media (min-width: 1024px) {
-      .Header_logo {
-        margin: 2.5% 0 0 3%;
+      .Header > svg {
+        margin-left: 8%;
+        width: 15%;
+        margin-top: 0;
         height: fit-content; } }
   .Header_burger {
-    width: 2em;
-    height: 2em;
-    margin: 2% 0 0 70%; }
+    width: auto;
+    height: 25px;
+    margin: 5% 0 0 50%; }
     @media (min-width: 768px) {
       .Header_burger {
         margin-left: 80%; } }
     @media (min-width: 1024px) {
       .Header_burger {
-        display: none; } }
+        display: none;
+        margin: 2% 0 0 65%; } }
   .Header_nav {
     display: none;
     flex-direction: column;
     background: #f0ece1;
-    width: 97%;
-    height: fit-content;
+    width: 100%;
+    z-index: -1;
+    margin-top: 100px;
+    height: 100%;
     padding-top: 5em;
-    position: absolute;
-    top: 3em;
+    position: fixed;
+    top: 0;
     left: 0; }
     @media (min-width: 768px) {
       .Header_nav {
         height: 100vh; } }
     @media (min-width: 1024px) {
       .Header_nav {
-        width: 80%;
+        width: 65%;
+        margin-left: 30%;
         display: flex;
-        height: 100%;
+        height: 150px;
         flex-direction: row;
         justify-content: space-evenly;
         padding: 0 2%;
-        position: unset;
+        position: fixed;
+        margin-top: 0px;
         top: unset;
-        left: unset;
-        margin: 0 0 0 2%; } }
+        left: unset; } }
     .Header_nav_box {
-      margin: 2% 0 0 5%;
       font-family: "rajdhanisemibold";
-      font-size: 1.5em;
+      margin: 5% auto 10%;
+      font-size: 24px;
       width: 132.66px; }
-      @media (min-width: 425px) {
-        .Header_nav_box {
-          margin: 3% 20%; } }
       @media (min-width: 768px) {
         .Header_nav_box {
-          margin: 3% auto; } }
+          margin: 5% auto 10%; } }
       @media (min-width: 1024px) {
         .Header_nav_box {
-          margin: 0 auto;
-          height: 150%; } }
+          margin: 25px auto;
+          padding-top: 10px;
+          height: 150%;
+          font-size: 18px; } }
       .Header_nav_box:first-child:hover .Header_nav_box_menu {
         visibility: visible;
         opacity: 1; }
@@ -210,14 +85,14 @@ table {
         position: absolute;
         top: 8%;
         right: 7%;
-        margin: 1.5em 0 0 0;
+        margin: 1.5em 0 0;
         color: #a39b94; }
         @media (min-width: 768px) {
           .Header_nav_box_menu {
             right: 17%; } }
         @media (min-width: 1024px) {
           .Header_nav_box_menu {
-            margin: 0 0;
+            margin: 0;
             position: unset;
             visibility: hidden;
             opacity: 0;
@@ -228,7 +103,7 @@ table {
           visibility: visible;
           opacity: 1; }
         .Header_nav_box_menu_item {
-          padding: 0.2em;
+          padding-top: 10px;
           cursor: pointer;
           transition: all 0.5s ease; }
           .Header_nav_box_menu_item:hover {
@@ -241,7 +116,7 @@ table {
         cursor: pointer;
         width: max-content; }
       .Header_nav_box_square {
-        margin: 1em 0 1em 0;
+        margin: 0 0 1em;
         width: 1em;
         height: 1em;
         background: #f52f57; }
@@ -416,7 +291,7 @@ table {
 .Experience {
   width: 90%;
   display: block;
-  margin: 20Px auto;
+  margin: 120Px auto;
   border: solid 1px #A39B94; }
   .Experience_End {
     width: 80%;
@@ -457,7 +332,7 @@ table {
     .Experience_Main > h6 {
       font-family: "rajdhanisemibold";
       font-size: 35px;
-      width: 80%;
+      width: 65%;
       padding-bottom: 80px;
       color: #f0ede2; }
       @media (min-width: 768px) {
@@ -594,11 +469,13 @@ table {
     margin: 100px auto; }
     .Fiche_Att_Txt {
       font-family: "kraft_monoregular";
-      color: #A39B94; }
+      color: #A39B94;
+      font-size: 14px; }
       @media (min-width: 768px) {
         .Fiche_Att_Txt {
           font-size: 16px; } }
     .Fiche_Att_Title {
+      font-size: 14px;
       font-family: "kraft_monoregular"; }
       @media (min-width: 768px) {
         .Fiche_Att_Title {
@@ -1048,7 +925,7 @@ table {
     justify-content: space-between; }
     @media (min-width: 768px) {
       .Steps_container {
-        margin-left: 0px; } }
+        margin-left: 0; } }
   .Steps_item--current {
     color: #383d3b; }
 
@@ -1489,12 +1366,11 @@ table {
 body {
   width: 100%;
   height: 100vh;
-  background: #f0ede2;
-  overflow-x: hidden; }
+  background: #f0ede2; }
 
 .container {
   overflow: hidden;
-  width: 90%;
+  width: 80%;
   border: 1px solid #383d3b;
   margin: 0 auto; }
 
@@ -1523,3 +1399,4 @@ a {
   text-decoration: none;
   padding: 0 20px;
   cursor: pointer; }
+
