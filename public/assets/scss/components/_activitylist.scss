@@ -45,8 +45,6 @@
         border-bottom: 1px solid black;
         border-left: 1px solid black;
       }
-      @include breakpoint(tablet) {
-      }
       &-img{
         height: 100px;
         width: 371px;
@@ -72,6 +70,15 @@
       }
       &-paragraph{
         margin-left: 2rem;
+        font-family: $kraftMono;
+        color:$grey;
+      }
+      &-desc{
+        margin-top: 30px;
+        font-family: $kraftMono;
+        color: $darkgrey;
+      }
+      &-price{
         font-family: $kraftMono;
         color:$grey;
       }
