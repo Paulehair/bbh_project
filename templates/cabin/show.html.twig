@@ -20,16 +20,17 @@
                             <span class="Infos_price">{{ cabin.price }} €</span>
                         </div>
                     </div>
-                    <p class="Infos_description">Lorem ipsum dolor  sit amet consecteturadipisicing elit. Perspiciatis tempora facilis fugiat veritatis ad laborum Lorem ipsum dolor  </p>
+                    <p class="Infos_description">{{ cabin.description }}</p>
                     <div class="BookingDetails">
                         <div class="BookingDetails_container">
                             <div class="BookingDetails_tableHead">
                                 <div class="BookingDetails_HeadTitle">Details</div>
                             </div>
                             <div class="BookingDetails_content">
-                                <div class="BookingDetails_item"><span>John</span></div>
-                                <div class="BookingDetails_item"><span>Doe</span></div>
-                                <div class="BookingDetails_item"><span>John@doe.com</span></div>
+                                <div class="BookingDetails_item"><span>{{ cabin.name }}</span></div>
+                                <div class="BookingDetails_item"><span>{{ cabin.area }}</span></div>
+                                <div class="BookingDetails_item"><span>{{ cabin.price }}</span></div>
+                                <div class="BookingDetails_item"><span>{{ cabin.numberOfPeople }}</span></div>
                             </div>
                         </div>
                     </div>

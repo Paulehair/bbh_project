@@ -1,6 +1,5 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-<<<<<<< HEAD
 <section class="CabinList">
         <div class="CabinList_main">
                 <h6 class="CabinList_title">Séléctionnez une cabine</h6>
@@ -13,8 +12,7 @@
                                         <use xlink:Href="../assets/img/sprite.svg#arrow" aria-hidden="true"></use>
                                 </svg>
                                 <select name="date" id="" class="CabinForm_select">
-                                        <option value="january">1er Janvier</option>
-                                        <option value="february">1er Février</option>
+                                        <option value="january"></option>
                                 </select>
                         </div>
                 </div>
@@ -64,43 +62,4 @@
             {% endfor %}
         </div>
 </section>
-=======
-    <h1>Cabin index</h1>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>description</th>
-                <th>numberOfPeople</th>
-                <th>area</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for cabin in cabins %}
-            <tr>
-                <td>{{ cabin.id }}</td>
-                <td>{{ cabin.name }}</td>
-                <td>{{ cabin.price }}</td>
-                <td>{{ cabin.description }}</td>
-                <td>{{ cabin.numberOfPeople }}</td>
-                <td>{{ cabin.area }}</td>
-                <td>
-                    <a href="{{ path('cabin_show', {'id': cabin.id}) }}">show</a>
-                    <a href="{{ path('cabin_edit', {'id': cabin.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="4">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('cabin_new') }}">Create new</a>
->>>>>>> 66e1e6525cb2c6ac33bf9f3d631c3d88b9f5e7ed
 {% endblock %}

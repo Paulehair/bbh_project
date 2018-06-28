@@ -16,6 +16,7 @@
 @import "./components/cabindetails";
 @import "./components/cabinlist";
 @import "./components/loginregister";
+@import "./components/ConfirmBooking";
 @import "./components/footer";
 
 
@@ -63,7 +64,7 @@ a {
 }
 
 html {
-  font-size: 62.5%;
+ // font-size: 62.5%;
   width: 100%;
 }
 

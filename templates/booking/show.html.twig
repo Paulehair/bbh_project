@@ -3,20 +3,11 @@
 {% block title %}Booking{% endblock %}
 
 {% block body %}
+    <!--
     <h1>Booking</h1>
     <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <th>Réservation N°</th>
-                <th>Cabine</th>
-                <th>Nombre de passagers</th>
-                <th>Mois</th>
-                <th>Prix</th>
-                <th>Prénom</th>
-                <th>Nom</th>
-            </tr>
-            <tr>
+        {#
+        <tr>
                 <td>{{ booking.id }}</td>
                 <td>{{ booking.reference }}</td>
                 <td>{{ booking.cabin.name }}</td>
@@ -26,12 +17,48 @@
                 <td>{{ booking.user.firstName }}</td>
                 <td>{{ booking.user.lastName }}</td>
             </tr>
+        #}
+
         </tbody>
     </table>
-
+    {#
     <a href="{{ path('booking_index') }}">back to list</a>
 
     <a href="{{ path('booking_edit', {'id': booking.id}) }}">edit</a>
-
     {{ include('booking/_delete_form.html.twig') }}
+    #}
+-->
+    <section class="ConfirmBooking">
+        <div class="ConfirmBooking_container">
+            <h1 class="ConfirmBooking_name">{{ booking.user.firstName }}  {{  booking.user.lastName }}</h1>
+            <p class="ConfirmBooking_reservation">
+                <span class="ConfirmBooking_reservationItem">Réservation N°</span>
+                <span class="ConfirmBooking_reservationValue">{{ booking.reference }}</span>
+            </p>
+        </div>
+        <div class="ConfirmBookingDetails">
+            <div class="ConfirmBookingDetails_item">
+                <p class="ConfirmBookingDetails_itemName">Cabine :</p>
+                <p class="ConfirmBookingDetails-itemVal">{{ booking.cabin.name  }}</p>
+            </div>
+            <div class="ConfirmBookingDetails_item">
+                <p class="ConfirmBookingDetails_itemName">Nombre de passagers :</p>
+                <p class="ConfirmBookingDetails-itemVal">{{ booking.guestQuantity }}</p>
+            </div>
+            <div class="ConfirmBookingDetails_item">
+                <p class="ConfirmBookingDetails_itemName">Date d'embarquement :</p>
+                <p class="ConfirmBookingDetails-itemVal">1er {{ booking.month }} 2022</p>
+            </div>
+            <div class="ConfirmBookingDetails_item">
+                <p class="ConfirmookingDetails_itemName">Date d'embarquement :</p>
+                <p class="ConfirmBookingDetails-itemVal">{{ booking.cabin.price  }}</p>
+            </div>
+        </div>
+        <div class="ConfirmBookingText">
+            <p class="ConfirmBookingText_text">
+                Merci pour votre réservation Mr. John Doe. Vous recevrez une copie de cette confirmation par mail ainsi que les détails concernant l’embarquement.
+            </p>
+            <a href="" class="ConfirmBookingText_link Button">Retour à l'accueil</a>
+        </div>
+    </section>
 {% endblock %}
