@@ -4,19 +4,17 @@
   border-top: 1px solid #A39B94;
   border-left: 1px solid #A39B94;
   border-right: 1px solid #A39B94;
-  background-image: url("../img/moon.png");
+  background-image: url("../img/planete4.png");
+  background-size: 100%;
+  background-position: -40% 50% 50%;
   background-repeat: no-repeat;
   height: 70rem;
   @include breakpoint(tablet) {}
 
   &-container {
-    background-image: url("../img/spaceship.png");
-    background-repeat: no-repeat;
-    background-size: contain;
     width: 85%;
     margin: 0 auto;
     background-size: 100%;
-    background-position: 20% 20%;
     padding-top: 250px;
     @include breakpoint(tablet) {
       padding-top: 200px;
@@ -56,6 +54,9 @@
     text-align: center;
     cursor: pointer;
     text-decoration: none;
+      @include breakpoint(tablet) {
+        padding: 15px 35px;
+      }
   }
 }
 
@@ -88,12 +89,10 @@
   }
 
   &-carac {
-    background-image: url("../img/traits.png");
-    background-repeat: no-repeat;
-    background-size: contain;
     margin-top: 10rem;
     font-family: $kraftMono;
     font-size: 1.6rem;
+
   }
 
   &-btn {
@@ -132,6 +131,7 @@
       line-height: 120%;
       font-family: $kraftMono;
       color: $white;
+      width: 70%;
     }
   }
 
@@ -166,7 +166,7 @@
           margin-top: 2rem;
           margin-bottom: 2rem;
           font-family: $radjhani;
-          font-size: 1.4rem;
+          font-size: 16px;
           color: $white;
         }
 
@@ -189,7 +189,7 @@
     background-color: $white;
     font-size: 1.4rem;
     font-family: $kraftMono;
-    color: black;
+    color: $grey;
     text-align: center;
     cursor: pointer;
     text-decoration: none;
