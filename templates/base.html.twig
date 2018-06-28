@@ -3,19 +3,71 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="icon" href="assets/img/icon.png">
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link href="/assets/css/main.css" type="text/css" rel="stylesheet">
     </head>
     <body>
     <header class="Header">
-        <img class="Header_logo" src="/assets/img/smartphone.png">
+
+      <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      	 viewBox="0 0 459 84" style="enable-background:new 0 0 459 84;" xml:space="preserve">
+      <style type="text/css">
+      	.st0{fill:url(#SVGID_1_);}
+      	.st1{fill:url(#SVGID_2_);}
+      </style>
+      <g>
+      	<path d="M108.7,67V22.7c0-0.7,0.3-1,1-1h17.7c3.3,0,5.9,0.9,7.8,2.8c1.9,1.9,2.8,4.5,2.8,7.8v25c0,3.3-0.9,5.9-2.8,7.8
+      		c-1.9,1.9-4.5,2.8-7.8,2.8h-17.7C109,68,108.7,67.6,108.7,67z M114.7,63.4h12.1c4,0,6-2.1,6-6.3V32.6c0-4.2-2-6.3-6-6.3h-12.1
+      		c-0.5,0-0.7,0.2-0.7,0.6v35.8C113.9,63.2,114.2,63.4,114.7,63.4z"/>
+      	<path d="M161.5,22.7V67c0,0.7-0.3,1-1,1h-3.2c-0.7,0-1-0.3-1-1V22.7c0-0.7,0.3-1,1-1h3.2C161.2,21.7,161.5,22,161.5,22.7z"/>
+      	<path d="M199,68h-8.6c-3.3,0-5.9-0.9-7.8-2.8c-1.9-1.9-2.8-4.5-2.8-7.8v-25c0-3.4,0.9-6,2.8-7.8c1.9-1.9,4.5-2.8,7.8-2.8h8.6
+      		c3.3,0,5.9,0.9,7.8,2.8c1.9,1.9,2.8,4.5,2.8,7.8v25c0,3.3-0.9,5.9-2.8,7.8C204.9,67,202.3,68,199,68z M191,63.4h7.3
+      		c4,0,6-2.1,6-6.3V32.6c0-4.2-2-6.3-6-6.3H191c-4,0-6,2.1-6,6.3v24.6C185,61.3,187,63.4,191,63.4z"/>
+      	<path d="M231.7,68h-3.2c-0.7,0-1-0.3-1-1V22.7c0-0.7,0.3-1,1-1h3c0.6,0,1,0.2,1.2,0.6l19.9,34.9h0.3V22.7c0-0.7,0.3-1,1-1h3.2
+      		c0.7,0,1,0.3,1,1V67c0,0.7-0.3,1-1,1h-2.7c-0.5,0-1-0.3-1.5-0.9L233,32.5h-0.3V67C232.7,67.6,232.3,68,231.7,68z"/>
+      	<path d="M290.4,68h-3.2c-0.7,0-1-0.3-1-1V50.6l-13.7-27.9c-0.1-0.3-0.1-0.6,0-0.8c0.1-0.2,0.4-0.3,0.6-0.3h4c0.5,0,0.9,0.3,1.2,1
+      		l10.3,21.8h0.4l10.2-21.8c0.2-0.7,0.6-1,1.2-1h4.1c0.8,0,1,0.4,0.6,1.1l-13.8,27.9V67C291.4,67.6,291.1,68,290.4,68z"/>
+      	<path d="M319.2,57.3V55c0-0.7,0.3-1,1-1h3.2c0.7,0,1,0.3,1,1v1.9c0,4.3,2.1,6.5,6.4,6.5h6.3c4.3,0,6.4-2.2,6.4-6.6v-2.4
+      		c0-3.5-2.9-5.7-8.6-6.8c-2.4-0.4-4.8-0.9-7.2-1.5c-2.4-0.6-4.4-1.7-6.1-3.3c-1.7-1.7-2.5-3.9-2.5-6.8v-3.5c0-3.3,0.9-5.9,2.8-7.8
+      		c1.9-1.9,4.5-2.8,7.8-2.8h8c3.3,0,5.9,0.9,7.8,2.8c1.9,1.9,2.9,4.5,2.9,7.8v1.8c0,0.7-0.3,1.1-0.9,1.1h-3.3c-0.6,0-0.9-0.4-0.9-1.1
+      		v-1.3c0-4.4-2.1-6.6-6.4-6.6h-6.1c-4.3,0-6.4,2.3-6.4,6.8V36c0,2.4,1.6,4.1,4.8,5c1.4,0.4,3,0.7,4.8,1c1.7,0.3,3.5,0.7,5.2,1.2
+      		c1.8,0.5,3.3,1.1,4.8,1.9c1.4,0.7,2.6,1.9,3.5,3.4c0.9,1.5,1.3,3.3,1.3,5.5v3.2c0,3.3-1,5.9-2.9,7.8c-1.9,1.9-4.5,2.8-7.8,2.8h-8.3
+      		c-3.3,0-5.9-0.9-7.8-2.8C320.2,63.2,319.2,60.6,319.2,57.3z"/>
+      	<path d="M385.4,68h-8.6c-3.3,0-5.9-0.9-7.8-2.8s-2.8-4.5-2.8-7.8v-25c0-3.4,0.9-6,2.8-7.8c1.9-1.9,4.5-2.8,7.8-2.8h8.6
+      		c3.3,0,5.9,0.9,7.8,2.8c1.9,1.9,2.8,4.5,2.8,7.8v25c0,3.3-0.9,5.9-2.8,7.8C391.3,67,388.7,68,385.4,68z M377.4,63.4h7.3
+      		c4,0,6-2.1,6-6.3V32.6c0-4.2-2-6.3-6-6.3h-7.3c-4,0-6,2.1-6,6.3v24.6C371.4,61.3,373.4,63.4,377.4,63.4z"/>
+      	<path d="M413.4,57.3V55c0-0.7,0.3-1,1-1h3.2c0.7,0,1,0.3,1,1v1.9c0,4.3,2.1,6.5,6.4,6.5h6.3c4.3,0,6.4-2.2,6.4-6.6v-2.4
+      		c0-3.5-2.9-5.7-8.6-6.8c-2.4-0.4-4.8-0.9-7.2-1.5s-4.4-1.7-6.1-3.3c-1.7-1.7-2.5-3.9-2.5-6.8v-3.5c0-3.3,0.9-5.9,2.8-7.8
+      		c1.9-1.9,4.5-2.8,7.8-2.8h8c3.3,0,5.9,0.9,7.8,2.8c1.9,1.9,2.9,4.5,2.9,7.8v1.8c0,0.7-0.3,1.1-0.9,1.1h-3.3c-0.6,0-0.9-0.4-0.9-1.1
+      		v-1.3c0-4.4-2.1-6.6-6.4-6.6H425c-4.3,0-6.4,2.3-6.4,6.8V36c0,2.4,1.6,4.1,4.8,5c1.4,0.4,3,0.7,4.8,1c1.7,0.3,3.5,0.7,5.2,1.2
+      		c1.8,0.5,3.3,1.1,4.8,1.9c1.4,0.7,2.6,1.9,3.5,3.4c0.9,1.5,1.3,3.3,1.3,5.5v3.2c0,3.3-1,5.9-2.9,7.8c-1.9,1.9-4.5,2.8-7.8,2.8H424
+      		c-3.3,0-5.9-0.9-7.8-2.8C414.3,63.2,413.4,60.6,413.4,57.3z"/>
+      </g>
+      <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-12.1353" y1="237.2553" x2="20.4421" y2="237.2553" gradientTransform="matrix(0.952 -0.306 0.306 0.952 -43.3388 -176.5692)">
+      	<stop  offset="0" style="stop-color:#F52F57"/>
+      	<stop  offset="1" style="stop-color:#9649CB"/>
+      </linearGradient>
+      <path class="st0" d="M49.4,50.4C49.4,50.3,49.3,50.3,49.4,50.4c-0.4-0.4-0.8-0.7-1.1-0.9c-1.6-1.3-4.1-3.3-5.1-5.2
+      	c-1.5-2.9-2-5.5-2.2-7.3c0-0.2,0-0.4,0-0.7c0-0.1,0-0.1,0-0.2c0,0,0,0,0,0c-0.7-6.2-5.6-11.4-12.1-12.2C21.3,23,14.4,28.4,13.5,36
+      	c-0.6,4.8,1.4,9.4,5,12.3l0,0c0,0,0,0,0,0c0.4,0.4,0.9,0.7,1.4,1c0.1,0,0.1,0.1,0.2,0.1c1.2,0.8,3.9,2.4,5.4,4.4
+      	c1.8,2.5,3.1,6.8,3.5,8.4c0,0,0,0,0,0c1.1,5,5.2,8.9,10.6,9.6c6.8,0.8,12.9-4,13.7-10.8C53.7,56.8,52.2,52.9,49.4,50.4L49.4,50.4z"
+      	/>
+      <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="46.5566" y1="35.4585" x2="69.8718" y2="35.4585">
+      	<stop  offset="0" style="stop-color:#F52F57"/>
+      	<stop  offset="1" style="stop-color:#9649CB"/>
+      </linearGradient>
+      <circle class="st1" cx="58.2" cy="35.5" r="11.7"/>
+      </svg>
+
+
 
         <img class="Header_burger" src="/assets/img/burger.svg" alt="burger menu" title="burger menu">
 
         <nav class="Header_nav">
             <div id="roll" class="Header_nav_box">
                 <p class="Header_nav_box_nbr">01</p>
-                <p class="Header_nav_box_item"><a class="Header_nav_box_item" href="{{ path('experience') }}">L'EXPERIENCE</a></p>
+                <p class="Header_nav_box_item"><a class="Header_nav_box_item" href="{{ path('experience') }}">INFORMATION</a></p>
 
                 <div class="Header_nav_box_menu">
                     <p class="Header_nav_box_menu_item"><a class="Header_nav_box_menu_item" href="{{ path('spaceship') }}">Vaisseau</a></p>
@@ -25,15 +77,11 @@
             </div>
             <div class="Header_nav_box">
                 <p class="Header_nav_box_nbr">02</p>
-                <p class="Header_nav_box_item"><a class="Header_nav_box_item" href="{{ path('booking_index') }}">RESERVER</a></p>
+                <p class="Header_nav_box_item"><a class="Header_nav_box_item" href="{{ path('booking_new') }}">RESERVER</a></p>
             </div>
             <div class="Header_nav_box">
                 <p class="Header_nav_box_nbr">03</p>
                 <p class="Header_nav_box_item">CONTACT</p>
-            </div>
-            <div class="Header_nav_box">
-                <div class="Header_nav_box_square"></div>
-                <p class="Header_nav_box_item">SE CONNECTER</p>
             </div>
         </nav>
     </header>
@@ -43,7 +91,7 @@
     <footer class="Footer">
     <div class="Footer_container">
         <nav class="Footer_nav">
-          
+
             <ul class="Nav">
               <span class="Nav_title">Dionysos</span>
 
@@ -77,6 +125,3 @@
     {% endblock %}
     </body>
 </html>
-
-
-
