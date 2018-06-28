@@ -1,7 +1,7 @@
 .CabinDetails{
     width: 90%;
     display: block;
-    margin: 20px auto;
+    margin: 150px auto 20px auto;
     border: solid 1px #A39B94;
     box-sizing: border-box;
     @include breakpoint(tablet){
@@ -68,7 +68,7 @@
 
     &_titleContainer{
         color: #fff;
-        transform: translateY(-155%);
+        transform: translateY(-200%);
         @include breakpoint(tablet){
             transform: none;
             color: #383D3B;
