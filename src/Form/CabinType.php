@@ -14,6 +14,9 @@ class CabinType extends AbstractType
         $builder
             ->add('name')
             ->add('price')
+            ->add('description')
+            ->add('numberOfPeople')
+            ->add('area')
         ;
     }
 

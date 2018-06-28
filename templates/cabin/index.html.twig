@@ -11,6 +11,9 @@
                 <th>Id</th>
                 <th>Name</th>
                 <th>Price</th>
+                <th>description</th>
+                <th>numberOfPeople</th>
+                <th>area</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -20,6 +23,9 @@
                 <td>{{ cabin.id }}</td>
                 <td>{{ cabin.name }}</td>
                 <td>{{ cabin.price }}</td>
+                <td>{{ cabin.description }}</td>
+                <td>{{ cabin.numberOfPeople }}</td>
+                <td>{{ cabin.area }}</td>
                 <td>
                     <a href="{{ path('cabin_show', {'id': cabin.id}) }}">show</a>
                     <a href="{{ path('cabin_edit', {'id': cabin.id}) }}">edit</a>

@@ -28,8 +28,10 @@ CREATE TABLE `activities` (
   `detail` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `image` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `price` int(11) NOT NULL,
+  `type` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +40,7 @@ CREATE TABLE `activities` (
 
 LOCK TABLES `activities` WRITE;
 /*!40000 ALTER TABLE `activities` DISABLE KEYS */;
-INSERT INTO `activities` VALUES (1,'Course de modules','Course de modules dans un champs d\'astéroïdes','champs.png',200),(2,'Combats 0g','Pariez sur des combats en gravité 0','combat.png',50);
+INSERT INTO `activities` VALUES (1,'Course de modules','Course de modules dans un champs d\'astéroïdes','champs.png',200,'sport extrême','Embarquez dans une course absolument folle où tous les coups sont permis.'),(2,'Combats 0g','Pariez sur des combats en gravité 0','combat.png',50,'sport extrême','Enfilez vos gants de boxes entourés de barbelés et faîtes vous réspecter. Ou lâchez vos billets pour tenter de gagner le double... ou tout perdre'),(3,'Cabarets de danseuses robots','Vous pensiez qu\'une machine ne pourrait jamais vous exciter ?','cabaret.png',20,'spectacle','Venez assister à un spectacle de danse robotique enivrante. Vous êtes sur le point de voir des mouvements impossibles pour un humain. A ne pas reproduire chez vous.');
 /*!40000 ALTER TABLE `activities` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -84,6 +86,9 @@ CREATE TABLE `cabin` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `price` int(11) NOT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `number_of_people` int(11) DEFAULT NULL,
+  `area` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -94,7 +99,7 @@ CREATE TABLE `cabin` (
 
 LOCK TABLES `cabin` WRITE;
 /*!40000 ALTER TABLE `cabin` DISABLE KEYS */;
-INSERT INTO `cabin` VALUES (1,'Standard',1000),(2,'Premium',2000),(3,'Royal',3000);
+INSERT INTO `cabin` VALUES (1,'Standard',1000,'Cabine incroyablement bien foutue. Canapé en cuir de phoque gris du pôle nord en voie de disparition et cheminée à plasma. Inclue chaîne porno.',2,18),(2,'Premium',2000,'Cabine de folie comprenant un terrain de réalité virtuelle ainsi qu\'un robot prisonnier que l\'on peut tabasser.',2,22),(3,'Royal',3000,'Avec ou sans mousse ?',2,30);
 /*!40000 ALTER TABLE `cabin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -182,4 +187,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-27 14:20:27
+-- Dump completed on 2018-06-28 11:26:23
