@@ -1,0 +1,65 @@
+.Login{
+  width: 90%;
+  height: 80vh;
+  margin: 40px auto ;
+  border: solid 1px #A39B94;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: $kraftMono;
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+  &_title{
+    font-family: $radjhani;
+    font-size: 30px;
+  }
+  @include breakpoint(tablet){
+    padding: 80px;
+  }
+  &_container{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.RegisterForm{
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 35px;
+  &_item{
+
+  }
+  &_label{
+    display: block;
+    color: $darkgrey;
+  }
+  &_input{
+    margin-top: 15px;
+    height: 35px;
+    width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid $grey;
+    &:focus{
+      outline: 0;
+    }
+  }
+}
+.RegisterItem{
+  &_submit{
+    width: 100%;
+  }
+  &_btn{
+    border: none;
+    width: 301px;
+  }
+  &_link{
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 35px;
+  }
+}

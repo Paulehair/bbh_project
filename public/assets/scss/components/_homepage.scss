@@ -8,8 +8,10 @@
   background-size: 100%;
   background-position: -40% 50% 50%;
   background-repeat: no-repeat;
-  height: 70rem;
-  @include breakpoint(tablet) {}
+  height: 40rem;
+  @include breakpoint(tablet) {
+    height: 120rem;
+  }
 
   &-container {
     width: 85%;
@@ -17,7 +19,7 @@
     background-size: 100%;
     padding-top: 250px;
     @include breakpoint(tablet) {
-      padding-top: 200px;
+      padding-top: 300px;
       background-image: url("");
     }
   }
@@ -34,6 +36,7 @@
     margin-bottom: 4.2rem;
     font-family: $kraftMono;
     color: $grey;
+    line-height: 120%;
     @include breakpoint(tablet) {
       background-image: url("");
       margin-left: 5.5rem;
@@ -65,7 +68,7 @@
   margin: 0 auto;
   border-left: 1px solid #A39B94;
   border-right: 1px solid #A39B94;
-  height: 70rem;
+  height: 50rem;
   background-image: url("../img/spaceship1.png");
   background-position: top 35% right 0;
   background-size: 100%;
@@ -119,33 +122,66 @@
   }
 }
 
+.homeContainer {
+  width: 90%;
+  margin: 0 auto;
+  border-right: 1px solid $grey;
+  border-left: 1px solid $grey;
+}
+
+.homeMap {
+  width: 90%;
+  margin: 0 auto;
+  &-title {
+    font-size: 1.6rems;
+  }
+  &-btn {
+    width: 50%;
+    margin: 2em auto;
+    font-size: 1.4rem;
+    @include breakpoint(tablet) {
+      width:30%;
+    }
+  }
+}
+
 .activity {
-  background: $red;
+  width: 90%;
+  margin: 0 auto;
+  border-right: 1px solid $grey;
+  border-left: 1px solid $grey;
+  border-bottom: 1px solid $grey;
 
   &-container {
-    &-title {
-      padding-top: 2rem;
-      margin-left: 4.5rem;
-      margin-bottom: 3rem;
-      font-size: 24px;
-      font-family: $radjhani;
-      color: $white;
-    }
+    &-text {
+      width: 85%;
+      margin:0 auto;
+      color: $darkgrey;
+      &-title {
+        padding-top: 2rem;
+        margin-left: 4.5rem;
+        margin-bottom: 3rem;
+        font-size: 1.6rem;
+        font-family: $radjhani;
+        color: $darkgrey;
+      }
 
-    &-paragraph {
-      margin-top: 4rem;
-      margin-left: 4.5rem;
-      margin-bottom: 4rem;
-      font-size: 14px;
-      line-height: 120%;
-      font-family: $kraftMono;
-      color: $white;
-      width: 70%;
+      &-paragraph {
+        margin-top: 4rem;
+        margin-left: 4.5rem;
+        margin-bottom: 4rem;
+        font-size: 14px;
+        line-height: 120%;
+        font-family: $kraftMono;
+        color: $darkgrey;
+        width: 70%;
+      }
     }
   }
 
   &-wrapper {
     @include breakpoint(tablet) {
+      width: 100%;
       display: flex;
       justify-content: space-around;
       flex-direction: row;
@@ -183,13 +219,13 @@
           margin-bottom: 2rem;
           font-family: $radjhani;
           font-size: 16px;
-          color: $white;
+          color: $darkgrey;
         }
 
         &-paragraph {
           font-family: $kraftMono;
           font-size: 1.2rem;
-          color: $white;
+          color: $darkgrey;
         }
       }
     }
@@ -201,7 +237,7 @@
     justify-content: center;
     width: 80px;
     height: 1rem;
-    margin: 15% auto 0;
+    margin: 5% auto 0;
     padding: 1em 2em;
     background-color: $white;
     font-size: 12px;
@@ -211,142 +247,4 @@
     cursor: pointer;
     text-decoration: none;
   }
-}
-
-a,
-abbr,
-acronym,
-address,
-applet,
-article,
-aside,
-audio,
-b,
-big,
-blockquote,
-body,
-canvas,
-caption,
-center,
-cite,
-code,
-dd,
-del,
-details,
-dfn,
-div,
-dl,
-dt,
-em,
-embed,
-fieldset,
-figcaption,
-figure,
-footer,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header,
-hgroup,
-html,
-i,
-iframe,
-img,
-ins,
-kbd,
-label,
-legend,
-li,
-mark,
-menu,
-nav,
-object,
-ol,
-output,
-p,
-pre,
-q,
-ruby,
-s,
-samp,
-section,
-small,
-span,
-strike,
-strong,
-sub,
-summary,
-sup,
-table,
-tbody,
-td,
-tfoot,
-th,
-thead,
-time,
-tr,
-tt,
-u,
-ul,
-var,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote {
-  &:after,
-  &:before {
-    content: '';
-    content: none;
-  }
-}
-
-q {
-  &:after,
-  &:before {
-    content: '';
-    content: none;
-  }
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
 }

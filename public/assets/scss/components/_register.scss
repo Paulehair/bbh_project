@@ -1,0 +1,25 @@
+.Register{
+  width: 90%;
+  height: 80vh;
+  margin: 40px auto ;
+  border: solid 1px #A39B94;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: $kraftMono;
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+  &_title{
+    font-family: $radjhani;
+    font-size: 30px;
+  }
+  @include breakpoint(tablet){
+    padding: 80px;
+  }
+  &_container{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

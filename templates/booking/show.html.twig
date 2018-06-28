@@ -41,19 +41,19 @@
                 <div class="ConfirmBookingDetails">
                     <div class="ConfirmBookingDetails_item">
                         <p class="ConfirmBookingDetails_itemName">Cabine :</p>
-                        <p class="ConfirmBookingDetails-itemVal">{{ booking.cabin.name  }}</p>
+                        <p class="ConfirmBookingDetails_itemVal">{{ booking.cabin.name  }}</p>
                     </div>
                     <div class="ConfirmBookingDetails_item">
                         <p class="ConfirmBookingDetails_itemName">Nombre de passagers :</p>
-                        <p class="ConfirmBookingDetails-itemVal">{{ booking.guestQuantity }}</p>
+                        <p class="ConfirmBookingDetails_itemVal">{{ booking.guestQuantity }}</p>
                     </div>
                     <div class="ConfirmBookingDetails_item">
                         <p class="ConfirmBookingDetails_itemName">Date d'embarquement :</p>
-                        <p class="ConfirmBookingDetails-itemVal">1er {{ booking.month }} 2022</p>
+                        <p class="ConfirmBookingDetails_itemVal">1er {{ booking.month }} 2022</p>
                     </div>
                     <div class="ConfirmBookingDetails_item">
-                        <p class="ConfirmookingDetails_itemName">Date d'embarquement :</p>
-                        <p class="ConfirmBookingDetails-itemVal">{{ booking.cabin.price  }}</p>
+                        <p class="ConfirmookingDetails_itemName">Prix total :</p>
+                        <p class="ConfirmBookingDetails_itemVal">{{ booking.cabin.price  }} € ttc</p>
                     </div>
                 </div>
             </div>
@@ -63,10 +63,9 @@
                     <p class="ConfirmBookingText_text">
                         Merci pour votre réservation {{ booking.user.firstName }}  {{  booking.user.lastName }}. Vous recevrez une copie de cette confirmation par mail ainsi que les détails concernant l’embarquement.
                     </p>
-                    <a href="" class="ConfirmBookingText_link Button">Retour à l'accueil</a>
+                    <a href="{{ path('home_page') }}" class="ConfirmBookingText_link Button">Retour à l'accueil</a>
                 </div>
             </div>
-
         </div>
 
     </section>
