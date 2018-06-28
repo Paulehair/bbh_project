@@ -3,10 +3,69 @@
 {% block title %}New Booking{% endblock %}
 
 {% block body %}
-    <h1>Create new Booking</h1>
+    <section class="CabinList">
+        {{ form_start(form) }}
 
-    {{ include('booking/_form.html.twig') }}
+        <div class="CabinList_main">
+            <h6>Séléctionnez une cabine</h6>
+        </div>
+        <div class="CabinForm">
 
+        <div class="CabinForm_item">
+            <div class="CabinForm_container">
+                <svg class="CabinForm_icon">
+                    <use xlink:Href="../assets/img/sprite.svg#arrow" aria-hidden="true"></use>
+                </svg>
+                {{ form_row(form.month, {'attr': {'class': 'CabinForm_select'}}) }}
+            </div>
+        </div>
+
+        <div class="CabinForm_item">
+            <div class="CabinForm_container">
+                <svg class="CabinForm_icon">
+                    <use xlink:Href="../assets/img/sprite.svg#arrow" aria-hidden="true"></use>
+                </svg>
+                {{ form_row(form.guestQuantity, {'attr': {'class': 'CabinForm_select'}}) }}
+            </div>
+        </div>
+        </div>
+        <div class="ResultsContainer">
+
+        {% for cabin in form.cabin %}
+            {% set index = cabin.vars.value %}{# get array index #}
+            {% set entity = form.cabin.vars.choices[index].data %}{# get entity object #}
+            <div class="CabinCard">
+                <div class="CardThumbnail">
+                    <span class="CardThumbnail_price">{{ entity.price }} €</span>
+                    <img class="CardThumbnail_img" src="/assets/img/thumbnail.png" alt="">
+                </div>
+                <div class="CabinInfo">
+                    <div class="CabinInfo_upper">
+                        <span class="CabinInfo_name">{{ entity.name }}</span>
+                        <div class="CabinInfo_passengers">
+                            <svg class="CabinInfo_icon">
+                                <use xlink:Href="./assets/img/sprite.svg#passengers" aria-hidden="true"></use>
+                            </svg>
+                            <span>4-5</span>
+                        </div>
+                    </div>
+                    <p class="CabinInfo_text">
+                        cabine incroyablement bien foutue, canapés en cuir de phoque gris du pôle nord et cheminée à plasma. Inclus chaines pornos, putes et cocaînes
+                    </p>
+
+                    <div class="CabinInfo_btnContainer">
+                        <a href="" class="Button">{{ form_widget(cabin) }} Plus de détails</a>
+                    </div>
+
+                </div>
+            </div>
+
+        {% endfor %}
+        </div>
+
+        <button class="btn">{{ button_label|default('Save') }}</button>
+        {{ form_end(form) }}
+    </section>
     <a href="{{ path('booking_index') }}">back to list</a>
 {% endblock %}
 {% block javascripts %}
