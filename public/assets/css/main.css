@@ -217,7 +217,7 @@
   height: 6%;
   margin: 15% auto 0;
   padding: 1em 2em;
-  background: linear-gradient(-145deg, rgba(153, 70, 200, 0.8), rgba(244, 43, 87, 0.8));
+  background: linear-gradient(-145deg, #9946c8, #f42b57);
   font-size: 14px;
   color: #f0ede2;
   text-align: center;
@@ -1151,6 +1151,9 @@
 .CabinList_main {
   font-family: "rajdhanisemibold";
 }
+.CabinList_title {
+  font-size: 20px;
+}
 
 .CabinForm {
   margin-top: 50px;
@@ -1405,7 +1408,7 @@ html {
 }
 
 .Button {
-  background: linear-gradient(-145deg, rgba(153, 70, 200, 0.8), rgba(244, 43, 87, 0.8));
+  background: linear-gradient(-145deg, #9946c8, #f42b57);
   line-height: 50px;
   text-align: center;
   color: #ffffff;

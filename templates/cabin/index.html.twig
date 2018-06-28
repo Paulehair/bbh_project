@@ -1,35 +1,8 @@
 {% extends 'base.html.twig' %}
-
-{#
-
-    {% block title %}Cabin index{% endblock %}
-
-#}
-
-
 {% block body %}
-
-    <!--
-    <h1>Cabin index</h1>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-
-        </tbody>
-    </table>
-
-    <a href="{{ path('cabin_new') }}">Create new</a> -->
 <section class="CabinList">
         <div class="CabinList_main">
-                <h6>Séléctionnez une cabine</h6>
+                <h6 class="CabinList_title">Séléctionnez une cabine</h6>
         </div>
         <form action="" class="CabinForm">
                 <div class="CabinForm_item">
@@ -61,9 +34,9 @@
         <div class="ResultsContainer">
             {% for cabin in cabins %}
             <div class="CabinCard">
-                    <div class="Thumbnail">
-                            <span class="Thumbnail_price">{{ cabin.price }} €</span>
-                            <img class="Thumbnail_img" src="../assets/img/thumbnail.png" alt="">
+                    <div class="CardThumbnail">
+                            <span class="CardThumbnail_price">{{ cabin.price }} €</span>
+                            <img class="CardThumbnail_img" src="../assets/img/thumbnail.png" alt="">
                     </div>
                     <div class="CabinInfo">
                             <div class="CabinInfo_upper">
@@ -83,7 +56,6 @@
                             </div>
                     </div>
             </div>
-
             {% else %}
                 <div>
                         <p>No cabin found :(</p>
