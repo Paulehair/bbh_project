@@ -31,7 +31,7 @@ CREATE TABLE `activities` (
   `type` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `description` longtext COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,8 +40,38 @@ CREATE TABLE `activities` (
 
 LOCK TABLES `activities` WRITE;
 /*!40000 ALTER TABLE `activities` DISABLE KEYS */;
-INSERT INTO `activities` VALUES (1,'Course de modules','Course de modules dans un champs d\'astéroïdes','champs.png',200,'sport extrême','Embarquez dans une course absolument folle où tous les coups sont permis.'),(2,'Combats 0g','Pariez sur des combats en gravité 0','combat.png',50,'sport extrême','Enfilez vos gants de boxes entourés de barbelés et faîtes vous réspecter. Ou lâchez vos billets pour tenter de gagner le double... ou tout perdre'),(3,'Cabarets de danseuses robots','Vous pensiez qu\'une machine ne pourrait jamais vous exciter ?','cabaret.png',20,'spectacle','Venez assister à un spectacle de danse robotique enivrante. Vous êtes sur le point de voir des mouvements impossibles pour un humain. A ne pas reproduire chez vous.');
+INSERT INTO `activities` VALUES (1,'Course de modules','Course de modules dans un champs d\'astéroïdes','champs.png',200,'sport extrême','Embarquez dans une course absolument folle où tous les coups sont permis.'),(2,'Combats 0g','Pariez sur des combats en gravité 0','combat.png',50,'sport extrême','Enfilez vos gants de boxes entourés de barbelés et faîtes vous réspecter. Ou lâchez vos billets pour tenter de gagner le double... ou tout perdre'),(3,'Maison close de danseuses robots','Vous pensiez qu\'une machine ne pourrait jamais vous exciter ?','sex.jpg',20,'spectacle','Venez assister à un spectacle robotique enivrant. Attendez vous à voir des mouvements impossibles pour un humain. A ne pas reproduire chez soi.'),(4,'Partouze géante','Partouze géante entre robots et humains consentants','touz.jpg',25,'sport extrême','Vous êtes rouillés sexuellement ? Venez reprendre du poil de la bête dans cette orgie hors du commun.'),(5,'Atelier fellation','Atelier fellation avec les meilleurs sexperts de la galaxie','pipe.jpg',5,'éducation','Prenez vous en main et apprenez à retourner le chandail à col roulé.'),(6,'Atelier crime parfait','Le crime parfait enseigné par des professionnels du milieu','crime.jpg',200,'éducation','Belle mère envahissante ? Femme infidèle ? Patron trop con ? Apprenez à vous débarrasser des encombrants sans vous faire choper.');
 /*!40000 ALTER TABLE `activities` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `app_users`
+--
+
+DROP TABLE IF EXISTS `app_users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `app_users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `last_name` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `is_active` tinyint(1) NOT NULL,
+  `roles` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'ROLE_USER',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UNIQ_C2502824E7927C74` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `app_users`
+--
+
+LOCK TABLES `app_users` WRITE;
+/*!40000 ALTER TABLE `app_users` DISABLE KEYS */;
+INSERT INTO `app_users` VALUES (1,'Paule','Herman','$2y$13$JH7zPHRkV9fkmPsWv0cN/epR44fHElJ2p7GNB2KhPsTDsMh6zgkt6','lol@gmail.com',1,'ROLE_USER');
+/*!40000 ALTER TABLE `app_users` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -57,12 +87,16 @@ CREATE TABLE `booking` (
   `month_id` int(11) NOT NULL,
   `guest_quantity` int(11) NOT NULL,
   `reference` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `sessid` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `IDX_E00CEDDE8560181F` (`cabin_id`),
   KEY `IDX_E00CEDDEA0CBDE4` (`month_id`),
+  KEY `IDX_E00CEDDEA76ED395` (`user_id`),
   CONSTRAINT `FK_E00CEDDE8560181F` FOREIGN KEY (`cabin_id`) REFERENCES `cabin` (`id`),
-  CONSTRAINT `FK_E00CEDDEA0CBDE4` FOREIGN KEY (`month_id`) REFERENCES `month` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  CONSTRAINT `FK_E00CEDDEA0CBDE4` FOREIGN KEY (`month_id`) REFERENCES `month` (`id`),
+  CONSTRAINT `FK_E00CEDDEA76ED395` FOREIGN KEY (`user_id`) REFERENCES `app_users` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -71,7 +105,7 @@ CREATE TABLE `booking` (
 
 LOCK TABLES `booking` WRITE;
 /*!40000 ALTER TABLE `booking` DISABLE KEYS */;
-INSERT INTO `booking` VALUES (1,2,1,2,'ff'),(2,2,4,2,'5b32315083937'),(3,3,10,2,'5b32525c66b55');
+INSERT INTO `booking` VALUES (2,2,4,2,'5b32315083937',NULL,''),(3,3,10,2,'5b32525c66b55',NULL,''),(4,3,8,2,'5b34c47615728',NULL,'ln6du64qpa5l728nu0tdj9860r');
 /*!40000 ALTER TABLE `booking` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -89,6 +123,7 @@ CREATE TABLE `cabin` (
   `description` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `number_of_people` int(11) DEFAULT NULL,
   `area` int(11) DEFAULT NULL,
+  `image` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -99,7 +134,7 @@ CREATE TABLE `cabin` (
 
 LOCK TABLES `cabin` WRITE;
 /*!40000 ALTER TABLE `cabin` DISABLE KEYS */;
-INSERT INTO `cabin` VALUES (1,'Standard',1000,'Cabine incroyablement bien foutue. Canapé en cuir de phoque gris du pôle nord en voie de disparition et cheminée à plasma. Inclue chaîne porno.',2,18),(2,'Premium',2000,'Cabine de folie comprenant un terrain de réalité virtuelle ainsi qu\'un robot prisonnier que l\'on peut tabasser.',2,22),(3,'Royal',3000,'Avec ou sans mousse ?',2,30);
+INSERT INTO `cabin` VALUES (1,'La Capine',1000,'Cabine incroyablement bien foutue. Canapé en cuir de phoque gris du pôle nord en voie de disparition et cheminée à plasma. Inclue les chaînes porno.',2,18,'cabine2.jpg'),(2,'La Cabine Prepium',2000,'Cabine comprenant un terrain de réalité virtuelle ainsi qu\'un robot prisonnier que l\'on peut tabasser. Vous pourrez également profiter de lui à volonté.',2,22,'cabine3.jpg'),(3,'La Cabine Royass',3000,'La cabine où vous pourrez festoyer jusqu\'à tomber chiffon carpette. Trap inclus dans le prix de la cabine. Alors ? Avec ou sans mousse ?',2,30,'cabine4.png');
 /*!40000 ALTER TABLE `cabin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -174,7 +209,7 @@ CREATE TABLE `planet` (
 
 LOCK TABLES `planet` WRITE;
 /*!40000 ALTER TABLE `planet` DISABLE KEYS */;
-INSERT INTO `planet` VALUES (1,'Vénus','Vénus est une planète tellurique, comme le sont également Mercure, la Terre et Mars.','tellurique',12100,'venus.png'),(2,'Mars','Sa topographie présente des analogies aussi bien avec la Lune, à travers ses cratères et ses bassins d\'impact, qu\'avec la Terre, avec des formations d\'origine tectonique et climatique telles que des volcans, des rifts, des vallées, des mesas, des champs de dunes et des calottes polaires.','tellurique',6800,'mars.png'),(3,'Ganymede','Ganymède est le plus gros satellite naturel de Jupiter mais également le plus gros de tout le Système solaire. Il est constitué en quantités à peu près égales de roches silicatées et de glace d\'eau.','lune',5262,'ganymede.png');
+INSERT INTO `planet` VALUES (1,'Vénus','Vénus est une planète tellurique, comme le sont également Mercure, la Terre et Mars.','ronde',12100,'venus.png'),(2,'Mars','Sa topographie présente des analogies aussi bien avec la Lune, à travers ses cratères et ses bassins d\'impact, qu\'avec la Terre.','tellurique',6800,'mars.png'),(3,'Ganymede','Ganymède est le plus gros satellite naturel de Jupiter mais également le plus gros de tout le Système solaire. Il est constitué en quantités à peu près égales de roches silicatées et de glace d\'eau.','lune',5262,'ganymede.png');
 /*!40000 ALTER TABLE `planet` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -187,5 +222,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-28 11:26:23
-
+-- Dump completed on 2018-06-29  5:32:31

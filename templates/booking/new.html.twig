@@ -13,6 +13,9 @@
 
         <div class="CabinForm_item">
             <div class="CabinForm_container">
+                <svg class="CabinForm_icon">
+                    <use xlink:Href="../assets/img/sprite.svg#arrow" aria-hidden="true"></use>
+                </svg>
                 {{ form_row(form.month, {'attr': {'class': 'CabinForm_select'}}) }}
             </div>
         </div>
@@ -31,21 +34,19 @@
             <div class="CabinCard">
                 <div class="CardThumbnail">
                     <span class="CardThumbnail_price">{{ entity.price }} €</span>
-                    <img class="CardThumbnail_img" src="/assets/img/thumbnail.png" alt="">
+                    <img class="CardThumbnail_img" src="/assets/img/{{ entity.image }}" alt="">
                 </div>
                 <div class="CabinInfo">
                     <div class="CabinInfo_upper">
                         <span class="CabinInfo_name">{{ entity.name }}</span>
                         <div class="CabinInfo_passengers">
                             <svg class="CabinInfo_icon">
-                                <use xlink:Href="./assets/img/sprite.svg#passengers" aria-hidden="true"></use>
+                                <use xlink:Href="../assets/img/sprite.svg#passengers" aria-hidden="true"></use>
                             </svg>
-                            <span>4-5</span>
+                            <span>{{ entity.numberOfPeople }}</span>
                         </div>
                     </div>
-                    <p class="CabinInfo_text">
-                        cabine incroyablement bien foutue, canapés en cuir de phoque gris du pôle nord et cheminée à plasma. Inclus chaines pornos, putes et cocaînes
-                    </p>
+                    <p class="CabinInfo_text">{{ entity.description }}</p>
                     <div class="CabinInfo_btnContainer">
                         {{ form_widget(cabin) }}
                         <p class="CabinInfo_btnTxt">Sélectionner cette cabine</p>

@@ -6,3 +6,4 @@ easy_admin:
         - App\Entity\Cabin
         - App\Entity\Month
         - App\Entity\Planet
+        - App\Entity\Activities

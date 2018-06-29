@@ -33,13 +33,13 @@
     }
 
     &_Txt {
-      width: 50%;
-      z-index: 4;
+      width: 30%;
+      z-index: -1000;
       justify-content: center;
       display: flex;
       align-items: center;
       @include breakpoint(tablet) {
-        width: 16%;
+        width: 11%;
       }
 
       & > p {

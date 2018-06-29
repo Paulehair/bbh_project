@@ -10,10 +10,14 @@
             <div class="activitylist-container">
         {% for activity in activities %}
                 <div class="activitylist-container-content">
-                    <img src="/assets/img/{{ activity.image }}" alt="img" class="activitylist-container-content-img">
+                    <div class="activitylist-container-content-box">
+                        <img src="/assets/img/{{ activity.image }}" alt="img" class="activitylist-container-content-box-img">
+                    </div>
                     <h2 class="activitylist-container-content-title">{{ activity.name }}</h2>
                     <p class="activitylist-container-content-tag">{{ activity.type }}</p>
                     <p class="activitylist-container-content-paragraph">{{ activity.detail }}</p>
+                    <p class="activitylist-container-content-desc">{{ activity.description }}</p>
+                    <p class="activitylist-container-content-price">{{ activity.price }} €</p>
 
                 </div>
         {% else %}

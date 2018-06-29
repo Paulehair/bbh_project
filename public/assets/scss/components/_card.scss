@@ -55,7 +55,7 @@
         font-size: $fontP;
         font-family: $kraftMono;
       }
-      
+
       &_btn {
         width: 60%;
         height: 6%;
@@ -66,6 +66,10 @@
         color: $mainBkgd;
         text-align: center;
         cursor: pointer;
+      }
+      &_link {
+        color: $white;
+        font-family: $kraftMono;
       }
     }
   }

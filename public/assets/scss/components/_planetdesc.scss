@@ -77,6 +77,14 @@
           font-family: $radjhani;
           padding-left: 1em;
         }
+
+      }
+      &_link {
+        display: block;
+        color: $darkgrey;
+        font-family: $kraftMono;
+        font-size: 14px;
+        margin-top: 60px;
       }
 
       &_bot {
@@ -92,7 +100,7 @@
         &_line {
           height: 2px;
           background: #383d3b;
-          width: 100px;           
+          width: 100px;
           align-self: flex-end;
           margin: 0 0 0 5%;
         }
