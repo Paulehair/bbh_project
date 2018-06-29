@@ -1,0 +1,20 @@
+.Register {
+  width: 90%;
+  height: 80vh;
+  margin: 40px auto;
+  border: solid 1px #A39B94;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: $kraftMono;
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+}
+.ContactForm_input {
+  margin-top: 15px;
+  height: 35px;
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid $grey;
+}
