@@ -1,12 +1,12 @@
 .CabinDetails{
-  width: 90%;
-  display: block;
-  margin: 150px auto 20px auto;
-  border: solid 1px #A39B94;
-  box-sizing: border-box;
-  @include breakpoint(tablet){
-    padding: 30px 80px;
-  }
+    width: 90%;
+    display: block;
+    margin: 150px auto 20px auto;
+    border: solid 1px #A39B94;
+    box-sizing: border-box;
+    @include breakpoint(tablet){
+      padding: 30px 80px;
+    }
 }
 .Steps{
   font-family: $kraftMono;
