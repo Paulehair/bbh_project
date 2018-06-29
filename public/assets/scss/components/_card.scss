@@ -1,5 +1,4 @@
 .Card {
-  width: 100%;
   height: fit-content;
   margin: 10% auto 0 auto;
   padding-bottom: 10%;
@@ -12,14 +11,15 @@
     display: flex;
 
     &_ctnr {
-      border: 1px solid $blackPlanet;
+      border: 1px solid $darkgrey;
       border-bottom: none;
-      height: 42%;
-      width: 18em;
-      margin: 0 0 0 2.5%;
+      height: fit-content;
+      width: 25em;
+      margin: 0 0 0 0.5%;
 
       @include breakpoint(mobileL) {
-        width: 20em;
+        width: 29em;
+        margin: 0 0 0 2%;
       }
 
       @include breakpoint(tablet) {
@@ -31,10 +31,9 @@
       }
 
       &_title {
-        position: relative;
-        padding: 1em;
+        padding: 1em 0 0 0.35em;
         font-family: $radjhani;
-        font-size: 30px;
+        font-size: $fontT;
         
         &:after {
           content: "";
@@ -51,6 +50,8 @@
 
       &_txt {
         padding: 1em;
+        height: 10em;
+        line-height: 120%;
         font-size: $fontP;
         font-family: $kraftMono;
       }

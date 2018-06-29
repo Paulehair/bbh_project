@@ -263,27 +263,26 @@ table {
     padding: 1em; }
   .Map_img {
     object-fit: contain;
-    width: 25em;
-    margin: 0 0 0 -2em; }
+    width: 103%;
+    margin: 0 0 0 2%; }
     @media (min-width: 425px) {
       .Map_img {
-        width: 30em;
-        margin: 0 0 0 1.5em; } }
+        width: 96%;
+        margin: 0 0 0 8%; } }
     @media (min-width: 768px) {
       .Map_img {
-        width: 40em;
-        margin: 0 0 0 3.5em; } }
+        width: 77%;
+        margin: 0 0 0 13%; } }
     @media (min-width: 1024px) {
       .Map_img {
-        margin: 0 0 0 10em;
-        width: 50em; } }
+        margin: 0 0 0 16%;
+        width: 69%; } }
     @media (min-width: 1440px) {
       .Map_img {
-        margin: 0 0 0 21em;
-        width: 60em; } }
+        margin: 0 0 0 16%;
+        width: 69%; } }
 
 .Card {
-  width: 100%;
   height: fit-content;
   margin: 10% auto 0 auto;
   padding-bottom: 10%;
@@ -294,14 +293,15 @@ table {
     height: fit-content;
     display: flex; }
     .Card_slider_ctnr {
-      border: 1px solid #353a38;
+      border: 1px solid #383d3b;
       border-bottom: none;
-      height: 42%;
-      width: 18em;
-      margin: 0 0 0 2.5%; }
+      height: fit-content;
+      width: 25em;
+      margin: 0 0 0 0.5%; }
       @media (min-width: 425px) {
         .Card_slider_ctnr {
-          width: 20em; } }
+          width: 29em;
+          margin: 0 0 0 2%; } }
       @media (min-width: 768px) {
         .Card_slider_ctnr {
           width: 30em; } }
@@ -309,10 +309,9 @@ table {
         .Card_slider_ctnr {
           width: 40em; } }
       .Card_slider_ctnr_title {
-        position: relative;
-        padding: 1em;
+        padding: 1em 0 0 0.35em;
         font-family: "rajdhanisemibold";
-        font-size: 30px; }
+        font-size: 35px; }
         .Card_slider_ctnr_title:after {
           content: "";
           background: url(../img/traits.png) no-repeat;
@@ -325,6 +324,8 @@ table {
           z-index: -1; }
       .Card_slider_ctnr_txt {
         padding: 1em;
+        height: 10em;
+        line-height: 120%;
         font-size: 16px;
         font-family: "kraft_monoregular"; }
       .Card_slider_ctnr_btn {
@@ -344,19 +345,19 @@ table {
   height: 85%;
   background: no-repeat url(../../assets/img/planete.png);
   background-size: contain;
-  background-position: 8em -3em; }
+  background-position: 20em -3em; }
   @media (min-width: 425px) {
     .Planet {
-      background-position: 17em -3em; } }
+      background-position: 33em -3em; } }
   @media (min-width: 768px) {
     .Planet {
-      background-position: 20em -3em; } }
+      background-position: 62em -3em; } }
   @media (min-width: 1024px) {
     .Planet {
-      background-position: 45em -3em; } }
+      background-position: 83em -3em; } }
   @media (min-width: 1440px) {
     .Planet {
-      background-position: 70em -3em; } }
+      background-position: 122em -3em; } }
   .Planet_content {
     padding-top: 5%;
     height: fit-content; }
