@@ -33,6 +33,7 @@
 
   }
   &_label{
+    font-size: 12px;
     display: block;
     color: $darkgrey;
   }
@@ -57,9 +58,11 @@
     width: 301px;
   }
   &_link{
+    font-size: 14px;
     width: 100%;
     display: block;
     text-align: center;
     margin-top: 35px;
+    color: $darkgrey;
   }
 }

@@ -885,15 +885,10 @@ table {
   margin-right: 2rem;
   display: flex;
   align-items: flex-end; }
-  @media (min-width: 768px) {
-    .detailsactivity-container {
-      height: 45rem; } }
-
 .detailsactivity-preface {
   margin-top: 800px;
   padding-bottom: 2rem;
   padding-left: 2rem; }
-
 .detailsactivity-btn {
   height: 1rem;
   width: 9rem;
@@ -903,13 +898,11 @@ table {
   background: #f52f57;
   padding: 5px 5px 6px 5px;
   text-decoration: none; }
-
 .detailsactivity-titlepreface {
   color: #ffffff;
   font-family: "rajdhanisemibold";
   font-size: 3rem;
   margin-bottom: 2rem; }
-
 .detailsactivity-firsttitle {
   padding-top: 2rem;
   padding-left: 2rem;
@@ -917,14 +910,12 @@ table {
   font-family: "rajdhanisemibold";
   font-size: 2rem;
   margin-bottom: 2rem; }
-
 .detailsactivity-secondtitle {
   padding-left: 2rem;
   padding-right: 2rem;
   font-family: "rajdhanisemibold";
   font-size: 1.2rem;
   margin-bottom: 2rem; }
-
 .detailsactivity-paragraph {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -932,7 +923,6 @@ table {
   color: #a39b94;
   font-size: 1.4rem;
   margin-bottom: 1.6rem; }
-
 .detailsactivity-description {
   height: 27rem;
   border-left: 1px solid black;
@@ -1095,6 +1085,7 @@ table {
   justify-content: space-between;
   margin-top: 35px; }
   .RegisterForm_label {
+    font-size: 12px;
     display: block;
     color: #383d3b; }
   .RegisterForm_input {
@@ -1109,16 +1100,16 @@ table {
 
 .RegisterItem_submit {
   width: 100%; }
-
 .RegisterItem_btn {
   border: none;
   width: 301px; }
-
 .RegisterItem_link {
+  font-size: 14px;
   width: 100%;
   display: block;
   text-align: center;
-  margin-top: 35px; }
+  margin-top: 35px;
+  color: #383d3b; }
 
 .Register {
   width: 90%;
@@ -1338,10 +1329,8 @@ table {
 
 .ConfirmBookingDetails_item {
   margin-top: 45px; }
-
 .ConfirmBookingDetails_itemName {
   margin-top: 45px; }
-
 .ConfirmBookingDetails_itemVal {
   color: #a39b94;
   line-height: 45px; }
@@ -1353,7 +1342,6 @@ table {
   @media (min-width: 1440px) {
     .ConfirmBookingText_text {
       width: 300px; } }
-
 .ConfirmBookingText_link {
   width: 250px;
   margin: 0 auto;
@@ -1381,7 +1369,6 @@ table {
 
 .Nav_title {
   font-family: "rajdhanisemibold"; }
-
 .Nav_item {
   font-family: "rajdhanisemibold"; }
   .Nav_item > a {
@@ -1389,105 +1376,19 @@ table {
     text-decoration: none;
     line-height: 1.7;
     font-size: 16px; }
-
 .Nav_container {
   margin-top: 30px; }
-
-.activitylist-wrapper {
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  margin-top: 150px;
-  margin-left: 25px;
-  margin-right: 5%; }
-  @media (min-width: 768px) {
-    .activitylist-wrapper {
-      margin-left: 70px; } }
-.activitylist-title {
-  margin-left: 50px;
-  margin-bottom: 40px;
-  font-family: "rajdhanisemibold";
-  font-size: 20px; }
-.activitylist-paragraph {
-  margin-left: 50px;
-  margin-bottom: 70px;
-  font-family: "kraft_monoregular";
-  font-size: 14px;
-  color: #a39b94; }
-.activitylist-container {
-  margin-left: 2%;
-  padding-right: 2%; }
-  @media (min-width: 768px) {
-    .activitylist-container {
-      display: flex;
-      flex-direction: column;
-      margin-left: 25%; } }
-  @media (min-width: 1024px) {
-    .activitylist-container {
-      margin-left: 0%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around; } }
-  .activitylist-container-content {
-    border-right: 1px solid black;
-    margin-bottom: 140px;
-    width: 371px;
-    height: 450px; }
-    @media (min-width: 768px) {
-      .activitylist-container-content {
-        border-bottom: 1px solid black;
-        border-left: 1px solid black; } }
-    .activitylist-container-content-img {
-      height: 100px;
-      width: 371px; }
-    .activitylist-container-content-title {
-      margin-left: 2rem;
-      margin-top: 50px;
-      margin-bottom: 20px;
-      font-family: "rajdhanisemibold";
-      font-size: 14px; }
-    .activitylist-container-content-tag {
-      margin-left: 2rem;
-      margin-bottom: 50px;
-      height: 1rem;
-      width: 65px;
-      font-family: "kraft_monoregular";
-      color: #ffffff;
-      font-size: 8px;
-      background: #f52f57;
-      padding: 5px 9px 6px 9px;
-      text-decoration: none; }
-    .activitylist-container-content-paragraph {
-      margin-left: 2rem;
-      font-family: "kraft_monoregular";
-      color: #a39b94; }
-    .activitylist-container-content-btn {
-      display: flex;
-      justify-content: center;
-      width: 150px;
-      height: 20px;
-      margin: 15% auto 0;
-      padding: 1em 2em;
-      background: linear-gradient(-145deg, rgba(153, 70, 200, 0.8), rgba(244, 43, 87, 0.8));
-      font-size: 14px;
-      font-family: "kraft_monoregular";
-      color: #f0ede2;
-      text-align: center;
-      cursor: pointer;
-      text-decoration: none; }
 
 /* FONTS */
 @font-face {
   font-family: 'kraft_monoregular';
   src: url("../font/kraftmono-webfont.woff2") format("woff2"), url("../font/kraftmono-webfont.woff") format("woff"); }
-
 @font-face {
   font-family: 'kraft_monoitalic';
   src: url("../font/kraftmono-italic-webfont.woff2") format("woff2"), url("../font/kraftmono-italic-webfont.woff") format("woff"); }
-
 @font-face {
   font-family: 'rajdhanisemibold';
   src: url("../font/rajdhani-semibold-webfont.woff2") format("woff2"), url("../font/rajdhani-semibold-webfont.woff") format("woff"); }
-
 body {
   width: 100%;
   height: 100vh;
@@ -1528,3 +1429,5 @@ html {
   text-decoration: none;
   padding: 0 20px;
   cursor: pointer; }
+
+/*# sourceMappingURL=main.css.map */
