@@ -1,5 +1,4 @@
 .Card {
-  width: 100%;
   height: fit-content;
   margin: 10% auto 0 auto;
   padding-bottom: 10%;
@@ -7,23 +6,35 @@
   overflow-y: hidden;
 
   &_slider {
-    width: 300%;
+    width: fit-content;
     height: fit-content;
     display: flex;
 
     &_ctnr {
-      border-top: 1px solid $blackPlanet;
-      border-left: 1px solid $blackPlanet;
-      height: 42%;
-      width: 100%;
-      margin: 0 0 0 2.5%;
+      border: 1px solid $darkgrey;
+      border-bottom: none;
+      height: fit-content;
+      width: 25em;
+      margin: 0 0 0 0.5%;
+
+      @include breakpoint(mobileL) {
+        width: 29em;
+        margin: 0 0 0 2%;
+      }
+
+      @include breakpoint(tablet) {
+        width: 30em;
+      }
+
+      @include breakpoint(laptop) {
+        width: 40em;
+      }
 
       &_title {
-        position: relative;
-        padding: 1em;
+        padding: 1em 0 0 0.35em;
         font-family: $radjhani;
-        font-size: 30px;
-        
+        font-size: $fontT;
+
         &:after {
           content: "";
           background: url(../img/traits.png) no-repeat;
@@ -39,10 +50,12 @@
 
       &_txt {
         padding: 1em;
+        height: 10em;
+        line-height: 120%;
         font-size: $fontP;
         font-family: $kraftMono;
       }
-      
+
       &_btn {
         width: 60%;
         height: 6%;
@@ -53,6 +66,10 @@
         color: $mainBkgd;
         text-align: center;
         cursor: pointer;
+      }
+      &_link {
+        color: $white;
+        font-family: $kraftMono;
       }
     }
   }

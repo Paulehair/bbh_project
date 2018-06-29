@@ -4,13 +4,14 @@
   border-top: 1px solid #A39B94;
   border-left: 1px solid #A39B94;
   border-right: 1px solid #A39B94;
-  background-image: url("../img/planete4.png");
-  background-size: 100%;
-  background-position: -40% 50% 50%;
+  background-image: url("../img/planeteHome.png");
+  background-size: 80%;
+  //background-position: -40% 50% 50%;
   background-repeat: no-repeat;
   height: 40rem;
   @include breakpoint(tablet) {
-    height: 120rem;
+    height: 90rem;
+    background-size: 80%;
   }
 
   &-container {
@@ -19,7 +20,7 @@
     background-size: 100%;
     padding-top: 250px;
     @include breakpoint(tablet) {
-      padding-top: 300px;
+      //padding-top: 300px;
       background-image: url("");
     }
   }
@@ -35,11 +36,10 @@
     width: 80%;
     margin-bottom: 4.2rem;
     font-family: $kraftMono;
-    color: $grey;
+    color: $darkgrey;
     line-height: 120%;
     @include breakpoint(tablet) {
       background-image: url("");
-      margin-left: 5.5rem;
       letter-spacing: 1px;
       width: 60%;
     }
@@ -66,6 +66,7 @@
 .spaceship {
   width: 90%;
   margin: 0 auto;
+  padding: 100px 0 50px 0;
   border-left: 1px solid #A39B94;
   border-right: 1px solid #A39B94;
   height: 50rem;
@@ -74,15 +75,18 @@
   background-size: 100%;
   background-repeat: no-repeat;
   @include breakpoint(tablet) {
+    margin: 0 auto;
     background-size: 60%;
   }
 
 
   &-container {
-    padding-top: 5%;
+    padding-top: 45%;
     width: 85%;
     margin: 0 auto;
-    @include breakpoint(tablet) {}
+    @include breakpoint(tablet) {
+      padding-top: 5%;
+    }
   }
 
   &-title {
@@ -91,9 +95,8 @@
   }
 
   &-paragraph {
-    margin-top: 5rem;
-    margin-left: 4rem;
-    margin-bottom: 8rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
     font-family: $kraftMono;
     line-height: 120%;
     font-size: 14px;
@@ -101,7 +104,7 @@
   }
 
   &-carac {
-    margin-top: 10rem;
+    margin-top: 3rem;
     font-family: $kraftMono;
     font-size: 1.6rem;
 
@@ -130,10 +133,9 @@
 }
 
 .homeMap {
-  width: 90%;
   margin: 0 auto;
   &-title {
-    font-size: 1.6rems;
+    font-size: 3rem;
   }
   &-btn {
     width: 50%;
@@ -153,15 +155,15 @@
   border-bottom: 1px solid $grey;
 
   &-container {
+    width: 85%;
     &-text {
-      width: 85%;
       margin:0 auto;
       color: $darkgrey;
       &-title {
         padding-top: 2rem;
         margin-left: 4.5rem;
         margin-bottom: 3rem;
-        font-size: 1.6rem;
+        font-size: 3rem;
         font-family: $radjhani;
         color: $darkgrey;
       }

@@ -15,6 +15,9 @@
         font-size: 20px;
     }
 }
+.CabinList h6 {
+    font-size: 16px;
+}
 .CabinForm{
     margin-top: 50px;
     @include breakpoint(tablet){
@@ -149,6 +152,7 @@
         align-items: center;
     }
     &_btnTxt {
+        margin-left: 5px;
         font-family: $kraftMono;
         font-size: 14px;
     }

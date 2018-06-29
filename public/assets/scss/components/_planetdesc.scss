@@ -4,22 +4,22 @@
   height: 85%;
   background: no-repeat url(../../assets/img/planete.png);
   background-size: contain;
-  background-position: 8em -3em;
+  background-position: 20em -3em;
 
   @include breakpoint(mobileL) {
-    background-position: 17em -3em;
+    background-position: 33em -3em;
   }
 
   @include breakpoint(tablet) {
-    background-position: 20em -3em;
+    background-position: 62em -3em;
   }
 
   @include breakpoint(laptop) {
-    background-position: 45em -3em;
+    background-position: 83em -3em;
   }
 
   @include breakpoint(desktop) {
-    background-position: 70em -3em;
+    background-position: 122em -3em;
   }
 
   &_content {
@@ -77,6 +77,14 @@
           font-family: $radjhani;
           padding-left: 1em;
         }
+
+      }
+      &_link {
+        display: block;
+        color: $darkgrey;
+        font-family: $kraftMono;
+        font-size: 14px;
+        margin-top: 60px;
       }
 
       &_bot {
@@ -92,7 +100,7 @@
         &_line {
           height: 2px;
           background: #383d3b;
-          width: 100px;           
+          width: 100px;
           align-self: flex-end;
           margin: 0 0 0 5%;
         }

@@ -13,6 +13,7 @@
 @import "./components/fiche";
 @import "./components/homepage";
 @import "./components/activitydesc";
+@import "./components/activitylist";
 @import "./components/cabindetails";
 @import "./components/login";
 @import "./components/register";
@@ -20,8 +21,6 @@
 @import "./components/loginregister";
 @import "./components/confirmbooking";
 @import "./components/footer";
-
-
 
 /* FONTS */
 @font-face {
@@ -73,6 +72,10 @@ a {
 html {
   font-size: 62.5%;
   width: 100%;
+}
+
+.Map_container {
+  margin-top: 100px;
 }
 
 .Button{
