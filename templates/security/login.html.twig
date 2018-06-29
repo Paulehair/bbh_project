@@ -4,21 +4,37 @@
     <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 {% endif %}
 
-<form action="{{ path('login_check') }}" method="post">
-    <label for="username">Mail :</label>
-    <input type="text" id="username" name="_username" value="{{ last_username }}" />
+    <section class="Login">
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="_password" />
+        <div class="Login_container">
 
-    {#
-        If you want to control the URL the user
-        is redirected to on success (more details below)
-        <input type="hidden" name="_target_path" value="/account" />
-        <input type="hidden" name="_target_path" value="{{ path('booking_show', { 'id': sessid }) }}"/>
-    #}
-    <input type="hidden" name="_target_path" value="{{ path('booking_show_by_ref') }}"/>
-    <button type="submit">login</button>
-    <a href="{{ path('user_registration') }}">S'inscrire</a>
-</form>
+            <h1 class="Login_title">S'identifier</h1>
+            <form class="RegisterForm" action="{{ path('login_check') }}" method="post">
+
+                <div class="RegisterForm_item">
+                    <label class="RegisterForm_label" for="username">Mail :</label>
+                    <input class="RegisterForm_input" type="text" id="username" name="_username" value="{{ last_username }}" />
+                </div>
+
+                <div class="RegisterForm_item">
+                    <label class="RegisterForm_label" for="password">Password:</label>
+                    <input class="RegisterForm_input" type="password" id="password" name="_password" />
+                </div>
+
+                {#
+                    If you want to control the URL the user
+                    is redirected to on success (more details below)
+                    <input type="hidden" name="_target_path" value="/account" />
+                    <input type="hidden" name="_target_path" value="{{ path('booking_show', { 'id': sessid }) }}"/>
+                #}
+
+                <div class="RegisterItem_submit">
+                    <input type="hidden" name="_target_path" value="{{ path('booking_show_by_ref') }}"/>
+                    <button class="RegisterItem_btn Button" type="submit">login</button>
+                    <a class="RegisterItem_link" href="{{ path('user_registration') }}">S'inscrire</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
     {% endblock %}

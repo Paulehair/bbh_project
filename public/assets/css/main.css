@@ -130,78 +130,82 @@ table {
 .Header {
   position: fixed;
   top: 0;
-  left: 8.5%;
+  left: 0;
+  background-color: #f0ede2;
   z-index: 1;
   display: flex;
-  height: 3%;
-  width: 90%;
-  margin: 4% auto; }
-  @media (min-width: 768px) {
-    .Header {
-      left: 10%; } }
+  height: 10%;
+  width: 100%;
+  margin: 0 auto; }
   @media (min-width: 1024px) {
     .Header {
       margin: 0 auto;
-      height: fit-content; } }
-  .Header_logo {
+      height: 150px; } }
+  .Header > svg {
     object-fit: contain;
-    width: 3em;
+    width: 30%;
     height: 3em;
-    margin: 2px 0 0 0; }
+    margin-top: 5%;
+    margin-left: 7%; }
     @media (min-width: 1024px) {
-      .Header_logo {
-        margin: 2.5% 0 0 3%;
+      .Header > svg {
+        margin-left: 8%;
+        width: 15%;
+        margin-top: 0;
         height: fit-content; } }
   .Header_burger {
-    width: 2em;
-    height: 2em;
-    margin: 2% 0 0 70%; }
+    width: auto;
+    height: 25px;
+    margin: 5% 0 0 50%; }
     @media (min-width: 768px) {
       .Header_burger {
         margin-left: 80%; } }
     @media (min-width: 1024px) {
       .Header_burger {
-        display: none; } }
+        display: none;
+        margin: 2% 0 0 65%; } }
   .Header_nav {
     display: none;
     flex-direction: column;
     background: #f0ece1;
-    width: 97%;
-    height: fit-content;
+    width: 100%;
+    z-index: -1;
+    margin-top: 100px;
+    height: 100%;
     padding-top: 5em;
-    position: absolute;
-    top: 3em;
+    position: fixed;
+    top: 0;
     left: 0; }
     @media (min-width: 768px) {
       .Header_nav {
         height: 100vh; } }
     @media (min-width: 1024px) {
       .Header_nav {
-        width: 80%;
+        width: 65%;
+        margin-left: 30%;
         display: flex;
-        height: 100%;
+        height: 150px;
         flex-direction: row;
         justify-content: space-evenly;
         padding: 0 2%;
-        position: unset;
+        position: fixed;
+        margin-top: 0px;
         top: unset;
-        left: unset;
-        margin: 0 0 0 2%; } }
+        left: unset; } }
     .Header_nav_box {
-      margin: 2% 0 0 5%;
       font-family: "rajdhanisemibold";
-      font-size: 1.5em;
+      margin: 5% auto 10%;
+      font-size: 24px;
       width: 132.66px; }
-      @media (min-width: 425px) {
-        .Header_nav_box {
-          margin: 3% 20%; } }
       @media (min-width: 768px) {
         .Header_nav_box {
-          margin: 3% auto; } }
+          margin: 5% auto 10%; } }
       @media (min-width: 1024px) {
         .Header_nav_box {
-          margin: 0 auto;
-          height: 150%; } }
+          margin: 25px auto;
+          padding-top: 10px;
+          height: 150%;
+          font-size: 18px; } }
       .Header_nav_box:first-child:hover .Header_nav_box_menu {
         visibility: visible;
         opacity: 1; }
@@ -210,14 +214,14 @@ table {
         position: absolute;
         top: 8%;
         right: 7%;
-        margin: 1.5em 0 0 0;
+        margin: 1.5em 0 0;
         color: #a39b94; }
         @media (min-width: 768px) {
           .Header_nav_box_menu {
             right: 17%; } }
         @media (min-width: 1024px) {
           .Header_nav_box_menu {
-            margin: 0 0;
+            margin: 0;
             position: unset;
             visibility: hidden;
             opacity: 0;
@@ -228,7 +232,7 @@ table {
           visibility: visible;
           opacity: 1; }
         .Header_nav_box_menu_item {
-          padding: 0.2em;
+          padding-top: 10px;
           cursor: pointer;
           transition: all 0.5s ease; }
           .Header_nav_box_menu_item:hover {
@@ -241,7 +245,7 @@ table {
         cursor: pointer;
         width: max-content; }
       .Header_nav_box_square {
-        margin: 1em 0 1em 0;
+        margin: 0 0 1em;
         width: 1em;
         height: 1em;
         background: #f52f57; }
@@ -259,27 +263,26 @@ table {
     padding: 1em; }
   .Map_img {
     object-fit: contain;
-    width: 25em;
-    margin: 0 0 0 -2em; }
+    width: 103%;
+    margin: 0 0 0 2%; }
     @media (min-width: 425px) {
       .Map_img {
-        width: 30em;
-        margin: 0 0 0 1.5em; } }
+        width: 96%;
+        margin: 0 0 0 8%; } }
     @media (min-width: 768px) {
       .Map_img {
-        width: 40em;
-        margin: 0 0 0 3.5em; } }
+        width: 77%;
+        margin: 0 0 0 13%; } }
     @media (min-width: 1024px) {
       .Map_img {
-        margin: 0 0 0 10em;
-        width: 50em; } }
+        margin: 0 0 0 16%;
+        width: 69%; } }
     @media (min-width: 1440px) {
       .Map_img {
-        margin: 0 0 0 21em;
-        width: 60em; } }
+        margin: 0 0 0 16%;
+        width: 69%; } }
 
 .Card {
-  width: 100%;
   height: fit-content;
   margin: 10% auto 0 auto;
   padding-bottom: 10%;
@@ -290,14 +293,15 @@ table {
     height: fit-content;
     display: flex; }
     .Card_slider_ctnr {
-      border: 1px solid #353a38;
+      border: 1px solid #383d3b;
       border-bottom: none;
-      height: 42%;
-      width: 18em;
-      margin: 0 0 0 2.5%; }
+      height: fit-content;
+      width: 25em;
+      margin: 0 0 0 0.5%; }
       @media (min-width: 425px) {
         .Card_slider_ctnr {
-          width: 20em; } }
+          width: 29em;
+          margin: 0 0 0 2%; } }
       @media (min-width: 768px) {
         .Card_slider_ctnr {
           width: 30em; } }
@@ -305,10 +309,9 @@ table {
         .Card_slider_ctnr {
           width: 40em; } }
       .Card_slider_ctnr_title {
-        position: relative;
-        padding: 1em;
+        padding: 1em 0 0 0.35em;
         font-family: "rajdhanisemibold";
-        font-size: 30px; }
+        font-size: 35px; }
         .Card_slider_ctnr_title:after {
           content: "";
           background: url(../img/traits.png) no-repeat;
@@ -321,6 +324,8 @@ table {
           z-index: -1; }
       .Card_slider_ctnr_txt {
         padding: 1em;
+        height: 10em;
+        line-height: 120%;
         font-size: 16px;
         font-family: "kraft_monoregular"; }
       .Card_slider_ctnr_btn {
@@ -340,19 +345,19 @@ table {
   height: 85%;
   background: no-repeat url(../../assets/img/planete.png);
   background-size: contain;
-  background-position: 8em -3em; }
+  background-position: 20em -3em; }
   @media (min-width: 425px) {
     .Planet {
-      background-position: 17em -3em; } }
+      background-position: 33em -3em; } }
   @media (min-width: 768px) {
     .Planet {
-      background-position: 20em -3em; } }
+      background-position: 62em -3em; } }
   @media (min-width: 1024px) {
     .Planet {
-      background-position: 45em -3em; } }
+      background-position: 83em -3em; } }
   @media (min-width: 1440px) {
     .Planet {
-      background-position: 70em -3em; } }
+      background-position: 122em -3em; } }
   .Planet_content {
     padding-top: 5%;
     height: fit-content; }
@@ -429,7 +434,7 @@ table {
 .Experience {
   width: 90%;
   display: block;
-  margin: 20Px auto;
+  margin: 120Px auto;
   border: solid 1px #A39B94; }
   .Experience_End {
     width: 80%;
@@ -470,7 +475,7 @@ table {
     .Experience_Main > h6 {
       font-family: "rajdhanisemibold";
       font-size: 35px;
-      width: 80%;
+      width: 65%;
       padding-bottom: 80px;
       color: #f0ede2; }
       @media (min-width: 768px) {
@@ -607,11 +612,13 @@ table {
     margin: 100px auto; }
     .Fiche_Att_Txt {
       font-family: "kraft_monoregular";
-      color: #A39B94; }
+      color: #A39B94;
+      font-size: 14px; }
       @media (min-width: 768px) {
         .Fiche_Att_Txt {
           font-size: 16px; } }
     .Fiche_Att_Title {
+      font-size: 14px;
       font-family: "kraft_monoregular"; }
       @media (min-width: 768px) {
         .Fiche_Att_Title {
@@ -690,7 +697,10 @@ table {
   background-size: 100%;
   background-position: -40% 50% 50%;
   background-repeat: no-repeat;
-  height: 70rem; }
+  height: 40rem; }
+  @media (min-width: 768px) {
+    .experience {
+      height: 120rem; } }
   .experience-container {
     width: 85%;
     margin: 0 auto;
@@ -698,7 +708,7 @@ table {
     padding-top: 250px; }
     @media (min-width: 768px) {
       .experience-container {
-        padding-top: 200px;
+        padding-top: 300px;
         background-image: url(""); } }
   .experience-title {
     font-size: 40px;
@@ -709,7 +719,8 @@ table {
     width: 80%;
     margin-bottom: 4.2rem;
     font-family: "kraft_monoregular";
-    color: #a39b94; }
+    color: #a39b94;
+    line-height: 120%; }
     @media (min-width: 768px) {
       .experience-paragraph {
         background-image: url("");
@@ -737,7 +748,7 @@ table {
   margin: 0 auto;
   border-left: 1px solid #A39B94;
   border-right: 1px solid #A39B94;
-  height: 70rem;
+  height: 50rem;
   background-image: url("../img/spaceship1.png");
   background-position: top 35% right 0;
   background-size: 100%;
@@ -777,26 +788,54 @@ table {
     cursor: pointer;
     text-decoration: none; }
 
+.homeContainer {
+  width: 90%;
+  margin: 0 auto;
+  border-right: 1px solid #a39b94;
+  border-left: 1px solid #a39b94; }
+
+.homeMap {
+  width: 90%;
+  margin: 0 auto; }
+  .homeMap-title {
+    font-size: 1.6rems; }
+  .homeMap-btn {
+    width: 50%;
+    margin: 2em auto;
+    font-size: 1.4rem; }
+    @media (min-width: 768px) {
+      .homeMap-btn {
+        width: 30%; } }
+
 .activity {
-  background: #f52f57; }
-  .activity-container-title {
-    padding-top: 2rem;
-    margin-left: 4.5rem;
-    margin-bottom: 3rem;
-    font-size: 24px;
-    font-family: "rajdhanisemibold";
-    color: #f0ece1; }
-  .activity-container-paragraph {
-    margin-top: 4rem;
-    margin-left: 4.5rem;
-    margin-bottom: 4rem;
-    font-size: 14px;
-    line-height: 120%;
-    font-family: "kraft_monoregular";
-    color: #f0ece1;
-    width: 70%; }
+  width: 90%;
+  margin: 0 auto;
+  border-right: 1px solid #a39b94;
+  border-left: 1px solid #a39b94;
+  border-bottom: 1px solid #a39b94; }
+  .activity-container-text {
+    width: 85%;
+    margin: 0 auto;
+    color: #383d3b; }
+    .activity-container-text-title {
+      padding-top: 2rem;
+      margin-left: 4.5rem;
+      margin-bottom: 3rem;
+      font-size: 1.6rem;
+      font-family: "rajdhanisemibold";
+      color: #383d3b; }
+    .activity-container-text-paragraph {
+      margin-top: 4rem;
+      margin-left: 4.5rem;
+      margin-bottom: 4rem;
+      font-size: 14px;
+      line-height: 120%;
+      font-family: "kraft_monoregular";
+      color: #383d3b;
+      width: 70%; }
   @media (min-width: 768px) {
     .activity-wrapper {
+      width: 100%;
       display: flex;
       justify-content: space-around;
       flex-direction: row; } }
@@ -828,17 +867,17 @@ table {
       margin-bottom: 2rem;
       font-family: "rajdhanisemibold";
       font-size: 16px;
-      color: #f0ece1; }
+      color: #383d3b; }
     .activity-wrapper-second-content-paragraph {
       font-family: "kraft_monoregular";
       font-size: 1.2rem;
-      color: #f0ece1; }
+      color: #383d3b; }
   .activity-btn {
     display: flex;
     justify-content: center;
     width: 80px;
     height: 1rem;
-    margin: 15% auto 0;
+    margin: 5% auto 0;
     padding: 1em 2em;
     background-color: #f0ece1;
     font-size: 12px;
@@ -848,147 +887,20 @@ table {
     cursor: pointer;
     text-decoration: none; }
 
-a,
-abbr,
-acronym,
-address,
-applet,
-article,
-aside,
-audio,
-b,
-big,
-blockquote,
-body,
-canvas,
-caption,
-center,
-cite,
-code,
-dd,
-del,
-details,
-dfn,
-div,
-dl,
-dt,
-em,
-embed,
-fieldset,
-figcaption,
-figure,
-footer,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header,
-hgroup,
-html,
-i,
-iframe,
-img,
-ins,
-kbd,
-label,
-legend,
-li,
-mark,
-menu,
-nav,
-object,
-ol,
-output,
-p,
-pre,
-q,
-ruby,
-s,
-samp,
-section,
-small,
-span,
-strike,
-strong,
-sub,
-summary,
-sup,
-table,
-tbody,
-td,
-tfoot,
-th,
-thead,
-time,
-tr,
-tt,
-u,
-ul,
-var,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol,
-ul {
-  list-style: none; }
-
-blockquote,
-q {
-  quotes: none; }
-
-blockquote:after, blockquote:before {
-  content: '';
-  content: none; }
-
-q:after, q:before {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
 .detailsactivity-container {
-  background-image: url(../img/allstars.jpg);
+  background-image: url(/assets/img/champs.png);
   background-repeat: no-repeat;
   background-size: cover;
   border-left: 1px solid black;
   border-right: 1px solid black;
-  height: 25rem;
-  margin-top: 2rem;
+  height: 400px;
+  margin-top: 150px;
   margin-left: 2rem;
   margin-right: 2rem;
   display: flex;
   align-items: flex-end; }
-  @media (min-width: 768px) {
-    .detailsactivity-container {
-      height: 45rem; } }
 .detailsactivity-preface {
+  margin-top: 800px;
   padding-bottom: 2rem;
   padding-left: 2rem; }
 .detailsactivity-btn {
@@ -996,9 +908,9 @@ table {
   width: 9rem;
   font-family: "kraft_monoregular";
   color: #ffffff;
-  font-size: 11px;
+  font-size: 14px;
   background: #f52f57;
-  padding: 5px 9px 6px 9px;
+  padding: 5px 5px 6px 5px;
   text-decoration: none; }
 .detailsactivity-titlepreface {
   color: #ffffff;
@@ -1156,6 +1068,82 @@ table {
     .BookingDetails_item:last-child {
       border-bottom: 1px solid #383d3b;
       border-top: none; }
+
+.Login {
+  width: 90%;
+  height: 80vh;
+  margin: 40px auto;
+  border: solid 1px #A39B94;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: "kraft_monoregular";
+  display: flex;
+  justify-content: center;
+  margin-top: 150px; }
+  .Login_title {
+    font-family: "rajdhanisemibold";
+    font-size: 30px; }
+  @media (min-width: 768px) {
+    .Login {
+      padding: 80px; } }
+  .Login_container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+
+.RegisterForm {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 35px; }
+  .RegisterForm_label {
+    display: block;
+    color: #383d3b; }
+  .RegisterForm_input {
+    margin-top: 15px;
+    height: 35px;
+    width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #a39b94; }
+    .RegisterForm_input:focus {
+      outline: 0; }
+
+.RegisterItem_submit {
+  width: 100%; }
+.RegisterItem_btn {
+  border: none;
+  width: 301px; }
+.RegisterItem_link {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: 35px; }
+
+.Register {
+  width: 90%;
+  height: 80vh;
+  margin: 40px auto;
+  border: solid 1px #A39B94;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: "kraft_monoregular";
+  display: flex;
+  justify-content: center;
+  margin-top: 150px; }
+  .Register_title {
+    font-family: "rajdhanisemibold";
+    font-size: 30px; }
+  @media (min-width: 768px) {
+    .Register {
+      padding: 80px; } }
+  .Register_container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
 
 .CabinList {
   width: 90%;
@@ -1321,7 +1309,8 @@ table {
   font-family: "kraft_monoregular";
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  margin-top: 150px; }
   @media (min-width: 768px) {
     .ConfirmBooking {
       padding: 80px; } }
@@ -1354,10 +1343,13 @@ table {
 .ConfirmBookingDetails_itemName {
   margin-top: 45px; }
 .ConfirmBookingDetails_itemVal {
-  color: #a39b94; }
+  color: #a39b94;
+  line-height: 45px; }
 
 .ConfirmBookingText_text {
-  margin-top: 45px; }
+  margin-top: 45px;
+  line-height: 1.5;
+  color: #a39b94; }
   @media (min-width: 1440px) {
     .ConfirmBookingText_text {
       width: 300px; } }
@@ -1398,79 +1390,6 @@ table {
 .Nav_container {
   margin-top: 30px; }
 
-.activitylist-wrapper {
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  margin-top: 50px;
-  margin-left: 5%;
-  margin-right: 5%; }
-.activitylist-title {
-  margin-left: 50px;
-  margin-bottom: 40px;
-  font-family: "rajdhanisemibold";
-  font-size: 14px; }
-.activitylist-paragraph {
-  margin-left: 50px;
-  margin-bottom: 70px;
-  font-family: "kraft_monoregular";
-  font-size: 12px; }
-.activitylist-container {
-  margin-left: 2%; }
-  @media (min-width: 768px) {
-    .activitylist-container {
-      display: flex;
-      flex-direction: row;
-      justify-content: center; } }
-  .activitylist-container-content {
-    margin-bottom: 140px;
-    border-right: 1px solid black;
-    width: 371px;
-    height: 380px; }
-    @media (min-width: 768px) {
-      .activitylist-container-content {
-        border-bottom: 1px solid black;
-        border-left: 1px solid black; } }
-    @media (min-width: 768px) {
-      .activitylist-container-content {
-        margin-right: 100px; } }
-    .activitylist-container-content-img {
-      height: 100px;
-      width: 95%; }
-    .activitylist-container-content-title {
-      margin-left: 2rem;
-      margin-top: 50px;
-      margin-bottom: 20px;
-      font-family: "rajdhanisemibold";
-      font-size: 14px; }
-    .activitylist-container-content-tag {
-      margin-left: 2rem;
-      margin-bottom: 50px;
-      height: 1rem;
-      width: 65px;
-      font-family: "kraft_monoregular";
-      color: #ffffff;
-      font-size: 8px;
-      background: #f52f57;
-      padding: 5px 9px 6px 9px;
-      text-decoration: none; }
-    .activitylist-container-content-paragraph {
-      margin-left: 2rem;
-      font-family: "kraft_monoregular"; }
-    .activitylist-container-content-btn {
-      display: flex;
-      justify-content: center;
-      width: 150px;
-      height: 20px;
-      margin: 15% auto 0;
-      padding: 1em 2em;
-      background: linear-gradient(-145deg, rgba(153, 70, 200, 0.8), rgba(244, 43, 87, 0.8));
-      font-size: 1.4rem;
-      font-family: "kraft_monoregular";
-      color: #f0ede2;
-      text-align: center;
-      cursor: pointer;
-      text-decoration: none; }
-
 /* FONTS */
 @font-face {
   font-family: 'kraft_monoregular';
@@ -1484,12 +1403,11 @@ table {
 body {
   width: 100%;
   height: 100vh;
-  background: #f0ede2;
-  overflow-x: hidden; }
+  background: #f0ede2; }
 
 .container {
   overflow: hidden;
-  width: 90%;
+  width: 80%;
   border: 1px solid #383d3b;
   margin: 0 auto; }
 
@@ -1506,6 +1424,10 @@ body {
 a {
   text-decoration: none;
   color: #a39b94; }
+
+html {
+  font-size: 62.5%;
+  width: 100%; }
 
 .Button {
   background: linear-gradient(-145deg, #9946c8, #f42b57);

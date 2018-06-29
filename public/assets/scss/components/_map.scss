@@ -9,32 +9,32 @@
     font-family: $radjhani;
     font-size: 1.8em;
     width: 40%;
-    padding: 1em;
+    padding: 1em; 
   }
 
   &_img {
     object-fit: contain;
-    width: 25em;
-    margin: 0 0 0 -2em;
+    width: 103%;
+    margin: 0 0 0 2%;
 
     @include breakpoint(mobileL) {
-      width: 30em;
-      margin: 0 0 0 1.5em;
+      width: 96%;
+      margin: 0 0 0 8%;
     }
 
     @include breakpoint(tablet) {
-      width: 40em;
-      margin: 0 0 0 3.5em;
+      width: 77%;
+      margin: 0 0 0 13%;
     }
 
     @include breakpoint(laptop) {
-      margin: 0 0 0 10em;
-      width: 50em;
+      margin: 0 0 0 16%;
+      width: 69%;
     }
 
     @include breakpoint(desktop) {
-      margin: 0 0 0 21em;
-      width: 60em;
+      margin: 0 0 0 16%;
+      width: 69%;
     }
   }
 }
